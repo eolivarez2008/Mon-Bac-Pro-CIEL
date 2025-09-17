@@ -1,0 +1,2621 @@
+[
+  {
+    "nom": "Lycée professionnel Saint-Joseph",
+    "ville": "Bourg-en-Bresse",
+    "codePostal": "01000",
+    "coords": [
+      45.8249469,
+      4.9507623
+    ]
+  },
+  {
+    "nom": "Lycée professionnel Alexandre Bérard",
+    "ville": "Ambérieu-en-Bugey",
+    "codePostal": "01505",
+    "coords": [
+      45.9746158,
+      5.349528
+    ]
+  },
+  {
+    "nom": "Lycée polyvalent Pierre Méchain",
+    "ville": "Laon",
+    "codePostal": "02011",
+    "coords": [
+      49.5611919,
+      3.6349893
+    ]
+  },
+  {
+    "nom": "Lycée professionnel Saint-Joseph",
+    "ville": "Fontaine-lès-Vervins",
+    "codePostal": "02140",
+    "coords": [
+      49.8360571,
+      3.9060632
+    ]
+  },
+  {
+    "nom": "Lycée professionnel Saint-Charles",
+    "ville": "Chauny",
+    "codePostal": "02300",
+    "coords": [
+      49.613837,
+      3.2117821
+    ]
+  },
+  {
+    "nom": "Lycée polyvalent Jules Verne",
+    "ville": "Château-Thierry",
+    "codePostal": "02405",
+    "coords": [
+      49.0538844,
+      3.4003903
+    ]
+  },
+  {
+    "nom": "Lycée polyvalent Albert Einstein",
+    "ville": "Montluçon",
+    "codePostal": "03105",
+    "coords": [
+      46.3511568,
+      2.60616
+    ]
+  },
+  {
+    "nom": "Lycée professionnel Pierre et Louis Poutrain",
+    "ville": "Saint-Jean-Saint-Nicolas",
+    "codePostal": "05260",
+    "coords": [
+      44.6706719,
+      6.2157447
+    ]
+  },
+  {
+    "nom": "Lycée professionnel Pierre Mendès-France",
+    "ville": "Veynes",
+    "codePostal": "05400",
+    "coords": [
+      44.5343799,
+      5.8214061
+    ]
+  },
+  {
+    "nom": "Lycée professionnel Alfred Hutinel",
+    "ville": "Cannes",
+    "codePostal": "06150",
+    "coords": [
+      43.5527771,
+      6.9696242
+    ]
+  },
+  {
+    "nom": "Lycée professionnel Jacques Dolle",
+    "ville": "Antibes",
+    "codePostal": "06600",
+    "coords": [
+      43.5933766,
+      7.1139323
+    ]
+  },
+  {
+    "nom": "Lycée professionnel privé Marc Seguin",
+    "ville": "Annonay",
+    "codePostal": "07100",
+    "coords": [
+      45.243218,
+      4.676222
+    ]
+  },
+  {
+    "nom": "Lycée professionnel Jean-Baptiste Clément",
+    "ville": "Sedan",
+    "codePostal": "08200",
+    "coords": [
+      49.700047,
+      4.9341281
+    ]
+  },
+  {
+    "nom": "Lycée professionnel La Salle",
+    "ville": "Troyes",
+    "codePostal": "10000",
+    "coords": [
+      48.2974876,
+      4.0818868
+    ]
+  },
+  {
+    "nom": "Lycée professionnel le Chatelier",
+    "ville": "Marseille",
+    "codePostal": "13003",
+    "coords": [
+      43.3142174,
+      5.3714663
+    ]
+  },
+  {
+    "nom": "Lycée professionnel Ampère",
+    "ville": "Marseille",
+    "codePostal": "13010",
+    "coords": [
+      43.280243,
+      5.4229678
+    ]
+  },
+  {
+    "nom": "Lycée professionnel Saint-Henri",
+    "ville": "Marseille",
+    "codePostal": "13016",
+    "coords": [
+      43.365823,
+      5.3391007
+    ]
+  },
+  {
+    "nom": "Lycée professionnel Jean Moulin",
+    "ville": "Port-de-Bouc",
+    "codePostal": "13110",
+    "coords": [
+      43.407735,
+      4.9926304
+    ]
+  },
+  {
+    "nom": "Lycée polyvalent de la Méditerranée",
+    "ville": "La Ciotat",
+    "codePostal": "13600",
+    "coords": [
+      43.1916437,
+      5.6136096
+    ]
+  },
+  {
+    "nom": "Lycée polyvalent Adam de Craponne",
+    "ville": "Salon-de-Provence",
+    "codePostal": "13651",
+    "coords": [
+      43.6352474,
+      5.0977464
+    ]
+  },
+  {
+    "nom": "Lycée polyvalent Pierre Mendès-France",
+    "ville": "Vitrolles",
+    "codePostal": "13741",
+    "coords": [
+      43.4464348,
+      5.2473976
+    ]
+  },
+  {
+    "nom": "Lycée Charles Tellier",
+    "ville": "Condé-en-Normandie",
+    "codePostal": "14110",
+    "coords": [
+      48.8533182,
+      -0.5709881
+    ]
+  },
+  {
+    "nom": "Lycée Jules Verne",
+    "ville": "Mondeville",
+    "codePostal": "14126",
+    "coords": [
+      49.1671638,
+      -0.3270452
+    ]
+  },
+  {
+    "nom": "Lycée professionnel Pierre André Chabanne",
+    "ville": "Chasseneuil-sur-Bonnieure",
+    "codePostal": "16260",
+    "coords": [
+      45.8224075,
+      0.4537562
+    ]
+  },
+  {
+    "nom": "Lycée professionnel Louise Michel",
+    "ville": "Ruffec",
+    "codePostal": "16700",
+    "coords": [
+      46.0250125,
+      0.1900041
+    ]
+  },
+  {
+    "nom": "Lycée professionnel de Rompsay",
+    "ville": "La Rochelle",
+    "codePostal": "17012",
+    "coords": [
+      46.1619166,
+      -1.1274627
+    ]
+  },
+  {
+    "nom": "Lycée professionnel Bernard Palissy",
+    "ville": "Saintes",
+    "codePostal": "17107",
+    "coords": [
+      45.7351105,
+      -0.6142406
+    ]
+  },
+  {
+    "nom": "École d'enseignement technique de l'armée de l'air et de l'espace de Saintes",
+    "ville": "Saintes",
+    "codePostal": "17136",
+    "coords": [
+      45.7069793,
+      -0.6312977
+    ]
+  },
+  {
+    "nom": "Lycée polyvalent Pierre-Émile Martin",
+    "ville": "Bourges",
+    "codePostal": "18000",
+    "coords": [
+      47.0745302,
+      2.4059424
+    ]
+  },
+  {
+    "nom": "Lycée polyvalent privé Saint-Jean-Baptiste de la Salle",
+    "ville": "Bourges",
+    "codePostal": "18027",
+    "coords": [
+      47.1027222,
+      2.4065664
+    ]
+  },
+  {
+    "nom": "Lycée professionnel Fred Scamaroni",
+    "ville": "Bastia",
+    "codePostal": "20600",
+    "coords": [
+      42.6699823,
+      9.4405617
+    ]
+  },
+  {
+    "nom": "Lycée professionnel Roland Carraz",
+    "ville": "Chenôve",
+    "codePostal": "21300",
+    "coords": [
+      47.2907468,
+      5.0096406
+    ]
+  },
+  {
+    "nom": "Lycée professionnel Eugène Guillaume",
+    "ville": "Montbard",
+    "codePostal": "21500",
+    "coords": [
+      47.6220036,
+      4.3411959
+    ]
+  },
+  {
+    "nom": "Lycée professionnel Félix le Dantec",
+    "ville": "Lannion",
+    "codePostal": "22303",
+    "coords": [
+      48.7311448,
+      -3.4494003
+    ]
+  },
+  {
+    "nom": "Lycée professionnel privé Saint-Bénigne",
+    "ville": "Pontarlier",
+    "codePostal": "25300",
+    "coords": [
+      46.9016219,
+      6.3561294
+    ]
+  },
+  {
+    "nom": "Lycée Polyvalent Gustave Jaume",
+    "ville": "Pierrelatte",
+    "codePostal": "26702",
+    "coords": [
+      44.3822097,
+      4.6976307
+    ]
+  },
+  {
+    "nom": "Lycée polyvalent Algoud-Laffemas",
+    "ville": "Valence",
+    "codePostal": "26901",
+    "coords": [
+      44.9165628,
+      4.9178973
+    ]
+  },
+  {
+    "nom": "Lycée Clément Ader",
+    "ville": "Bernay",
+    "codePostal": "27305",
+    "coords": [
+      49.0973363,
+      0.6030238
+    ]
+  },
+  {
+    "nom": "Lycée polyvalent Édouard Branly",
+    "ville": "Dreux",
+    "codePostal": "28100",
+    "coords": [
+      48.7318883,
+      1.3786589
+    ]
+  },
+  {
+    "nom": "Lycée Yves Thépot",
+    "ville": "Quimper",
+    "codePostal": "29104",
+    "coords": [
+      47.9878092,
+      -4.0880894
+    ]
+  },
+  {
+    "nom": "Lycée professionnel Jules Raimu",
+    "ville": "Nîmes",
+    "codePostal": "30908",
+    "coords": [
+      43.819451,
+      4.33012
+    ]
+  },
+  {
+    "nom": "Lycée polyvalent Déodat de Séverac",
+    "ville": "Toulouse",
+    "codePostal": "31076",
+    "coords": [
+      43.5890175,
+      1.4257318
+    ]
+  },
+  {
+    "nom": "Lycée professionnel Stéphane Hessel",
+    "ville": "Toulouse",
+    "codePostal": "31079",
+    "coords": [
+      43.6157895,
+      1.4768635
+    ]
+  },
+  {
+    "nom": "Lycée polyvalent Simone de Beauvoir",
+    "ville": "Gragnague",
+    "codePostal": "31380",
+    "coords": [
+      43.6965446,
+      1.5766386
+    ]
+  },
+  {
+    "nom": "Lycée professionnel privé les Potiers",
+    "ville": "Toulouse",
+    "codePostal": "31400",
+    "coords": [
+      43.5931068,
+      1.4480992
+    ]
+  },
+  {
+    "nom": "Lycée professionnel Jehan Dupérier",
+    "ville": "Saint-Médard-en-Jalles",
+    "codePostal": "33160",
+    "coords": [
+      44.8953746,
+      -0.7060509
+    ]
+  },
+  {
+    "nom": "Lycée professionnel Charles Péguy",
+    "ville": "Eysines",
+    "codePostal": "33327",
+    "coords": [
+      44.8883392,
+      -0.6282881
+    ]
+  },
+  {
+    "nom": "Lycée professionnel de l'Estuaire",
+    "ville": "Blaye",
+    "codePostal": "33394",
+    "coords": [
+      45.1253039,
+      -0.660527
+    ]
+  },
+  {
+    "nom": "Lycée polyvalent Jean Monnet",
+    "ville": "Libourne",
+    "codePostal": "33505",
+    "coords": [
+      44.9055327,
+      -0.2397125
+    ]
+  },
+  {
+    "nom": "Lycée professionnel Philadelphe de Gerde",
+    "ville": "Pessac",
+    "codePostal": "33602",
+    "coords": [
+      44.7874396,
+      -0.6516662
+    ]
+  },
+  {
+    "nom": "Lycée polyvalent Champollion",
+    "ville": "Lattes",
+    "codePostal": "34973",
+    "coords": [
+      43.5866943,
+      3.9314397
+    ]
+  },
+  {
+    "nom": "Lycée professionnel Charles Tillon",
+    "ville": "Rennes",
+    "codePostal": "35009",
+    "coords": [
+      48.1094104,
+      -1.6651844
+    ]
+  },
+  {
+    "nom": "Lycée professionnel Jean Guéhenno",
+    "ville": "Fougères",
+    "codePostal": "35305",
+    "coords": [
+      48.3419943,
+      -1.1994531
+    ]
+  },
+  {
+    "nom": "Lycée professionnel Henri Becquerel",
+    "ville": "Tours",
+    "codePostal": "37000",
+    "coords": [
+      47.3762955,
+      0.7327375
+    ]
+  },
+  {
+    "nom": "Lycée polyvalent Vaucanson",
+    "ville": "Grenoble",
+    "codePostal": "38030",
+    "coords": [
+      45.1710358,
+      5.7086438
+    ]
+  },
+  {
+    "nom": "Lycée professionnel Thomas Edison",
+    "ville": "Echirolles",
+    "codePostal": "38130",
+    "coords": [
+      45.1503334,
+      5.7214697
+    ]
+  },
+  {
+    "nom": "Lycée polyvalent Portes de l'Oisans",
+    "ville": "Vizille",
+    "codePostal": "38220",
+    "coords": [
+      45.0680103,
+      5.7681651
+    ]
+  },
+  {
+    "nom": "Lycée professionnel l'Odyssée",
+    "ville": "Pont-de-Chéruy",
+    "codePostal": "38232",
+    "coords": [
+      45.7569643,
+      5.1736177
+    ]
+  },
+  {
+    "nom": "Lycée polyvalent Pravaz",
+    "ville": "Le Pont-de-Beauvoisin",
+    "codePostal": "38480",
+    "coords": [
+      45.5408438,
+      5.6698823
+    ]
+  },
+  {
+    "nom": "MFR Saint-Égrève",
+    "ville": "Saint-Egrève",
+    "codePostal": "38523",
+    "coords": [
+      45.2310363,
+      5.6831293
+    ]
+  },
+  {
+    "nom": "Lycée professionnel Ambroise Croizat",
+    "ville": "Tarnos",
+    "codePostal": "40220",
+    "coords": [
+      43.5361905,
+      -1.4916435
+    ]
+  },
+  {
+    "nom": "Maison familiale rurale de Pontonx-sur-l'Adour",
+    "ville": "Pontonx-sur-l'Adour",
+    "codePostal": "40465",
+    "coords": [
+      43.7897359,
+      -0.9232557
+    ]
+  },
+  {
+    "nom": "Lycée professionnel Pierre Desgranges",
+    "ville": "Andrézieux-Bouthéon",
+    "codePostal": "42166",
+    "coords": [
+      45.5311139,
+      4.2730105
+    ]
+  },
+  {
+    "nom": "Lycée professionnel Arago",
+    "ville": "Roanne",
+    "codePostal": "42300",
+    "coords": [
+      46.0365681,
+      4.0627166
+    ]
+  },
+  {
+    "nom": "Lycée professionnel François Arago",
+    "ville": "Nantes",
+    "codePostal": "44322",
+    "coords": [
+      47.2504586,
+      -1.5524519
+    ]
+  },
+  {
+    "nom": "Lycée polyvalent Gaspard Monge - La Chauvinière",
+    "ville": "Nantes",
+    "codePostal": "44322",
+    "coords": [
+      47.2524409,
+      -1.572391
+    ]
+  },
+  {
+    "nom": "Lycée professionnel Jean Monnet",
+    "ville": "Foulayronnes",
+    "codePostal": "47510",
+    "coords": [
+      44.2317095,
+      0.6412809
+    ]
+  },
+  {
+    "nom": "Lycée polyvalent Fernand Renaudeau",
+    "ville": "Cholet",
+    "codePostal": "49321",
+    "coords": [
+      47.0686639,
+      -0.892338
+    ]
+  },
+  {
+    "nom": "Lycée polyvalent Curie-Corot",
+    "ville": "Saint-Lô",
+    "codePostal": "50010",
+    "coords": [
+      49.1073718,
+      -1.0881676
+    ]
+  },
+  {
+    "nom": "Lycée Alexis de Tocqueville",
+    "ville": "Cherbourg-en-Cotentin",
+    "codePostal": "50100",
+    "coords": [
+      49.6294686,
+      -1.6050707
+    ]
+  },
+  {
+    "nom": "Lycée Julliot de la Morandière",
+    "ville": "Granville",
+    "codePostal": "50406",
+    "coords": [
+      48.8292949,
+      -1.5784515
+    ]
+  },
+  {
+    "nom": "Lycée polyvalent Georges Brière",
+    "ville": "Reims",
+    "codePostal": "51097",
+    "coords": [
+      49.2238446,
+      4.0264549
+    ]
+  },
+  {
+    "nom": "Lycée professionnel Eugène Decomble",
+    "ville": "Chaumont",
+    "codePostal": "52000",
+    "coords": [
+      48.0933748,
+      5.1417439
+    ]
+  },
+  {
+    "nom": "Lycée professionnel Ligier Richier",
+    "ville": "Bar-le-Duc",
+    "codePostal": "55013",
+    "coords": [
+      48.7726969,
+      5.1729315
+    ]
+  },
+  {
+    "nom": "Lycée Saint-Joseph - La salle",
+    "ville": "Vannes",
+    "codePostal": "56010",
+    "coords": [
+      47.6529803,
+      -2.7791351
+    ]
+  },
+  {
+    "nom": "Lycée professionnel Ampère",
+    "ville": "Josselin",
+    "codePostal": "56120",
+    "coords": [
+      47.9592054,
+      -2.5471822
+    ]
+  },
+  {
+    "nom": "Lycée polyvalent Louis de Cormontaigne",
+    "ville": "Metz",
+    "codePostal": "57010",
+    "coords": [
+      49.1244008,
+      6.162637
+    ]
+  },
+  {
+    "nom": "Lycée professionnel César Baggio",
+    "ville": "Lille",
+    "codePostal": "59000",
+    "coords": [
+      50.6171573,
+      3.0682368
+    ]
+  },
+  {
+    "nom": "Lycée professionnel Léonard de Vinci",
+    "ville": "Roubaix",
+    "codePostal": "59100",
+    "coords": [
+      50.6960797,
+      3.1805335
+    ]
+  },
+  {
+    "nom": "Lycée professionnel EPID",
+    "ville": "Dunkerque",
+    "codePostal": "59140",
+    "coords": [
+      51.0262529,
+      2.3725521
+    ]
+  },
+  {
+    "nom": "Lycée polyvalent Colbert",
+    "ville": "Tourcoing",
+    "codePostal": "59200",
+    "coords": [
+      50.7260719,
+      3.1583843
+    ]
+  },
+  {
+    "nom": "Lycée Saint-Luc",
+    "ville": "Cambrai",
+    "codePostal": "59405",
+    "coords": [
+      50.169555,
+      3.2296691
+    ]
+  },
+  {
+    "nom": "Lycée professionnel Fernand Léger",
+    "ville": "Coudekerque-Branche",
+    "codePostal": "59411",
+    "coords": [
+      51.0227328,
+      2.3996813
+    ]
+  },
+  {
+    "nom": "Lycée professionnel Pierre Joseph Fontaine",
+    "ville": "Anzin",
+    "codePostal": "59416",
+    "coords": [
+      50.3685204,
+      3.4915069
+    ]
+  },
+  {
+    "nom": "Lycée polyvalent Gustave Eiffel",
+    "ville": "Armentières",
+    "codePostal": "59427",
+    "coords": [
+      50.688847,
+      2.8718411
+    ]
+  },
+  {
+    "nom": "Lycée polyvalent Élisa Lemonnier",
+    "ville": "Douai",
+    "codePostal": "59508",
+    "coords": [
+      50.376925,
+      3.0711007
+    ]
+  },
+  {
+    "nom": "Lycée Saint-Joseph",
+    "ville": "Hazebrouck",
+    "codePostal": "59529",
+    "coords": [
+      50.7184414,
+      2.5333139
+    ]
+  },
+  {
+    "nom": "Lycée polyvalent Joseph-Marie Jacquard",
+    "ville": "Caudry",
+    "codePostal": "59544",
+    "coords": [
+      50.126883,
+      3.4018272
+    ]
+  },
+  {
+    "nom": "Lycée professionnel Placide Courtoy",
+    "ville": "Hautmont",
+    "codePostal": "59618",
+    "coords": [
+      50.2513461,
+      3.9132264
+    ]
+  },
+  {
+    "nom": "Lycée Théophile Legrand",
+    "ville": "Louvroil",
+    "codePostal": "59720",
+    "coords": [
+      50.2666898,
+      3.9619154
+    ]
+  },
+  {
+    "nom": "Lycée professionnel des Plaines du Nord",
+    "ville": "Grande-Synthe",
+    "codePostal": "59760",
+    "coords": [
+      51.0147005,
+      2.3114796
+    ]
+  },
+  {
+    "nom": "Lycée professionnel Vertes Feuilles",
+    "ville": "Saint-André-lez-Lille",
+    "codePostal": "59871",
+    "coords": [
+      50.6637,
+      3.0449291
+    ]
+  },
+  {
+    "nom": "Lycée professionnel Lavoisier",
+    "ville": "Méru",
+    "codePostal": "60110",
+    "coords": [
+      49.2287044,
+      2.1239348
+    ]
+  },
+  {
+    "nom": "Lycée professionnel Arthur Rimbaud",
+    "ville": "Ribécourt-Dreslincourt",
+    "codePostal": "60170",
+    "coords": [
+      49.5081553,
+      2.9266962
+    ]
+  },
+  {
+    "nom": "Lycée professionnel Jules Verne",
+    "ville": "Grandvilliers",
+    "codePostal": "60210",
+    "coords": [
+      49.6620362,
+      1.9478621
+    ]
+  },
+  {
+    "nom": "Lycée Roberval",
+    "ville": "Breuil-le-Vert",
+    "codePostal": "60600",
+    "coords": [
+      49.3638279,
+      2.418796
+    ]
+  },
+  {
+    "nom": "Lycée professionnel Robert Desnos",
+    "ville": "Crépy-en-Valois",
+    "codePostal": "60800",
+    "coords": [
+      49.2275949,
+      2.8923385
+    ]
+  },
+  {
+    "nom": "Lycée professionnel Savary Ferry",
+    "ville": "Arras",
+    "codePostal": "62022",
+    "coords": [
+      50.2840716,
+      2.7449335
+    ]
+  },
+  {
+    "nom": "Lycée professionnel Pierre de Coubertin",
+    "ville": "Calais",
+    "codePostal": "62225",
+    "coords": [
+      50.9558369,
+      1.8378046
+    ]
+  },
+  {
+    "nom": "Lycée professionnel Maximilien de Robespierre",
+    "ville": "Lens",
+    "codePostal": "62307",
+    "coords": [
+      50.4383951,
+      2.7971273
+    ]
+  },
+  {
+    "nom": "Lycée polyvalent Édouard Branly",
+    "ville": "Boulogne-sur-Mer",
+    "codePostal": "62321",
+    "coords": [
+      50.7202699,
+      1.6173043
+    ]
+  },
+  {
+    "nom": "Lycée du pays de Saint-Omer - site de l'Aa",
+    "ville": "Saint-Omer",
+    "codePostal": "62505",
+    "coords": [
+      50.7495515,
+      2.278177
+    ]
+  },
+  {
+    "nom": "Lycée professionnel Pierre Mendès France",
+    "ville": "Bruay-la-Buissière",
+    "codePostal": "62701",
+    "coords": [
+      50.485337,
+      2.5369405
+    ]
+  },
+  {
+    "nom": "Lycée professionnel Darras",
+    "ville": "Liévin",
+    "codePostal": "62803",
+    "coords": [
+      50.4121174,
+      2.767821
+    ]
+  },
+  {
+    "nom": "Lycée polyvalent Saint-Cricq",
+    "ville": "Pau",
+    "codePostal": "64015",
+    "coords": [
+      43.2990884,
+      -0.3590773
+    ]
+  },
+  {
+    "nom": "Lycée professionnel Ramiro Arrué",
+    "ville": "Saint-Jean-de-Luz",
+    "codePostal": "64500",
+    "coords": [
+      43.3759407,
+      -1.6398628
+    ]
+  },
+  {
+    "nom": "Lycée polyvalent Louis Couffignal",
+    "ville": "Strasbourg",
+    "codePostal": "67025",
+    "coords": [
+      48.5605144,
+      7.7482822
+    ]
+  },
+  {
+    "nom": "Lycée professionnel Charles Stoessel",
+    "ville": "Mulhouse",
+    "codePostal": "68068",
+    "coords": [
+      47.7479561,
+      7.318777
+    ]
+  },
+  {
+    "nom": "Lycée professionnel Charles Pointet",
+    "ville": "Thann",
+    "codePostal": "68800",
+    "coords": [
+      47.8141147,
+      7.0938087
+    ]
+  },
+  {
+    "nom": "Lycée professionnel Jacques de Flesselles",
+    "ville": "Lyon",
+    "codePostal": "69001",
+    "coords": [
+      45.7712109,
+      4.8272484
+    ]
+  },
+  {
+    "nom": "Lycée polyvalent Charlie Chaplin",
+    "ville": "Décines-Charpieu",
+    "codePostal": "69153",
+    "coords": [
+      45.7735008,
+      4.9748709
+    ]
+  },
+  {
+    "nom": "Lycée polyvalent Jacques Brel",
+    "ville": "Vénissieux",
+    "codePostal": "69200",
+    "coords": [
+      45.6939231,
+      4.8803406
+    ]
+  },
+  {
+    "nom": "Lycée professionnel Tony Garnier",
+    "ville": "Bron",
+    "codePostal": "69500",
+    "coords": [
+      45.7272358,
+      4.8881557
+    ]
+  },
+  {
+    "nom": "Lycée professionnel Edmond Labbé",
+    "ville": "Oullins",
+    "codePostal": "69600",
+    "coords": [
+      45.7217164,
+      4.8072701
+    ]
+  },
+  {
+    "nom": "Lycée professionnel Marc Seguin",
+    "ville": "Vénissieux",
+    "codePostal": "69694",
+    "coords": [
+      45.716007,
+      4.8807922
+    ]
+  },
+  {
+    "nom": "Lycée professionnel Luxembourg",
+    "ville": "Vesoul",
+    "codePostal": "70014",
+    "coords": [
+      47.6202906,
+      6.1500205
+    ]
+  },
+  {
+    "nom": "Lycée professionnel Claudie Haigneré",
+    "ville": "Blanzy",
+    "codePostal": "71450",
+    "coords": [
+      46.6829247,
+      4.3883595
+    ]
+  },
+  {
+    "nom": "Lycée polyvalent Gabriel Touchard - Washington",
+    "ville": "Le Mans",
+    "codePostal": "72002",
+    "coords": [
+      47.9951228,
+      0.2048721
+    ]
+  },
+  {
+    "nom": "Lycée polyvalent d'Estournelles de Constant",
+    "ville": "La Flèche",
+    "codePostal": "72205",
+    "coords": [
+      47.7085815,
+      -0.0872221
+    ]
+  },
+  {
+    "nom": "Lycée professionnel Claude Chappe",
+    "ville": "Arnage",
+    "codePostal": "72231",
+    "coords": [
+      47.9353282,
+      0.1840205
+    ]
+  },
+  {
+    "nom": "Lycée professionnel privé ISETA-ECA",
+    "ville": "Chavanod",
+    "codePostal": "74650",
+    "coords": [
+      45.8851638,
+      6.0542831
+    ]
+  },
+  {
+    "nom": "Lycée polyvalent privé Saint-Nicolas",
+    "ville": "Paris",
+    "codePostal": "75006",
+    "coords": [
+      48.8467868,
+      2.3251933
+    ]
+  },
+  {
+    "nom": "Institut supérieur de ressources informatiques",
+    "ville": "Paris",
+    "codePostal": "75017",
+    "coords": [
+      48.8851646,
+      2.3008804
+    ]
+  },
+  {
+    "nom": "Lycée professionnel Grieu",
+    "ville": "Rouen",
+    "codePostal": "76000",
+    "coords": [
+      49.454727,
+      1.132478
+    ]
+  },
+  {
+    "nom": "Lycée Raymond Queneau",
+    "ville": "Yvetot",
+    "codePostal": "76194",
+    "coords": [
+      49.6115067,
+      0.7702665
+    ]
+  },
+  {
+    "nom": "Lycée privé la Châtaigneraie",
+    "ville": "Le Mesnil-Esnard",
+    "codePostal": "76240",
+    "coords": [
+      49.4146488,
+      1.1478404
+    ]
+  },
+  {
+    "nom": "Lycée professionnel Marcel Sembat",
+    "ville": "Sotteville-lès-Rouen",
+    "codePostal": "76301",
+    "coords": [
+      49.4145803,
+      1.0853975
+    ]
+  },
+  {
+    "nom": "Lycée Pierre de Coubertin",
+    "ville": "Meaux",
+    "codePostal": "77100",
+    "coords": [
+      48.9564829,
+      2.8652904
+    ]
+  },
+  {
+    "nom": "Lycée polyvalent Clément Ader",
+    "ville": "Tournan-en-Brie",
+    "codePostal": "77220",
+    "coords": [
+      48.7439661,
+      2.7485695
+    ]
+  },
+  {
+    "nom": "Lycée professionnel Louis Lumière",
+    "ville": "Chelles",
+    "codePostal": "77504",
+    "coords": [
+      48.880356,
+      2.6111776
+    ]
+  },
+  {
+    "nom": "Lycée Jules Ferry",
+    "ville": "Versailles",
+    "codePostal": "78000",
+    "coords": [
+      48.7948246,
+      2.1215611
+    ]
+  },
+  {
+    "nom": "Lycée professionnel Saint-Érembert",
+    "ville": "Saint-Germain-en-Laye",
+    "codePostal": "78100",
+    "coords": [
+      48.8954456,
+      2.1001579
+    ]
+  },
+  {
+    "nom": "Lycée professionnel Jean Moulin",
+    "ville": "Le Chesnay-Rocquencourt",
+    "codePostal": "78150",
+    "coords": [
+      48.8261431,
+      2.1336997
+    ]
+  },
+  {
+    "nom": "Lycée professionnel Louis Blériot",
+    "ville": "Trappes",
+    "codePostal": "78192",
+    "coords": [
+      48.7768469,
+      1.9805357
+    ]
+  },
+  {
+    "nom": "Lycée polyvalent privé Saint-André",
+    "ville": "Niort",
+    "codePostal": "79007",
+    "coords": [
+      46.3265914,
+      -0.4477524
+    ]
+  },
+  {
+    "nom": "Lycée professionnel Jean Moulin",
+    "ville": "Thouars",
+    "codePostal": "79101",
+    "coords": [
+      46.9946831,
+      -0.2142995
+    ]
+  },
+  {
+    "nom": "Lycée polyvalent Jean Racine",
+    "ville": "Montdidier",
+    "codePostal": "80500",
+    "coords": [
+      49.6545687,
+      2.5793254
+    ]
+  },
+  {
+    "nom": "Lycée polyvalent Louis Rascol",
+    "ville": "Albi",
+    "codePostal": "81012",
+    "coords": [
+      43.9310784,
+      2.1502889
+    ]
+  },
+  {
+    "nom": "Lycée Costebelle",
+    "ville": "Hyères",
+    "codePostal": "83408",
+    "coords": [
+      43.0969387,
+      6.1256424
+    ]
+  },
+  {
+    "nom": "Lycée Thomas Edison",
+    "ville": "Lorgues",
+    "codePostal": "83510",
+    "coords": [
+      43.4919583,
+      6.3557744
+    ]
+  },
+  {
+    "nom": "Lycée professionnel Galliéni",
+    "ville": "Fréjus",
+    "codePostal": "83600",
+    "coords": [
+      43.4459028,
+      6.7561703
+    ]
+  },
+  {
+    "nom": "Lycée professionnel Montesquieu",
+    "ville": "Sorgues",
+    "codePostal": "84700",
+    "coords": [
+      43.9970134,
+      4.8797846
+    ]
+  },
+  {
+    "nom": "Lycée polyvalent Jean Monnet",
+    "ville": "Les Herbiers",
+    "codePostal": "85500",
+    "coords": [
+      46.8603407,
+      -1.0235729
+    ]
+  },
+  {
+    "nom": "Lycée polyvalent Nelson Mandela",
+    "ville": "Poitiers",
+    "codePostal": "86000",
+    "coords": [
+      46.598543,
+      0.3292416
+    ]
+  },
+  {
+    "nom": "Lycée professionnel Édouard Branly",
+    "ville": "Châtellerault",
+    "codePostal": "86106",
+    "coords": [
+      46.8008342,
+      0.5433483
+    ]
+  },
+  {
+    "nom": "Lycée polyvalent Maryse Bastié",
+    "ville": "Limoges",
+    "codePostal": "87065",
+    "coords": [
+      45.8505338,
+      1.2903708
+    ]
+  },
+  {
+    "nom": "Lycée professionnel Pierre et Marie Curie",
+    "ville": "Sens",
+    "codePostal": "89094",
+    "coords": [
+      48.201055,
+      3.3031224
+    ]
+  },
+  {
+    "nom": "Lycée professionnel privé Saint-Jacques",
+    "ville": "Joigny",
+    "codePostal": "89300",
+    "coords": [
+      47.9836971,
+      3.3893583
+    ]
+  },
+  {
+    "nom": "Lycée professionnel Denis Diderot",
+    "ville": "Bavilliers",
+    "codePostal": "90800",
+    "coords": [
+      47.6282355,
+      6.8399645
+    ]
+  },
+  {
+    "nom": "Lycée Georges Brassens",
+    "ville": "Evry-Courcouronnes",
+    "codePostal": "91080",
+    "coords": [
+      48.6276405,
+      2.4189835
+    ]
+  },
+  {
+    "nom": "Lycée polyvalent Parc de Vilgénis",
+    "ville": "Massy",
+    "codePostal": "91300",
+    "coords": [
+      48.7322163,
+      2.2537058
+    ]
+  },
+  {
+    "nom": "Lycée Nikola Tesla",
+    "ville": "Dourdan",
+    "codePostal": "91410",
+    "coords": [
+      48.5330504,
+      1.992338
+    ]
+  },
+  {
+    "nom": "Lycée professionnel Léonard de Vinci",
+    "ville": "Bagneux",
+    "codePostal": "92220",
+    "coords": [
+      48.7988718,
+      2.3074398
+    ]
+  },
+  {
+    "nom": "Lycée professionnel La Tournelle",
+    "ville": "La Garenne-Colombes",
+    "codePostal": "92250",
+    "coords": [
+      48.9068414,
+      2.2377211
+    ]
+  },
+  {
+    "nom": "Lycée professionnel Alfred Costes",
+    "ville": "Bobigny",
+    "codePostal": "93000",
+    "coords": [
+      48.9081888,
+      2.4286149
+    ]
+  },
+  {
+    "nom": "Lycée professionnel Condorcet",
+    "ville": "Montreuil",
+    "codePostal": "93100",
+    "coords": [
+      48.8581937,
+      2.44544
+    ]
+  },
+  {
+    "nom": "Lycée professionnel Denis Papin",
+    "ville": "La Courneuve",
+    "codePostal": "93120",
+    "coords": [
+      48.9288262,
+      2.3871541
+    ]
+  },
+  {
+    "nom": "Lycée polyvalent privé La Salle Saint-Denis",
+    "ville": "Saint-Denis",
+    "codePostal": "93200",
+    "coords": [
+      48.9335545,
+      2.3550471
+    ]
+  },
+  {
+    "nom": "Lycée professionnel Voillaume",
+    "ville": "Aulnay-sous-Bois",
+    "codePostal": "93600",
+    "coords": [
+      48.9440355,
+      2.5101262
+    ]
+  },
+  {
+    "nom": "Lycée polyvalent Louis Armand",
+    "ville": "Nogent-sur-Marne",
+    "codePostal": "94130",
+    "coords": [
+      48.8474383,
+      2.4905995
+    ]
+  },
+  {
+    "nom": "Lycée professionnel Gourdou Leseurre",
+    "ville": "Saint-Maur-des-Fossés",
+    "codePostal": "94210",
+    "coords": [
+      48.8019489,
+      2.5072987
+    ]
+  },
+  {
+    "nom": "Lycée de Cachan",
+    "ville": "Cachan",
+    "codePostal": "94235",
+    "coords": [
+      48.7877909,
+      2.3238843
+    ]
+  },
+  {
+    "nom": "Lycée polyvalent Christophe Colomb",
+    "ville": "Sucy-en-Brie",
+    "codePostal": "94370",
+    "coords": [
+      48.7594768,
+      2.5253624
+    ]
+  },
+  {
+    "nom": "Lycée professionnel Paul Bert",
+    "ville": "Maisons-Alfort",
+    "codePostal": "94700",
+    "coords": [
+      48.8148978,
+      2.4247218
+    ]
+  },
+  {
+    "nom": "Lycée Jean Jaurès",
+    "ville": "Argenteuil",
+    "codePostal": "95100",
+    "coords": [
+      48.9403851,
+      2.2253659
+    ]
+  },
+  {
+    "nom": "Lycée Maryse-Condé",
+    "ville": "Sarcelles",
+    "codePostal": "95200",
+    "coords": [
+      48.9919749,
+      2.3833361
+    ]
+  },
+  {
+    "nom": "Lycée polyvalent Jean Perrin",
+    "ville": "Saint-Ouen-l'Aumône",
+    "codePostal": "95310",
+    "coords": [
+      49.0578323,
+      2.1304264
+    ]
+  },
+  {
+    "nom": "Lycée professionnel Gerty Archimède",
+    "ville": "Morne-à-l'Eau",
+    "codePostal": "97111",
+    "coords": [
+      16.3419349,
+      -61.4539474
+    ]
+  },
+  {
+    "nom": "Lycée professionnel privé de Blanchet",
+    "ville": "Gourbeyre",
+    "codePostal": "97113",
+    "coords": [
+      15.9920559,
+      -61.7158226
+    ]
+  },
+  {
+    "nom": "Lycée professionnel Jean Marie Michotte",
+    "ville": "Cayenne",
+    "codePostal": "97305",
+    "coords": [
+      4.9381037,
+      -52.3193515
+    ]
+  },
+  {
+    "nom": "Lycée professionnel Jean Perrin",
+    "ville": "Saint-André",
+    "codePostal": "97440",
+    "coords": [
+      -20.9633476,
+      55.6544777
+    ]
+  },
+  {
+    "nom": "Lycée professionnel Paul Langevin",
+    "ville": "Saint-Joseph",
+    "codePostal": "97480",
+    "coords": [
+      -21.3827629,
+      55.609971
+    ]
+  },
+  {
+    "nom": "Lycée polyvalent Georges Brassens",
+    "ville": "Saint-Denis",
+    "codePostal": "97493",
+    "coords": [
+      48.9562567,
+      2.5332719
+    ]
+  },
+  {
+    "nom": "Lycée professionnel Amiral Lacaze",
+    "ville": "Saint-Denis",
+    "codePostal": "97493",
+    "coords": [
+      -20.8920353,
+      55.4757759
+    ]
+  },
+  {
+    "nom": "Lycée polyvalent de Dembéni",
+    "ville": "Dembéni",
+    "codePostal": "97660",
+    "coords": [
+      -12.8383151,
+      45.1690604
+    ]
+  },
+  {
+    "nom": "Lycée polyvalent Gustave Eiffel de Kahani",
+    "ville": "Ouangani",
+    "codePostal": "97670",
+    "coords": [
+      -12.8222311,
+      45.1309324
+    ]
+  },
+  {
+    "nom": "Lycée polyvalent du Mont-Doré",
+    "ville": "Mont dore",
+    "codePostal": "98810",
+    "coords": [
+      -22.2333899,
+      166.5303541
+    ]
+  },
+  {
+    "nom": "Lycée polyvalent Joseph-Marie Carriat",
+    "ville": "Bourg-en-Bresse",
+    "codePostal": "01000",
+    "coords": [46.19685, 5.22416]
+  },
+  {
+    "nom": "Lycée polyvalent Arbez-Carme",
+    "ville": "Bellignat",
+    "codePostal": "01100",
+    "coords": [46.250717, 5.6313095]
+  },
+  {
+    "nom": "Lycée polyvalent de la Côtière",
+    "ville": "La Boisse",
+    "codePostal": "01120",
+    "coords": [45.8417, 5.0295]
+  },
+  {
+    "nom": "Lycée professionnel Lamartine",
+    "ville": "Belley",
+    "codePostal": "01302",
+    "coords": [45.7611, 5.6850]
+  },
+  {
+    "nom": "Lycée professionnel Les Eucalyptus",
+    "ville": "Nice",
+    "codePostal": "06206",
+    "coords": [43.67591768848931, 7.221830362412501]
+  },
+  {
+    "nom": "Lycée polyvalent Boissy d'Anglas",
+    "ville": "Annonay",
+    "codePostal": "07104",
+    "coords": [45.2431, 4.6619]
+  },
+  {
+    "nom": "Lycée professionnel Marius Bouvier",
+    "ville": "Tournon-sur-Rhône",
+    "codePostal": "07301",
+    "coords": [45.0628, 4.7489]
+  },
+  {
+    "nom": "Lycée polyvalent de Mirepoix",
+    "ville": "Mirepoix",
+    "codePostal": "09500",
+    "coords": [43.1194, 1.5986]
+  },
+  {
+    "nom": "Lycée Polyvalent Les Lombards",
+    "ville": "Troyes",
+    "codePostal": "10025",
+    "coords": [48.2728411, 4.07423719999997]
+  },
+  {
+    "nom": "Lycée polyvalent Jules Fil",
+    "ville": "Carcassonne",
+    "codePostal": "11890",
+    "coords": [43.2111, 2.3519]
+  },
+  {
+    "nom": "Lycée professionnel privé ORT Daniel Mayer",
+    "ville": "Montreuil",
+    "codePostal": "93100",
+    "coords": [48.864716, 2.448107]
+  },
+  {
+    "nom": "Lycée polyvalent d'application de l'ENNA",
+    "ville": "Saint-Denis",
+    "codePostal": "93200",
+    "coords": [48.938943, 2.354319]
+  },
+  {
+    "nom": "CFA AFORP - site de Tremblay-en-France",
+    "ville": "Tremblay-en-France",
+    "codePostal": "93290",
+    "coords": [48.9793, 2.5865]
+  },
+  {
+    "nom": "Lycée professionnel privé Robert Schuman",
+    "ville": "Dugny",
+    "codePostal": "93440",
+    "coords": [48.948721, 2.414351]
+  },
+  {
+    "nom": "Lycée professionnel Jacques Brel",
+    "ville": "Choisy-le-Roi",
+    "codePostal": "94600",
+    "coords": [48.773520, 2.416020]
+  },
+  {
+    "nom": "Lycée polyvalent Gustave Eiffel",
+    "ville": "Ermont",
+    "codePostal": "95120",
+    "coords": [49.0083, 2.2583]
+  },
+  {
+    "nom": "Lycée polyvalent Raoul Georges Nicolo",
+    "ville": "Basse-Terre",
+    "codePostal": "97100",
+    "coords": [16.247314, -61.525810]
+  },
+  {
+    "nom": "Lycée polyvalent Chevalier de Saint-Georges",
+    "ville": "Les Abymes",
+    "codePostal": "97158",
+    "coords": [16.247314, -61.525810]
+  },
+  {
+    "nom": "Lycée professionnel Louis Delgrès",
+    "ville": "Le Moule",
+    "codePostal": "97160",
+    "coords": [16.3333, -61.2833]
+  },
+  {
+    "nom": "Lycée professionnel Jeanne Catayée",
+    "ville": "Fort-de-France",
+    "codePostal": "97200",
+    "coords": [14.6111, -61.0736]
+  },
+  {
+    "nom": "Lycée polyvalent de l'AMEP",
+    "ville": "Fort-de-France",
+    "codePostal": "97204",
+    "coords": [14.6111, -61.0736]
+  },
+  {
+    "nom": "Lycée polyvalent Paule Pignolet De Fresne Rivière",
+    "ville": "Les Trois-Bassins",
+    "codePostal": "97426",
+    "coords": [-21.1600, 55.2833]
+  },
+  {
+    "nom": "Lycée polyvalent Mémona Hintermann-Afféjee",
+    "ville": "Saint-Denis",
+    "codePostal": "97491",
+    "coords": [-20.8833, 55.4500]
+  },
+  {
+    "nom": "Lycée professionnel Émile Letournel",
+    "ville": "Saint-Pierre",
+    "codePostal": "97500",
+    "coords": [-21.3383, 55.4800]
+  },
+  {
+    "nom": "Lycée polyvalent Roland Garros",
+    "ville": "Le Tampon",
+    "codePostal": "97831",
+    "coords": [-21.2833, 55.4667]
+  },
+  {
+    "nom": "Lycée professionnel Atima de Mahina",
+    "ville": "Mahina",
+    "codePostal": "98709",
+    "coords": [-17.5333, -149.4167]
+  },
+  {
+    "nom": "Lycée professionnel Saint-Joseph Punaauia",
+    "ville": "Punaauia",
+    "codePostal": "98717",
+    "coords": [-17.5333, -149.6167]
+  },
+  {
+    "nom": "Lycée professionnel privé De La Salle",
+    "ville": "Castres",
+    "codePostal": "81100",
+    "coords": [43.6032, 2.2385]
+  },
+  {
+    "nom": "Lycée polyvalent Antoine Bourdelle",
+    "ville": "Montauban",
+    "codePostal": "82003",
+    "coords": [44.0148, 1.3679]
+  },
+  {
+    "nom": "Lycée polyvalent Claude Nougaro",
+    "ville": "Monteils",
+    "codePostal": "82300",
+    "coords": [44.0900, 1.4180]
+  },
+  {
+    "nom": "Lycée professionnel Georges Cisson",
+    "ville": "Toulon",
+    "codePostal": "83100",
+    "coords": [43.1261, 5.9307]
+  },
+  {
+    "nom": "Lycée professionnel Externat Saint-Joseph (La Cordeille)",
+    "ville": "Ollioules",
+    "codePostal": "83190",
+    "coords": [43.1189, 5.8542]
+  },
+  {
+    "nom": "Lycée polyvalent La Salle",
+    "ville": "Avignon",
+    "codePostal": "84008",
+    "coords": [43.9461, 4.8056]
+  },
+  {
+    "nom": "Lycée polyvalent Philippe de Girard",
+    "ville": "Avignon",
+    "codePostal": "84082",
+    "coords": [43.9408, 4.8047]
+  },
+  {
+    "nom": "Lycée professionnel de l'Argensol",
+    "ville": "Orange",
+    "codePostal": "84106",
+    "coords": [44.1319, 4.8274]
+  },
+  {
+    "nom": "Lycée polyvalent Charles de Gaulle",
+    "ville": "Apt",
+    "codePostal": "84405",
+    "coords": [43.8800, 5.4000]
+  },
+  {
+    "nom": "LP Saint-François d'Assise",
+    "ville": "La Roche-sur-Yon",
+    "codePostal": "85000",
+    "coords": [46.6700, -1.4333]
+  },
+  {
+    "nom": "Lycée polyvalent Sainte-Marie du Port",
+    "ville": "Les Sables-d'Olonne",
+    "codePostal": "85109",
+    "coords": [46.5028, -1.7917]
+  },
+  {
+    "nom": "Lycée professionnel privé Saint-Gabriel Saint-Michel",
+    "ville": "Saint-Laurent-sur-Sèvre",
+    "codePostal": "85290",
+    "coords": [46.9861, -0.9778]
+  },
+  {
+    "nom": "Lycée des métiers de l'ingénierie et des créations industrielles Georges Baumont",
+    "ville": "Saint-Dié-des-Vosges",
+    "codePostal": "88100",
+    "coords": [48.2769, 6.9500]
+  },
+  {
+    "nom": "Lycée des Métiers André-Marie Ampère",
+    "ville": "Morsang-sur-Orge",
+    "codePostal": "91390",
+    "coords": [48.6700, 2.3800]
+  },
+  {
+    "nom": "Lycée professionnel industriel Claude Chappe",
+    "ville": "Nanterre",
+    "codePostal": "92000",
+    "coords": [48.8950, 2.2060]
+  },
+  {
+    "nom": "Lycée Isaac Newton",
+    "ville": "Clichy",
+    "codePostal": "92110",
+    "coords": [48.9061, 2.3033]
+  },
+  {
+    "nom": "CFA AFORP - site d'Issy-les-Moulineaux",
+    "ville": "Issy-les-Moulineaux",
+    "codePostal": "92130",
+    "coords": [48.8194, 2.2778]
+  },
+  {
+    "nom": "Lycée polyvalent La Salle - Saint-Nicolas (Lycée des métiers)",
+    "ville": "Issy-les-Moulineaux",
+    "codePostal": "92130",
+    "coords": [48.8194, 2.2778]
+  },
+  {
+    "nom": "Lycée de l'Observatoire",
+    "ville": "Meudon",
+    "codePostal": "92360",
+    "coords": [48.8028, 2.2219]
+  },
+  {
+    "nom": "Lycée polyvalent Robert Garnier",
+    "ville": "La Ferté-Bernard",
+    "codePostal": "72405",
+    "coords": [48.0771, 0.6422]
+  },
+  {
+    "nom": "Lycée polyvalent Saint-Joseph - La Salle",
+    "ville": "Pruillé-le-Chétif",
+    "codePostal": "72700",
+    "coords": [48.0683, 0.2311]
+  },
+  {
+    "nom": "Lycée polyvalent Monge",
+    "ville": "Chambéry",
+    "codePostal": "73000",
+    "coords": [45.5646, 5.9177]
+  },
+  {
+    "nom": "Lycée professionnel privé Lasalle Sainte-Anne - Savoisienne",
+    "ville": "La Motte-Servolex",
+    "codePostal": "73290",
+    "coords": [45.6234, 5.9301]
+  },
+  {
+    "nom": "Lycée polyvalent Paul Héroult",
+    "ville": "Saint-Jean-de-Maurienne",
+    "codePostal": "73302",
+    "coords": [45.3203, 6.3797]
+  },
+  {
+    "nom": "Lycée polyvalent René Perrin",
+    "ville": "Ugine",
+    "codePostal": "73400",
+    "coords": [45.7653, 6.4351]
+  },
+  {
+    "nom": "Lycée professionnel privé Saint-Vincent de Paul",
+    "ville": "Collonges-sous-Salève",
+    "codePostal": "74165",
+    "coords": [46.1427, 6.2071]
+  },
+  {
+    "nom": "Lycée polyvalent Louis Lachenal",
+    "ville": "Annecy",
+    "codePostal": "74372",
+    "coords": [45.9072, 6.1294]
+  },
+  {
+    "nom": "LP Gustave Ferrié",
+    "ville": "Paris",
+    "codePostal": "75010",
+    "coords": [48.8765, 2.3641]
+  },
+  {
+    "nom": "LP Galilée",
+    "ville": "Paris",
+    "codePostal": "75013",
+    "coords": [48.8326, 2.3665]
+  },
+  {
+    "nom": "Lycée polyvalent privé Le Rebours",
+    "ville": "Paris",
+    "codePostal": "75013",
+    "coords": [48.8309, 2.3544]
+  },
+  {
+    "nom": "Lycée polyvalent Louis Armand",
+    "ville": "Paris",
+    "codePostal": "75015",
+    "coords": [48.8431, 2.2953]
+  },
+  {
+    "nom": "Lycée professionnel Jules Siegfried",
+    "ville": "Le Havre",
+    "codePostal": "76054",
+    "coords": [49.4874, 0.1203]
+  },
+  {
+    "nom": "Lycée privé Jeanne d'Arc - Site Coty",
+    "ville": "Le Havre",
+    "codePostal": "76620",
+    "coords": [49.4895, 0.1197]
+  },
+  {
+    "nom": "Lycée polyvalent Saint-Aspais",
+    "ville": "Melun",
+    "codePostal": "77007",
+    "coords": [48.5413, 2.6625]
+  },
+  {
+    "nom": "CFA UTEC Marne-la-Vallée informatique, technologies numériques, fibre optique et cybersécurité",
+    "ville": "Emerainville",
+    "codePostal": "77184",
+    "coords": [48.8354, 2.6378]
+  },
+  {
+    "nom": "Lycée polyvalent Simone Veil",
+    "ville": "Noisiel",
+    "codePostal": "77186",
+    "coords": [48.8567, 2.6293]
+  },
+  {
+    "nom": "Lycée professionnel Jacques Prévert",
+    "ville": "Combs-la-Ville",
+    "codePostal": "77385",
+    "coords": [48.6732, 2.5760]
+  },
+  {
+    "nom": "Lycée polyvalent de la Mare Carrée",
+    "ville": "Moissy-Cramayel",
+    "codePostal": "77550",
+    "coords": [48.5978, 2.5915]
+  },
+  {
+    "nom": "Lycée La Fayette",
+    "ville": "Héricy",
+    "codePostal": "77850",
+    "coords": [48.4302, 2.7393]
+  },
+  {
+    "nom": "Lycée Jacques Vaucanson",
+    "ville": "Les Mureaux",
+    "codePostal": "78130",
+    "coords": [48.9942, 1.9330]
+  },
+  {
+    "nom": "Lycée polyvalent Jules Verne",
+    "ville": "Sartrouville",
+    "codePostal": "78500",
+    "coords": [48.9392, 2.1807]
+  },
+  {
+    "nom": "CFA AFORP - site de Mantes-la-Ville",
+    "ville": "Mantes-la-Ville",
+    "codePostal": "78711",
+    "coords": [48.9915, 1.7220]
+  },
+  {
+    "nom": "Lycée professionnel Édouard Branly",
+    "ville": "Amiens",
+    "codePostal": "80000",
+    "coords": [49.8941, 2.2925]
+  },
+  {
+    "nom": "Lycée professionnel Saint-Riquier",
+    "ville": "Amiens",
+    "codePostal": "80094",
+    "coords": [49.8918, 2.2965]
+  },
+  {
+    "nom": "Lycée professionnel Boucher de Perthes",
+    "ville": "Abbeville",
+    "codePostal": "80120",
+    "coords": [50.1063, 1.8334]
+  },
+  {
+    "nom": "Lycée polyvalent privé Saint-Joseph",
+    "ville": "Hasparren",
+    "codePostal": "64240",
+    "coords": [43.3586, -1.3794]
+  },
+  {
+    "nom": "Lycée professionnel Guynemer",
+    "ville": "Oloron-Sainte-Marie",
+    "codePostal": "64404",
+    "coords": [43.1894, -0.6045]
+  },
+  {
+    "nom": "Lycée professionnel privé Saint-Pierre Pradeau La Sède",
+    "ville": "Tarbes",
+    "codePostal": "65000",
+    "coords": [43.2374, -0.0782]
+  },
+  {
+    "nom": "Lycée professionnel Pierre Mendès France",
+    "ville": "Vic-en-Bigorre",
+    "codePostal": "65501",
+    "coords": [43.2044, -0.3034]
+  },
+  {
+    "nom": "Lycée privé polyvalent Sainte-Louise de Marillac",
+    "ville": "Perpignan",
+    "codePostal": "66000",
+    "coords": [42.6945, 2.8955]
+  },
+  {
+    "nom": "Lycée polyvalent Pablo Picasso",
+    "ville": "Perpignan",
+    "codePostal": "66028",
+    "coords": [42.7047, 2.9263]
+  },
+  {
+    "nom": "Lycée professionnel Haute Bruche",
+    "ville": "Schirmeck",
+    "codePostal": "67131",
+    "coords": [48.4639, 7.3586]
+  },
+  {
+    "nom": "Lycée polyvalent Marcel Rudloff",
+    "ville": "Strasbourg",
+    "codePostal": "67200",
+    "coords": [48.5539, 7.7481]
+  },
+  {
+    "nom": "Lycée professionnel Philippe Charles Goulden",
+    "ville": "Bischwiller",
+    "codePostal": "67241",
+    "coords": [48.7882, 7.7595]
+  },
+  {
+    "nom": "Lycée professionnel privé Charles de Foucauld",
+    "ville": "Schiltigheim",
+    "codePostal": "67306",
+    "coords": [48.6136, 7.7445]
+  },
+  {
+    "nom": "Lycée polyvalent Gutenberg",
+    "ville": "Illkirch-Graffenstaden",
+    "codePostal": "67404",
+    "coords": [48.5192, 7.7419]
+  },
+  {
+    "nom": "Lycée professionnel privé Saint-Jean",
+    "ville": "Colmar",
+    "codePostal": "68000",
+    "coords": [48.0782, 7.3583]
+  },
+  {
+    "nom": "Lycée polyvalent Louise Weiss",
+    "ville": "Sainte-Marie-aux-Mines",
+    "codePostal": "68160",
+    "coords": [48.2639, 7.2683]
+  },
+  {
+    "nom": "Lycée professionnel de la SEPR",
+    "ville": "Lyon",
+    "codePostal": "69003",
+    "coords": [45.7597, 4.8575]
+  },
+  {
+    "nom": "Lycée professionnel Saint-Charles",
+    "ville": "Rillieux-la-Pape",
+    "codePostal": "69140",
+    "coords": [45.8181, 4.9765]
+  },
+  {
+    "nom": "Lycée polyvalent Édouard Branly",
+    "ville": "Lyon",
+    "codePostal": "69245",
+    "coords": [45.7482, 4.8541]
+  },
+  {
+    "nom": "Lycée professionnel La Mache",
+    "ville": "Lyon",
+    "codePostal": "69373",
+    "coords": [45.7415, 4.8761]
+  },
+  {
+    "nom": "Lycée professionnel ORT",
+    "ville": "Lyon",
+    "codePostal": "69373",
+    "coords": [45.7415, 4.8761]
+  },
+  {
+    "nom": "CFA de la SEPR",
+    "ville": "Lyon",
+    "codePostal": "69424",
+    "coords": [45.7597, 4.8575]
+  },
+  {
+    "nom": "Lycée polyvalent Louis Armand",
+    "ville": "Villefranche-sur-Saône",
+    "codePostal": "69651",
+    "coords": [45.9908, 4.7461]
+  },
+  {
+    "nom": "Lycée polyvalent Aragon-Picasso",
+    "ville": "Givors",
+    "codePostal": "69700",
+    "coords": [45.5572, 4.7497]
+  },
+  {
+    "nom": "Lycée polyvalent privé Frédéric Ozanam",
+    "ville": "Mâcon",
+    "codePostal": "71000",
+    "coords": [46.3088, 4.8320]
+  },
+  {
+    "nom": "Lycée polyvalent Niépce Balleure",
+    "ville": "Chalon-sur-Saône",
+    "codePostal": "71321",
+    "coords": [46.7801, 4.8553]
+  },
+  {
+    "nom": "Lycée polyvalent Saint-Charles-Sainte-Croix",
+    "ville": "Le Mans",
+    "codePostal": "72000",
+    "coords": [47.4722, 0.2026]
+  },
+  {
+    "nom": "CFA de l'industrie de Champagne-Ardenne",
+    "ville": "Reims",
+    "codePostal": "51685",
+    "coords": [49.2594, 4.0214]
+  },
+  {
+    "nom": "Lycée polyvalent Saint-Jean-Baptiste de La Salle",
+    "ville": "Reims",
+    "codePostal": "51723",
+    "coords": [49.251062, 4.036937]
+  },
+  {
+    "nom": "Lycée professionnel Immaculée Conception",
+    "ville": "Laval",
+    "codePostal": "53000",
+    "coords": [48.073866, -0.767352]
+  },
+  {
+    "nom": "Lycée professionnel Pierre de Coubertin",
+    "ville": "Nancy",
+    "codePostal": "54000",
+    "coords": [48.690199, 6.175883]
+  },
+  {
+    "nom": "Lycée des métiers de la gestion d'énergie et des process Jean Prouvé",
+    "ville": "Nancy",
+    "codePostal": "54000",
+    "coords": [48.690199, 6.175883]
+  },
+  {
+    "nom": "Lycée polyvalent Jean Zay",
+    "ville": "Jarny",
+    "codePostal": "54800",
+    "coords": [49.15759, 5.87581]
+  },
+  {
+    "nom": "Lycée professionnel Émile Zola",
+    "ville": "Hennebont",
+    "codePostal": "56704",
+    "coords": [47.803209, -3.270360]
+  },
+  {
+    "nom": "Lycée des métiers des sciences et des techniques La Briquerie",
+    "ville": "Thionville",
+    "codePostal": "57100",
+    "coords": [49.3706, 6.1628]
+  },
+  {
+    "nom": "Lycée professionnel privé Sainte Marie",
+    "ville": "Lons-le-Saunier",
+    "codePostal": "39004",
+    "coords": [46.6669, 5.5585]
+  },
+  {
+    "nom": "Lycée polyvalent privé Pasteur Mont Roland",
+    "ville": "Dole",
+    "codePostal": "39100",
+    "coords": [47.0914, 5.4712]
+  },
+  {
+    "nom": "Lycée polyvalent Antoine de Saint-Exupéry",
+    "ville": "Parentis-en-Born",
+    "codePostal": "40161",
+    "coords": [44.2294, -1.1458]
+  },
+  {
+    "nom": "Lycée professionnel privé Saint-Joseph",
+    "ville": "Gabarret",
+    "codePostal": "40310",
+    "coords": [43.8819, -0.1583]
+  },
+  {
+    "nom": "Campus la Providence",
+    "ville": "Blois",
+    "codePostal": "41002",
+    "coords": [47.5861, 1.3350]
+  },
+  {
+    "nom": "Lycée professionnel privé le Marais Sainte-Thérèse",
+    "ville": "Saint-Étienne",
+    "codePostal": "42000",
+    "coords": [45.4397, 4.3872]
+  },
+  {
+    "nom": "Lycée professionnel Hippolyte Carnot",
+    "ville": "Roanne",
+    "codePostal": "42328",
+    "coords": [46.0352, 4.0735]
+  },
+  {
+    "nom": "Lycée professionnel privé La Chartreuse - Paradis",
+    "ville": "Brives-Charensac",
+    "codePostal": "43700",
+    "coords": [45.0333, 3.8875]
+  },
+  {
+    "nom": "Lycée professionnel privé Saint-Félix - La Salle",
+    "ville": "Nantes",
+    "codePostal": "44001",
+    "coords": [47.2184, -1.5536]
+  },
+  {
+    "nom": "CFA Orléans Métropole",
+    "ville": "Orléans",
+    "codePostal": "45000",
+    "coords": [47.9020, 1.9090]
+  },
+  {
+    "nom": "Lycée polyvalent privé Saint-Paul - Bourdon Blanc",
+    "ville": "Orléans",
+    "codePostal": "45000",
+    "coords": [47.9020, 1.9090]
+  },
+  {
+    "nom": "Lycée polyvalent Château Blanc",
+    "ville": "Châlette-sur-Loing",
+    "codePostal": "45120",
+    "coords": [48.0633, 2.7461]
+  },
+  {
+    "nom": "Lycée polyvalent Maurice Genevoix",
+    "ville": "Ingré",
+    "codePostal": "45147",
+    "coords": [47.9075, 1.8592]
+  },
+  {
+    "nom": "Lycée professionnel Marguerite Audoux",
+    "ville": "Gien",
+    "codePostal": "45500",
+    "coords": [47.6739, 2.6142]
+  },
+  {
+    "nom": "Lycée professionnel J-F Champollion",
+    "ville": "Figeac",
+    "codePostal": "46106",
+    "coords": [44.6097, 2.0333]
+  },
+  {
+    "nom": "Lycée polyvalent Chevrollier",
+    "ville": "Angers",
+    "codePostal": "49035",
+    "coords": [47.4731, -0.5520]
+  },
+  {
+    "nom": "Lycée polyvalent de l'Hyrôme",
+    "ville": "Chemillé-en-Anjou",
+    "codePostal": "49120",
+    "coords": [47.2119, -0.5286]
+  },
+  {
+    "nom": "Lycée polyvalent Saint-Aubin La Salle",
+    "ville": "Verrières-en-Anjou",
+    "codePostal": "49481",
+    "coords": [47.4819, -0.5525]
+  },
+  {
+    "nom": "Lycée polyvalent Sully",
+    "ville": "Nogent-le-Rotrou",
+    "codePostal": "28404",
+    "coords": [48.3131, 0.8294]
+  },
+  {
+    "nom": "Lycée professionnel le Likès",
+    "ville": "Quimper",
+    "codePostal": "29196",
+    "coords": [48.0003, -4.1033]
+  },
+  {
+    "nom": "Lycée polyvalent Vauban",
+    "ville": "Brest",
+    "codePostal": "29225",
+    "coords": [48.3893, -4.4861]
+  },
+  {
+    "nom": "Lycée polyvalent La Croix Rouge La Salle",
+    "ville": "Brest",
+    "codePostal": "29229",
+    "coords": [48.3902, -4.4830]
+  },
+  {
+    "nom": "Lycée privé polyvalent de la Salle",
+    "ville": "Alès",
+    "codePostal": "30106",
+    "coords": [44.1234, 4.0833]
+  },
+  {
+    "nom": "Lycée polyvalent Renée Bonnet",
+    "ville": "Toulouse",
+    "codePostal": "31432",
+    "coords": [43.6028, 1.4382]
+  },
+  {
+    "nom": "Pôle Formation UIMM Occitanie site de Toulouse - Beauzelle",
+    "ville": "Beauzelle",
+    "codePostal": "31700",
+    "coords": [43.6489, 1.3821]
+  },
+  {
+    "nom": "Lycée polyvalent Eugène Montel",
+    "ville": "Colomiers",
+    "codePostal": "31770",
+    "coords": [43.6200, 1.3380]
+  },
+  {
+    "nom": "Lycée professionnel privé Saint-Genès La Salle",
+    "ville": "Bordeaux",
+    "codePostal": "33081",
+    "coords": [44.8576, -0.5974]
+  },
+  {
+    "nom": "Lycée professionnel Jacques Brel",
+    "ville": "Lormont",
+    "codePostal": "33305",
+    "coords": [44.8692, -0.5350]
+  },
+  {
+    "nom": "Lycée polyvalent Alfred Kastler",
+    "ville": "Talence",
+    "codePostal": "33402",
+    "coords": [44.8075, -0.6022]
+  },
+  {
+    "nom": "Lycée polyvalent Irène et Frédéric Joliot-Curie",
+    "ville": "Sète",
+    "codePostal": "34200",
+    "coords": [43.4017, 3.6625]
+  },
+  {
+    "nom": "Lycée polyvalent privé Sacré-Coeur",
+    "ville": "Béziers",
+    "codePostal": "34500",
+    "coords": [43.3440, 3.2184]
+  },
+  {
+    "nom": "Lycée polyvalent Jean Moulin",
+    "ville": "Béziers",
+    "codePostal": "34521",
+    "coords": [43.3419, 3.2181]
+  },
+  {
+    "nom": "Pôle Formation UIMM Occitanie site de Montpellier - Baillargues",
+    "ville": "Baillargues",
+    "codePostal": "34748",
+    "coords": [43.6462, 3.8381]
+  },
+  {
+    "nom": "Lycée privé polyvalent St Joseph Pierre Rouge",
+    "ville": "Montferrier-sur-Lez",
+    "codePostal": "34980",
+    "coords": [43.6450, 3.8792]
+  },
+  {
+    "nom": "Lycée professionnel et SGT Coëtlogon",
+    "ville": "Rennes",
+    "codePostal": "35083",
+    "coords": [48.1135, -1.6750]
+  },
+  {
+    "nom": "CMA Formation Rennes - Bruz",
+    "ville": "Bruz",
+    "codePostal": "35172",
+    "coords": [48.0622, -1.7000]
+  },
+  {
+    "nom": "Lycée professionnel Institution Saint-Malo la Providence",
+    "ville": "Saint-Malo",
+    "codePostal": "35401",
+    "coords": [48.6496, -2.0256]
+  },
+  {
+    "nom": "Lycée professionnel et technologique Jeanne d'Arc",
+    "ville": "Vitré",
+    "codePostal": "35500",
+    "coords": [48.1167, -1.2167]
+  },
+  {
+    "nom": "Lycée professionnel Beaumont",
+    "ville": "Redon",
+    "codePostal": "35605",
+    "coords": [47.6542, -2.0800]
+  },
+  {
+    "nom": "Lycée professionnel privé Institution Notre Dame La Riche",
+    "ville": "Tours",
+    "codePostal": "37058",
+    "coords": [47.3860, 0.6900]
+  },
+  {
+    "nom": "Lycée polyvalent Thérèse Planiol",
+    "ville": "Loches",
+    "codePostal": "37600",
+    "coords": [47.1521, 1.1671]
+  },
+  {
+    "nom": "Lycée polyvalent privé Saint-Marc",
+    "ville": "Nivolas-Vermelle",
+    "codePostal": "38312",
+    "coords": [45.4633, 5.2128]
+  },
+  {
+    "nom": "Lycée professionnel privé Saint-Joseph",
+    "ville": "Rodez",
+    "codePostal": "12000",
+    "coords": [44.3500, 2.5750]
+  },
+  {
+    "nom": "CFA de la Bourse du travail",
+    "ville": "Marseille",
+    "codePostal": "13001",
+    "coords": [43.2965, 5.3698]
+  },
+  {
+    "nom": "Antenne rue Duverger du CFA de la Bourse du travail",
+    "ville": "Marseille",
+    "codePostal": "13002",
+    "coords": [43.3000, 5.3800]
+  },
+  {
+    "nom": "Lycée professionnel École libre de métiers",
+    "ville": "Marseille",
+    "codePostal": "13006",
+    "coords": [43.2811, 5.3840]
+  },
+  {
+    "nom": "Lycée polyvalent Don Bosco",
+    "ville": "Marseille",
+    "codePostal": "13006",
+    "coords": [43.2833, 5.3900]
+  },
+  {
+    "nom": "Lycée régional César Baldaccini (anciennement lycée du Rempart)",
+    "ville": "Marseille",
+    "codePostal": "13007",
+    "coords": [43.2930, 5.3880]
+  },
+  {
+    "nom": "Lycée polyvalent Vauvenargues",
+    "ville": "Aix-en-Provence",
+    "codePostal": "13100",
+    "coords": [43.5297, 5.4474]
+  },
+  {
+    "nom": "Lycée polyvalent modèle électronique",
+    "ville": "Marseille",
+    "codePostal": "13396",
+    "coords": [43.2950, 5.3800]
+  },
+  {
+    "nom": "Lycée polyvalent Marie-Madeleine Fourcade - site Jules Ferry",
+    "ville": "Gardanne",
+    "codePostal": "13541",
+    "coords": [43.4150, 5.5290]
+  },
+  {
+    "nom": "Lycée polyvalent Saint-Éloi",
+    "ville": "Aix-en-Provence",
+    "codePostal": "13626",
+    "coords": [43.5300, 5.4500]
+  },
+  {
+    "nom": "Lycée polyvalent Jean Lurçat",
+    "ville": "Martigues",
+    "codePostal": "13693",
+    "coords": [43.3983, 5.0547]
+  },
+  {
+    "nom": "Lycée polyvalent Monnet-Mermoz",
+    "ville": "Aurillac",
+    "codePostal": "15005",
+    "coords": [44.9290, 2.4440]
+  },
+  {
+    "nom": "Lycée professionnel Charles Augustin Coulomb",
+    "ville": "Angoulême",
+    "codePostal": "16000",
+    "coords": [45.6480, 0.1570]
+  },
+  {
+    "nom": "École militaire préparatoire technique",
+    "ville": "Bourges",
+    "codePostal": "18016",
+    "coords": [47.0810, 2.3980]
+  },
+  {
+    "nom": "Lycée professionnel Georges Cabanis",
+    "ville": "Brive-la-Gaillarde",
+    "codePostal": "19311",
+    "coords": [45.1600, 1.5330]
+  },
+  {
+    "nom": "Lycée professionnel Jules Antonini Lycée des métiers de la maintenance, du bâtiment et des transports",
+    "ville": "Ajaccio",
+    "codePostal": "20700",
+    "coords": [41.9180, 8.7380]
+  },
+  {
+    "nom": "Lycée polyvalent Saint-Joseph La Salle",
+    "ville": "Dijon",
+    "codePostal": "21010",
+    "coords": [47.3167, 5.0167]
+  },
+  {
+    "nom": "Lycée polyvalent Sacré-Coeur La Salle",
+    "ville": "Saint-Brieuc",
+    "codePostal": "22003",
+    "coords": [48.5167, -2.7667]
+  },
+  {
+    "nom": "Lycée professionnel la Fontaine des Eaux",
+    "ville": "Dinan",
+    "codePostal": "22102",
+    "coords": [48.4550, -2.0480]
+  },
+  {
+    "nom": "Lycée professionnel Joséphine Baker",
+    "ville": "Sarlat-la-Canéda",
+    "codePostal": "24206",
+    "coords": [44.8850, 1.2150]
+  },
+  {
+    "nom": "Lycée professionnel privé Saint-Joseph",
+    "ville": "Besançon",
+    "codePostal": "25000",
+    "coords": [47.2379, 6.0241]
+  },
+  {
+    "nom": "Lycée polyvalent Jules Haag",
+    "ville": "Besançon",
+    "codePostal": "25041",
+    "coords": [47.2380, 6.0230]
+  },
+  {
+    "nom": "Lycée polyvalent privé Saint-Louis",
+    "ville": "Crest",
+    "codePostal": "26402",
+    "coords": [44.7410, 5.0540]
+  },
+  {
+    "nom": "Lycée professionnel Louis-Modeste Leroy",
+    "ville": "Evreux",
+    "codePostal": "27016",
+    "coords": [49.0240, 1.1500]
+  },
+  {
+    "nom": "Lycée polyvalent Joséphine Baker",
+    "ville": "Hanches",
+    "codePostal": "28130",
+    "coords": [48.5600, 1.4710]
+  }
+]
