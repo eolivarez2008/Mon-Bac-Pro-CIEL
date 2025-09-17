@@ -1,0 +1,96 @@
+/* video */
+
+#introFormation video {
+  position: absolute; 
+  top:0; 
+  left:0; 
+  width:100%; 
+  height:100%; 
+  border-radius:12px;
+}
+
+/* Carte */
+#map {
+  height: 500px;
+  border-radius: 12px;
+}
+
+/* Tableau */
+#lyceesTable, .custom-table {
+  width: 100%;
+  border-collapse: collapse;
+  table-layout: fixed; 
+  color: var(--muted);
+  background: var(--panel);
+  border-radius: 0.5rem;
+  overflow: hidden;
+}
+
+/* En-têtes */
+#lyceesTable thead, .custom-table thead {
+  background: var(--glass);
+  color: var(--accent);
+}
+
+#lyceesTable th, #lyceesTable td,
+.custom-table th, .custom-table td {
+  padding: 8px 12px;
+  text-align: left;
+  border-bottom: 1px solid var(--glass-border);
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+/* Largeurs fixes des colonnes */
+#lyceesTable th:nth-child(1),
+#lyceesTable td:nth-child(1) {
+  width: 50%;
+}
+
+#lyceesTable th:nth-child(2),
+#lyceesTable td:nth-child(2) {
+  width: 25%;
+}
+
+#lyceesTable th:nth-child(3),
+#lyceesTable td:nth-child(3) {
+  width: 25%;
+}
+
+/* Lignes paires */
+#lyceesTable tbody tr:nth-child(even),
+.custom-table tbody tr:nth-child(even) {
+  background: var(--glass);
+}
+
+/* Tri */
+.sort-arrow {
+  display: inline-block;
+  width: 1em;            
+  margin-left: 6px;    
+  padding: 2px;           
+  cursor: pointer;         
+  color: var(--muted);
+  user-select: none;
+  text-align: center;
+  transition: color 0.2s;
+}
+
+.sort-arrow:hover {
+  color: var(--accent);
+}
+
+.sort-arrow.active {
+  color: var(--accent-2);
+}
+
+/* Pagination */
+.pagination, #paginationControls {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 10px;
+  color: var(--muted);
+}

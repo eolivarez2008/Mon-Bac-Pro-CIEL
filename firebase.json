@@ -1,0 +1,37 @@
+{
+  "hosting": {
+    "public": "public",
+    "cleanUrls": true,
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ],
+    "rewrites": [
+      {
+        "source": "/",
+        "destination": "/index.html"
+      },
+      {
+        "source": "/debouches",
+        "destination": "/pages/debouches.html"
+      },
+      {
+        "source": "/formation",
+        "destination": "/pages/formation.html"
+      },
+      {
+        "source": "/stages",
+        "destination": "/pages/stages.html"
+      },
+      {
+        "source": "/temoignages",
+        "destination": "/pages/temoignages.html"
+      },
+      {
+        "source": "**",
+        "destination": "/404.html"
+      }
+    ]
+  }
+}

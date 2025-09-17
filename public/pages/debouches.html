@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Bac Pro CIEL — Débouchés</title>
+  <link rel="shortcut icon" href="./assets/images/favicon.png" type="image/png">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/@mdi/font@7.4.47/css/materialdesignicons.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./styles/styles.css">
+  <link rel="stylesheet" href="./styles/debouches.css">
+</head>
+<body>
+  <!-- Navbar -->
+  <div id="navbar"></div>
+
+  <!-- MAIN -->
+  <main class="site-wrap">
+    <section id="debouches" class="py-5">
+      <div class="container">
+        <h2 class="section-title text-center mb-3">Débouchés & Poursuites d'études</h2>
+        <p class="text-center mb-4" style="max-width:700px;margin:auto;">
+          Le Bac Pro <strong>CIEL</strong> ouvre de nombreuses portes : métiers du numérique, des réseaux intelligents et de l’industrie connectée, 
+          mais aussi une large gamme de <strong>BTS et spécialisations</strong>. 
+        </p>
+
+        <div class="row g-4 justify-content-center">
+          <!-- Carte Débouchés -->
+          <div class="col-md-6 col-12">
+            <div class="flip-card">
+              <div class="flip-card-inner">
+                
+                <!-- Face avant -->
+                <div class="flip-card-front glass d-flex flex-column align-items-center justify-content-center text-center p-4">
+                  <span class="mdi mdi-account-hard-hat" style="font-size:90px;color:var(--accent);"></span>
+                  <h5>Débouchés professionnels</h5>
+                  <i class="mdi mdi-rotate-3d-variant flip-hint-icon"></i>
+                </div>
+                
+                <!-- Face arrière -->
+                <div class="flip-card-back glass p-4">
+                  <h5 class="mb-3">Exemples de métiers</h5>
+                  <div class="row">
+                    <div class="col-6">
+                      <ul class="list-unstyled">
+                        <li>• Dépanneur électroménager</li>
+                        <li>• Installateur télécoms</li>
+                        <li>• Monteur-câbleur</li>
+                        <li>• Fibre optique</li>
+                      </ul>
+                    </div>
+                    <div class="col-6">
+                      <ul class="list-unstyled">
+                        <li>• Technicien maintenance IT</li>
+                        <li>• Opérateur CN</li>
+                        <li>• Officier marinier</li>
+                        <li>• Nivoculteur</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          </div>
+
+          <!-- Carte Études -->
+          <div class="col-md-6 col-12">
+            <div class="flip-card" style="height:400px;">
+              <div class="flip-card-inner">
+                
+                <!-- Face avant -->
+                <div class="flip-card-front glass d-flex flex-column align-items-center justify-content-center text-center p-4">
+                  <span class="mdi mdi-school" style="font-size:90px;color:var(--accent);"></span>
+                  <h5>Poursuites d'études</h5>
+                  <i class="mdi mdi-rotate-3d-variant flip-hint-icon"></i>
+                </div>
+                
+                <!-- Face arrière -->
+                <div class="flip-card-back glass p-4">
+                  <h5 class="mb-3">Exemples de BTS</h5>
+                  <ul class="list-unstyled">
+                    <li>• BTS Cybersécurité (options A & B)</li>
+                    <li>• BTS Électrotechnique</li>
+                    <li>• BTS Fluides & Domotique</li>
+                    <li>• BTS Maintenance des systèmes</li>
+                    <li>• BTS Audiovisuel (son / exploitation)</li>
+                    <li>• BTS SIO (infrastructure & réseaux)</li>
+                  </ul>
+                </div>
+
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Bandeau chiffres clés -->
+        <div class="row text-center mt-2 g-3">
+          <div class="col-md-4">
+            <div class="glass py-4 h-100 d-flex flex-column justify-content-center">
+              <h3 style="color:var(--accent-2)">90%</h3>
+              <p class="mb-0">des diplômés trouvent un emploi <br> en moins de 6 mois</p>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="glass py-4 h-100 d-flex flex-column justify-content-center">
+              <h3 style="color:var(--accent-2)">40%</h3>
+              <p class="mb-0">poursuivent en <strong>BTS</strong></p>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="glass py-4 h-100 d-flex flex-column justify-content-center">
+              <h3 style="color:var(--accent-2)">+10</h3>
+              <p class="mb-0">métiers accessibles dès la sortie</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>  
+  <div id="footer"></div>
+  <div id="wifiModalContainer"></div>
+  <script src="./scripts/login-internet.js"></script>
+  <script src="./scripts/components-loader.js"></script>
+</body>
+</html>

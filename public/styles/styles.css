@@ -1,0 +1,232 @@
+:root {
+  --bg:#0e141b;          
+  --panel:#0f1820;       
+  --muted:#9aa6b2;     
+  --accent:#66d9ff;    
+  --accent-2:#4ec5d9;    
+  --glass: rgba(255,255,255,0.04);
+  --glass-border: rgba(255,255,255,0.06);
+}
+
+html,body {
+  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+  color:#e6eef6;
+  font-family: 'Poppins', system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+  margin:0;
+  padding-top: 30px;
+}
+
+a { text-decoration:none; }
+h1,h2,h3 { color: #eaf8ff; margin-bottom:.4rem; }
+p { color: #d0d8df; }
+
+/* -------------------------
+    Page layout
+------------------------- */
+
+.site-wrap {
+  max-width:1200px; 
+  margin:0 auto; 
+  padding:10px 20px 40px; 
+  border-bottom:1px solid rgba(255,255,255,0.02);
+}
+
+/* -------------------------
+    Navbar
+------------------------- */
+
+.navbar {
+  backdrop-filter: blur(10px);      
+  padding: 25px 0;
+  width: 100%;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.nav-link {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #cfeaf6;
+  margin: 0 0.8rem;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+.nav-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 0%;
+  height: 2px;
+  background:var(--accent);
+  transition: width 0.3s ease;
+}
+
+.nav-link:hover {
+  color:var(--accent);
+}
+
+.nav-link:hover::after {
+  width: 100%;
+}
+
+/* -------------------------
+    Sections & glass cards
+------------------------- */
+
+.section-title { 
+  color:var(--accent); 
+  font-weight:700; 
+  margin-bottom:1rem; 
+}
+
+.glass {
+  background: var(--glass);
+  border: 1px solid var(--glass-border);
+  border-radius:14px;
+  padding:18px;
+  box-shadow: 0 6px 20px rgba(3,10,18,0.55);
+}
+
+.cards-grid {
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+  gap:18px;
+  margin-top:18px;
+}
+
+.btn-accent {
+  background: linear-gradient(90deg, var(--accent), var(--accent-2));
+  color:#061018; 
+  border:none; 
+  padding:11px 20px;
+  border-radius:999px; 
+  font-weight:600;
+  box-shadow: 0 6px 22px rgba(78,197,217,0.12), 0 1px 0 rgba(255,255,255,0.02) inset;
+  cursor:pointer;
+}
+
+.btn-accent:hover {
+  box-shadow: 0 8px 30px rgba(78,197,217,0.25), 0 1px 0 rgba(255,255,255,0.02) inset;
+  transform: translateY(-2px);
+  transition: all 0.3s ease;
+}
+
+/* -------------------------
+    Responsive tweaks
+------------------------- */
+
+@media (max-width:992px){
+  .hero { 
+  flex-direction:column-reverse; 
+  align-items:center; gap:24px; 
+  }
+
+  .hero-card { 
+    width:100%; 
+    max-width:520px; 
+  }
+
+  .site-wrap{ 
+    padding-top:100px; 
+  }
+
+  .contact-grid{ 
+    grid-template-columns:1fr; 
+  }
+}
+
+/* -------------------------
+    Classes issues des inline styles
+------------------------- */
+.container-1200 {
+  max-width:1200px;
+}
+
+.hero-padding {
+  padding:28px;
+}
+
+.hero-kpi-box {
+  flex:1; 
+  display:flex; 
+  gap:12px; 
+  align-items:center; 
+  padding:12px;
+}
+
+.hero-kpi-icon {
+  width:46px; 
+  height:46px; 
+  border-radius:10px;
+  background:linear-gradient(180deg, rgba(255,255,255,0.02), transparent);  
+  display:flex; 
+  align-items:center; 
+  justify-content:center;
+}
+
+.hero-location { 
+  margin-top:12px; 
+  gap:10px; 
+  flex-direction:column;
+}
+
+.btn-site-link { 
+  margin-top:8px; 
+  display:inline-block;
+}
+
+.section-flex { 
+  display:flex; 
+  gap:20px;
+}
+
+.video-wrapper {
+  aspect-ratio:16/9;
+  background:#07111a;
+  border-radius:10px;
+  overflow:hidden;
+}
+
+/* -------------------------
+    Modal internet
+------------------------- */
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 9999;
+  inset: 0;
+  background: rgba(0,0,0,0.6);
+  align-items: center;
+  justify-content: center;
+}
+
+.modal-content {
+  background: var(--panel);
+  padding: 2rem;
+  border-radius: 1rem;
+  max-width: 400px;
+  width: 90%;
+  text-align: center;
+  position: relative;
+}
+
+.close {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 1.5rem;
+  color: var(--muted);
+  cursor: pointer;
+}
+
+.close:hover {
+  color: var(--accent);
+}
+
+body.modal-open {
+  overflow: hidden; 
+}
