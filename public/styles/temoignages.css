@@ -142,20 +142,6 @@
   margin-top: 1rem;
 }
 
-.btn-accent {
-  background-color: var(--accent);
-  color: white;
-  border: none;
-  padding: 0.5rem 1.5rem;
-  border-radius: 0.5rem;
-  cursor: pointer;
-  transition: background-color 0.3s;
-}
-
-.btn-accent:hover {
-  background-color: #0056b3;
-}
-
 /* Responsive */
 @media (max-width: 768px) {
   .form-columns {
