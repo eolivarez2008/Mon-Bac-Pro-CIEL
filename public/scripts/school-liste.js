@@ -1,35 +1,41 @@
 // Initialisation de la carte centrée sur la France
 const map = L.map('map').setView([46.603354, 1.888334], 6);
 
+// Ajout des tuiles OpenStreetMap sur la carte
 L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
   attribution: '© OpenStreetMap'
 }).addTo(map);
 
+// Variables pour gérer les données, la pagination et le tri
 let lyceesData = [];
 let currentPage = 1;
 const rowsPerPage = 20;
 let currentSort = { column: null, order: 'asc' };
 
+// Récupération des éléments du DOM liés au tableau et à la pagination
 const tableBody = document.getElementById("lyceesTableBody");
 const pageInfo = document.getElementById("pageInfo");
 const prevBtn = document.getElementById("prevPage");
 const nextBtn = document.getElementById("nextPage");
 
-// Toggle carte <-> tableau
+// Éléments pour basculer entre carte et tableau
 const toggleBtn = document.getElementById("toggleView");
 const toggleIcon = document.getElementById("toggleIcon");
 const toggleText = document.getElementById("toggleText");
 const mapDiv = document.getElementById("map");
 const tableDiv = document.getElementById("tableContainer");
 
+// Bouton pour alterner entre affichage carte et tableau
 toggleBtn.addEventListener("click", () => {
   if (mapDiv.classList.contains("d-none")) {
+    // Affiche la carte, cache le tableau
     mapDiv.classList.remove("d-none");
     tableDiv.classList.add("d-none");
     toggleIcon.textContent = "📋";
     toggleText.textContent = "Liste";
-    map.invalidateSize();
+    map.invalidateSize(); // Actualise la taille de la carte
   } else {
+    // Affiche le tableau, cache la carte
     mapDiv.classList.add("d-none");
     tableDiv.classList.remove("d-none");
     toggleIcon.textContent = "📍";
@@ -37,16 +43,16 @@ toggleBtn.addEventListener("click", () => {
   }
 });
 
-// Charger le fichier JSON
+// Chargement du fichier JSON contenant les lycées
 fetch('./data/lycees.json')
   .then(r => r.json())
   .then(data => {
-    // Tri par codePostal par défaut
+    // Tri initial des lycées par code postal
     lyceesData = data.sort((a, b) => {
       return a.codePostal.localeCompare(b.codePostal, undefined, {numeric: true});
     });
 
-    // Ajouter tous les lycées sur la carte
+    // Ajout d'un marqueur sur la carte pour chaque lycée
     lyceesData.forEach(lycee => {
       if (lycee.coords && lycee.coords.length === 2) {
         L.marker(lycee.coords).addTo(map)
@@ -54,17 +60,17 @@ fetch('./data/lycees.json')
       }
     });
 
+    // Affichage initial du tableau
     renderTable();
   })
   .catch(error => console.error("Erreur de chargement du JSON :", error));
 
-
-// Fonction d’affichage du tableau
+// Fonction pour afficher le tableau des lycées
 function renderTable() {
-  tableBody.innerHTML = "";
-  let sorted = [...lyceesData];
+  tableBody.innerHTML = ""; // Vide le tableau avant de le remplir
+  let sorted = [...lyceesData]; // Copie des données pour tri
 
-  // Tri si demandé
+  // Tri si une colonne est sélectionnée
   if (currentSort.column) {
     sorted.sort((a, b) => {
       let valA = (a[currentSort.column] || "").toString().toLowerCase();
@@ -75,11 +81,12 @@ function renderTable() {
     });
   }
 
-  // Pagination
+  // Pagination : calcul des lignes à afficher
   const start = (currentPage - 1) * rowsPerPage;
   const end = start + rowsPerPage;
   const pageData = sorted.slice(start, end);
 
+  // Ajout des lignes au tableau
   pageData.forEach(lycee => {
     const row = document.createElement("tr");
     row.innerHTML = `
@@ -90,14 +97,14 @@ function renderTable() {
     tableBody.appendChild(row);
   });
 
+  // Mise à jour des infos de pagination
   const totalPages = Math.ceil(sorted.length / rowsPerPage);
   pageInfo.textContent = `Page ${currentPage} / ${totalPages}`;
-
   prevBtn.disabled = currentPage === 1;
   nextBtn.disabled = currentPage === totalPages;
 }
 
-// Pagination
+// Gestion des boutons de pagination
 prevBtn.addEventListener("click", () => {
   if (currentPage > 1) {
     currentPage--;
@@ -112,11 +119,12 @@ nextBtn.addEventListener("click", () => {
   }
 });
 
-// Tri uniquement sur la flèche
+// Tri des colonnes au clic sur la flèche correspondante
 document.querySelectorAll(".sort-arrow").forEach(span => {
   span.addEventListener("click", () => {
     const column = span.dataset.column;
 
+    // Inverse l'ordre si même colonne, sinon tri asc sur nouvelle colonne
     if (currentSort.column === column) {
       currentSort.order = currentSort.order === 'asc' ? 'desc' : 'asc';
     } else {
@@ -124,14 +132,17 @@ document.querySelectorAll(".sort-arrow").forEach(span => {
       currentSort.order = 'asc';
     }
 
+    // Réinitialise toutes les flèches
     document.querySelectorAll(".sort-arrow").forEach(s => {
       s.textContent = "↕";
       s.classList.remove("active");
     });
 
+    // Met à jour la flèche de la colonne triée
     span.textContent = currentSort.order === 'asc' ? "↑" : "↓";
     span.classList.add("active");
 
+    // Rafraîchit le tableau
     renderTable();
   });
 });
