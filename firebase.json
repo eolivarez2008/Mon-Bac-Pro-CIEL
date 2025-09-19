@@ -21,6 +21,10 @@
         "destination": "/pages/formation.html"
       },
       {
+        "source": "/projets",
+        "destination": "/pages/projets.html"
+      },
+      {
         "source": "/stages",
         "destination": "/pages/stages.html"
       },

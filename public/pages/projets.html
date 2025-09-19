@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Projets — Bac Pro CIEL</title>
+  <link rel="shortcut icon" href="./assets/images/favicon.png" type="image/png">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/@mdi/font@7.4.47/css/materialdesignicons.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./styles/styles.css">
+  <link rel="stylesheet" href="./styles/projets.css">
+</head>
+<body>
+  <div id="navbar"></div>
+  <main class="site-wrap mt-5">
+    <h1 class="section-title text-center mb-3">Projets des élèves</h1>
+    <p class="text-center">Découvrez quelques réalisations des élèves du Bac Pro CIEL : sites web, applications, systèmes électroniques et réseaux.</p>
+
+    <div class="projects-container">
+      <!-- Projet 1 -->
+      <div class="project-card glass">
+        <img src="../assets/images/vr-lycee.png" alt="Projet 1" class="project-img">
+        <div class="project-content">
+          <div class="project-title">Visite virtuelle du lycée</div>
+          <div class="project-info">Année : 2025 — Réalisé par : Chef des Travaux</div>
+          <p class="project-desc">Réalisation d’une visite virtuelle immersive du lycée avec modélisation 3D des salles et espaces communs. Les utilisateurs peuvent naviguer librement et découvrir toutes les installations et les différents espaces du lycée.</p>
+          <a href="https://vr.lycee-cormontaigne-metz.fr/index.html" class="btn-projets" target="_blank"><span class="mdi mdi-virtual-reality"></span> Explorer en VR</a>
+        </div>
+      </div>
+
+      <!-- Projet 2 -->
+      <div class="project-card glass">
+        <img src="../assets/images/projet-ad.webp" alt="Projet 2" class="project-img">
+        <div class="project-content">
+          <div class="project-title">Création d'un Active Directory</div>
+          <div class="project-info">Année : 2025 — Réalisé par : Terminale CIEL</div>
+          <p class="project-desc">Configuration d’un Active Directory complet pour gérer les ordinateurs fixes et portables de la salle 312. Ce projet permet la centralisation des utilisateurs, la gestion des droits et le déploiement des ressources sur tous les postes.</p>
+          <a href="../assets/documents/Déploiement-pc-portable.pdf" target="_blank" class="btn-projets"><span class="mdi mdi-file-pdf-box"></span> Voir le projet</a>
+        </div>
+      </div>
+    </div>
+  </main>
+  <div id="footer"></div>
+  <div id="wifiModalContainer"></div>
+  <script src="./scripts/login-internet.js"></script>
+  <script src="./scripts/components-loader.js"></script>
+</body>
+</html>
