@@ -1,16 +1,26 @@
-// Charger la navbar
-fetch('./components/navbar.html')
-  .then(r => r.text())
-  .then(html => {
-    document.getElementById('navbar').innerHTML = html;
-
-    // Ré-initialiser le JS de la navbar pour le mobile
-    const mobileMenuBtn = document.getElementById('mobileMenuBtn');
-    const mobileMenu = document.getElementById('mobileMenu');
-    mobileMenuBtn?.addEventListener('click', () => {
-      mobileMenu.style.display = mobileMenu.style.display === 'block' ? 'none' : 'block';
+// Fonction pour charger la navbar (version unique, responsive via CSS)
+function loadNavbar() {
+  fetch('./components/navbar.html')
+    .then(r => r.text())
+    .then(html => {
+  document.getElementById('navbar').innerHTML = html;
+  // Appel des fonctions d'initialisation si elles existent
+  if (window.initMobileNavbarScrollBehavior) window.initMobileNavbarScrollBehavior();
+  if (window.initNavbarScrollBehavior) window.initNavbarScrollBehavior();
+  if (window.initHamburger) window.initHamburger();
+  if (window.initMobileNavbar) window.initMobileNavbar();
+  if (window.setActiveNavbarLink) window.setActiveNavbarLink();
     });
-  });
+}
+
+// Charger la navbar au chargement
+loadNavbar();
+
+// Recharger la navbar si on resize (pour recharger le composant si besoin)
+window.addEventListener('resize', () => {
+  clearTimeout(window._navbarResizeTimeout);
+  window._navbarResizeTimeout = setTimeout(loadNavbar, 200);
+});
 
 // Charger le footer
 fetch('./components/footer.html')

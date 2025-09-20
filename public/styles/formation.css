@@ -85,3 +85,13 @@
   margin-top: 10px;
   color: var(--muted);
 }
+
+.container-video {
+  position: relative; 
+  padding-top: 56.25%;
+}
+
+span {
+  font-size:40px; 
+  color:var(--accent);
+}
