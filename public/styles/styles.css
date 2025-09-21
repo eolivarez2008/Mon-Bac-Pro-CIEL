@@ -29,8 +29,7 @@ p { color: #d0d8df; }
 .site-wrap {
   max-width:1200px; 
   margin:0 auto; 
-  padding:10px 20px 40px; 
-  border-bottom:1px solid rgba(255,255,255,0.02);
+  padding:10px 20px 30px; 
 }
 
 /* -------------------------
@@ -256,4 +255,32 @@ body.modal-open {
   font-size: 1.5rem;
   color: var(--muted);
   margin-bottom: 2rem;
+}
+
+/* -------------------------
+    Footer
+------------------------- */
+.footer {
+  background: var(--glass); /* effet verre fumé */
+  border-top: 1px solid var(--glass-border);
+  font-size: 0.9rem;
+  padding-bottom: 20px;
+}
+
+.footer h4 {
+  color: var(--accent);
+  font-weight: 600;
+}
+
+.text-accent {
+  color: var(--accent) !important;
+}
+
+.footer a {
+  color: #e6eef6;
+  transition: color 0.2s ease;
+}
+
+.footer a:hover {
+  color: var(--accent-2) !important;
 }
