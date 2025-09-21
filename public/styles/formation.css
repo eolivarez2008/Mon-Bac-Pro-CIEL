@@ -1,5 +1,3 @@
-/* video */
-
 #introFormation video {
   position: absolute; 
   top:0; 
@@ -9,13 +7,11 @@
   border-radius:12px;
 }
 
-/* Carte */
 #map {
   height: 500px;
   border-radius: 12px;
 }
 
-/* Tableau */
 #lyceesTable, .custom-table {
   width: 100%;
   border-collapse: collapse;
@@ -26,7 +22,6 @@
   overflow: hidden;
 }
 
-/* En-têtes */
 #lyceesTable thead, .custom-table thead {
   background: var(--glass);
   color: var(--accent);
@@ -42,7 +37,6 @@
   white-space: nowrap;
 }
 
-/* Largeurs fixes des colonnes */
 #lyceesTable th:nth-child(1),
 #lyceesTable td:nth-child(1) {
   width: 50%;
@@ -58,13 +52,11 @@
   width: 25%;
 }
 
-/* Lignes paires */
 #lyceesTable tbody tr:nth-child(even),
 .custom-table tbody tr:nth-child(even) {
   background: var(--glass);
 }
 
-/* Tri */
 .sort-arrow {
   display: inline-block;
   width: 1em;            
@@ -85,7 +77,6 @@
   color: var(--accent-2);
 }
 
-/* Pagination */
 .pagination, #paginationControls {
   display: flex;
   justify-content: center;
