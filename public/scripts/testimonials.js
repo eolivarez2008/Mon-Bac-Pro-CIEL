@@ -1,29 +1,9 @@
-import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js";
-import { 
-  getFirestore, 
-  collection, 
-  addDoc, 
-  serverTimestamp, 
-  query, 
-  where, 
-  getDocs 
-} from "https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore.js";
-
 document.addEventListener("DOMContentLoaded", () => {
 
-  // ================== FIREBASE CONFIG ==================
-  const firebaseConfig = { 
-    apiKey: "AIzaSyD7wnWLPU-BlYJ99NrsUKPzZdyRcMIM-i0", 
-    authDomain: "mon-bac-pro-ciel.firebaseapp.com", 
-    projectId: "mon-bac-pro-ciel", 
-    storageBucket: "mon-bac-pro-ciel.firebasestorage.app", 
-    messagingSenderId: "391462981046", 
-    appId: "1:391462981046:web:813ec72bb4b448584f8517" 
-  };
-
-  // Initialiser Firebase
-  const app = initializeApp(firebaseConfig);
-  const db = getFirestore(app);
+  // ================== CONFIGURATION API ==================
+  // En local : http://localhost:3000
+  // En prod : https://monbacprociel.eolivarez.site/api
+  const API_URL = "https://monbacprociel.eolivarez.site/api";
 
   // ================== VARIABLES DOM ==================
   const openBtn = document.getElementById("openFormBtn");
@@ -33,9 +13,14 @@ document.addEventListener("DOMContentLoaded", () => {
   const charCount = document.getElementById("charCount");
   const confirmationMessage = document.createElement('div');
 
+  const testimonialMessage = document.getElementById("testimonial-message");
+  const testimonialMeta = document.getElementById("testimonial-meta");
+  const prevBtn = document.getElementById("prev-btn");
+  const nextBtn = document.getElementById("next-btn");
+
   // ================== TIMEOUT / LOCALSTORAGE ==================
-  const TIMEOUT_HOURS = 24; // Durée du cooldown en heures
-  const STORAGE_KEY = "lastTestimonialTime"; // clé pour localStorage
+  const TIMEOUT_HOURS = 24; 
+  const STORAGE_KEY = "lastTestimonialTime"; 
 
   // ================== TOOLTIP ==================
   const tooltip = document.createElement("div");
@@ -46,17 +31,14 @@ document.addEventListener("DOMContentLoaded", () => {
   let tooltipInterval;
 
   // ================== FONCTIONS TIMEOUT ==================
-
-  // Vérifie si l'utilisateur est toujours en cooldown
   function checkTimeout() {
     const lastTime = localStorage.getItem(STORAGE_KEY);
-    if (!lastTime) return false; // jamais envoyé
+    if (!lastTime) return false;
     const now = new Date().getTime();
     const elapsed = now - parseInt(lastTime, 10);
     return elapsed < TIMEOUT_HOURS * 60 * 60 * 1000;
   }
 
-  // Calcule le temps restant en ms
   function getRemainingTime() {
     const lastTime = localStorage.getItem(STORAGE_KEY);
     if (!lastTime) return 0;
@@ -66,7 +48,6 @@ document.addEventListener("DOMContentLoaded", () => {
     return remaining > 0 ? remaining : 0;
   }
 
-  // Met à jour l'état du bouton (disabled / enabled)
   function updateButtonState() {
     if (checkTimeout()) {
       openBtn.disabled = true;
@@ -80,8 +61,6 @@ document.addEventListener("DOMContentLoaded", () => {
   // ================== TOOLTIP DYNAMIQUE ==================
   function updateTooltip() {
     const remainingMs = getRemainingTime();
-
-    // Si le cooldown est terminé, réactive le bouton et masque le tooltip
     if (remainingMs <= 0) {
       openBtn.disabled = false;
       openBtn.classList.remove("btn-disabled");
@@ -90,25 +69,19 @@ document.addEventListener("DOMContentLoaded", () => {
       return;
     }
 
-    // Calcul des heures, minutes et secondes restantes
     const hours = Math.floor(remainingMs / (1000 * 60 * 60));
     const minutes = Math.floor((remainingMs % (1000 * 60 * 60)) / (1000 * 60));
     const seconds = Math.floor((remainingMs % (1000 * 60)) / 1000);
 
     tooltip.textContent = `Réessayez dans ${hours}h ${minutes}m ${seconds}s.`;
 
-    // Calcul position centre du bouton
     const rectBtn = openBtn.getBoundingClientRect();
     const centerX = rectBtn.left + rectBtn.width / 2;
     const centerY = rectBtn.top + rectBtn.height / 2;
-
-    const verticalOffset = 45;
-    tooltip.style.top = (centerY - verticalOffset) + "px";
+    tooltip.style.top = (centerY - 45) + "px";
     tooltip.style.left = centerX + "px";
-    tooltip.style.display = "block";
   }
 
-  // Afficher le tooltip au survol
   openBtn.addEventListener("mouseenter", () => {
     if (openBtn.disabled) {
       updateTooltip();
@@ -117,13 +90,12 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 
-  // Masquer le tooltip quand la souris quitte le bouton
   openBtn.addEventListener("mouseleave", () => {
     tooltip.style.display = "none";
     clearInterval(tooltipInterval);
   });
 
-  updateButtonState(); // état initial du bouton au chargement
+  updateButtonState();
 
   // ================== POPUP ==================
   const openPopup = () => {
@@ -141,12 +113,12 @@ document.addEventListener("DOMContentLoaded", () => {
   closeBtn.addEventListener("click", closePopup);
   popup.addEventListener("click", e => { if(e.target === popup) closePopup(); });
 
-  // ================== COMPTEUR DE CARACTERES ==================
+  // ================== COMPTEUR ==================
   messageInput.addEventListener("input", () => {
     charCount.textContent = `${messageInput.value.length} / 200`;
   });
 
-  // ================== FORMULAIRE ==================
+  // ================== FORMULAIRE (ENVOI API) ==================
   const form = document.getElementById("testimonialForm");
   form.addEventListener("submit", async (e) => {
     e.preventDefault();
@@ -158,20 +130,15 @@ document.addEventListener("DOMContentLoaded", () => {
     if(!firstname || !lastname || !classe || !message) return;
 
     try {
-      // Envoi du témoignage vers Firebase
-      await addDoc(collection(db, "temoignages"), {
-        firstname,
-        lastname,
-        classe,
-        message,
-        approved: false,
-        date: serverTimestamp()
+      const response = await fetch(`${API_URL}/temoignage`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ firstname, lastname, classe, message })
       });
 
-      // Stocker l'heure d'envoi pour le cooldown
-      localStorage.setItem(STORAGE_KEY, new Date().getTime());
+      if (!response.ok) throw new Error("Erreur lors de l'envoi");
 
-      // Afficher confirmation
+      localStorage.setItem(STORAGE_KEY, new Date().getTime());
       showConfirmation();
       form.reset();
       charCount.textContent = "0 / 200";
@@ -179,7 +146,7 @@ document.addEventListener("DOMContentLoaded", () => {
       updateButtonState();
     } catch(err) {
       console.error(err);
-      showError("Erreur lors de l'envoi. Veuillez réessayer.");
+      showError("Erreur de connexion au serveur.");
     }
   });
 
@@ -189,58 +156,41 @@ document.addEventListener("DOMContentLoaded", () => {
       <div class="confirmation-alert">
         <span class="mdi mdi-check-circle"></span>
         Merci ! Votre témoignage a été envoyé pour validation.
-      </div>
-    `;
-    if (!document.querySelector('.confirmation-alert')) {
-      const mainContent = document.querySelector('.site-wrap');
-      mainContent.insertBefore(confirmationMessage, mainContent.firstChild);
-    }
-    setTimeout(() => {
-      if (confirmationMessage.parentNode) confirmationMessage.parentNode.removeChild(confirmationMessage);
-    }, 5000);
+      </div>`;
+    const mainContent = document.querySelector('.site-wrap');
+    mainContent.insertBefore(confirmationMessage, mainContent.firstChild);
+    setTimeout(() => { if (confirmationMessage.parentNode) confirmationMessage.parentNode.removeChild(confirmationMessage); }, 5000);
   }
 
-  function showError(message) {
-    confirmationMessage.innerHTML = `
-      <div class="error-alert">
-        <span class="mdi mdi-alert-circle"></span>
-        ${message}
-      </div>
-    `;
-    if (!document.querySelector('.error-alert')) {
-      const mainContent = document.querySelector('.site-wrap');
-      mainContent.insertBefore(confirmationMessage, mainContent.firstChild);
-    }
-    setTimeout(() => {
-      if (confirmationMessage.parentNode) confirmationMessage.parentNode.removeChild(confirmationMessage);
-    }, 5000);
+  function showError(msg) {
+    confirmationMessage.innerHTML = `<div class="error-alert"><span class="mdi mdi-alert-circle"></span> ${msg}</div>`;
+    const mainContent = document.querySelector('.site-wrap');
+    mainContent.insertBefore(confirmationMessage, mainContent.firstChild);
+    setTimeout(() => { if (confirmationMessage.parentNode) confirmationMessage.parentNode.removeChild(confirmationMessage); }, 5000);
   }
 
-  // ================== TESTIMONIALS ==================
-  const testimonialMessage = document.getElementById("testimonial-message");
-  const testimonialMeta = document.getElementById("testimonial-meta");
-  const prevBtn = document.getElementById("prev-btn");
-  const nextBtn = document.getElementById("next-btn");
-
+  // ================== CARROUSEL (LECTURE API) ==================
   let testimonials = [];
   let currentIndex = 0;
   let autoSlideInterval;
 
-  // Charger les témoignages approuvés
   async function loadTestimonials() {
-    const q = query(collection(db, "temoignages"), where("approved", "==", true));
-    const querySnapshot = await getDocs(q);
-    testimonials = querySnapshot.docs.map(doc => doc.data());
+    try {
+      const response = await fetch(`${API_URL}/messages`);
+      testimonials = await response.json();
 
-    if (testimonials.length > 0) {
-      showTestimonial(currentIndex);
-      startAutoSlide();
-    } else {
-      testimonialMessage.textContent = "Aucun témoignage pour le moment.";
+      if (testimonials.length > 0) {
+        showTestimonial(currentIndex);
+        startAutoSlide();
+      } else {
+        testimonialMessage.textContent = "Aucun témoignage pour le moment.";
+      }
+    } catch (err) {
+      console.error(err);
+      testimonialMessage.textContent = "Erreur de chargement des témoignages.";
     }
   }
 
-  // Afficher un témoignage avec effet fade
   function showTestimonial(index) {
     testimonialMessage.classList.add("fade-out");
     testimonialMeta.classList.add("fade-out");
@@ -262,25 +212,27 @@ document.addEventListener("DOMContentLoaded", () => {
     }, 300);
   }
 
-  // Navigation manuelle
   prevBtn.addEventListener("click", () => {
+    if (testimonials.length === 0) return;
     currentIndex = (currentIndex - 1 + testimonials.length) % testimonials.length;
     showTestimonial(currentIndex);
     resetAutoSlide();
   });
 
   nextBtn.addEventListener("click", () => {
+    if (testimonials.length === 0) return;
     currentIndex = (currentIndex + 1) % testimonials.length;
     showTestimonial(currentIndex);
     resetAutoSlide();
   });
 
-  // Auto-slide toutes les 5 secondes
   function startAutoSlide() {
-    autoSlideInterval = setInterval(() => {
-      currentIndex = (currentIndex + 1) % testimonials.length;
-      showTestimonial(currentIndex);
-    }, 10000);
+    if (testimonials.length > 1) {
+        autoSlideInterval = setInterval(() => {
+            currentIndex = (currentIndex + 1) % testimonials.length;
+            showTestimonial(currentIndex);
+        }, 10000);
+    }
   }
 
   function resetAutoSlide() {
