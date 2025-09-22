@@ -22,19 +22,11 @@ a { text-decoration:none; }
 h1,h2,h3 { color: #eaf8ff; margin-bottom:.4rem; }
 p { color: #d0d8df; }
 
-/* -------------------------
-    Page layout
-------------------------- */
-
 .site-wrap {
   max-width:1200px; 
   margin:0 auto; 
   padding:10px 20px 30px; 
 }
-
-/* -------------------------
-    Sections & glass cards
-------------------------- */
 
 .section-title { 
   color:var(--accent); 
@@ -74,9 +66,6 @@ p { color: #d0d8df; }
   transform: translateY(-2px);
   transition: all 0.3s ease;
 }
-/* -------------------------
-    Classes issues des inline styles
-------------------------- */
 
 .container-1200 {
   max-width:1200px;
@@ -127,10 +116,6 @@ p { color: #d0d8df; }
   overflow:hidden;
 }
 
-/* -------------------------
-    Modal internet
-------------------------- */
-
 .modal {
   display: none;
   position: fixed;
@@ -171,10 +156,6 @@ body.modal-open {
   overflow: hidden; 
 }
 
-/* -------------------------
-    Page 404
-------------------------- */
-
 .error-container {
   min-height: 70vh;
   display: flex;
@@ -197,10 +178,6 @@ body.modal-open {
   color: var(--muted);
   margin-bottom: 2rem;
 }
-
-/* -------------------------
-    Footer
-------------------------- */
 
 .footer {
   background: var(--glass);

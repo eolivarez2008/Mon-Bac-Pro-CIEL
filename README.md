@@ -2,14 +2,19 @@
 
 Bienvenue sur le dépôt **Mon Bac Pro CIEL** créé par Emilien.
 
-Ce site est **hébergé avec Firebase Hosting** :  
-[https://mon-bac-pro-ciel.web.app](https://mon-bac-pro-ciel.web.app)
+Ce site est déployé sur **Firebase Hosting** :  
+https://mon-bac-pro-ciel.web.app 
+
+Un nom de domaine personnalisé a été configuré :  
+https://monbacprociel.eolivarez.site
 
 ---
 
 ## Présentation
 
-**Mon Bac Pro CIEL** est un site web francophone dédié à la présentation du bac professionnel Cybersécurité, Informatique, Electronique et réseaux; développé dans le cadre d’un projet scolaire démarré en **2025**. Il est pour ordinateur et ne possède pas de version mobile pour l'instant.
+**Mon Bac Pro CIEL** est un site web francophone dédié à la présentation du bac professionnel Cybersécurité, Informatique, Electronique et réseaux; développé dans le cadre d'un projet scolaire réalisé en **2025**. 
+
+**Important** : Ce site est **optimisé pour les ordinateurs de bureau uniquement**. L'accès depuis un téléphone ou une tablette n'est pas possible — un message s'affichera vous invitant à utiliser un PC.
 
 Ce site propose une immersion complète dans le thème du **Bac Pro CIEL**, à travers différentes rubriques :
 
@@ -19,8 +24,6 @@ Ce site propose une immersion complète dans le thème du **Bac Pro CIEL**, à t
 - **Stages** : des informations et conseils pour les stages
 - **Témoignages** : affichage et formulaire de témoignages
 
-Ce site évolue au fil du temps, avec de nouvelles fonctionnalités, une meilleure structure, et un design plus soigné.
-
 ---
 
 ## Technologies utilisées
@@ -28,7 +31,7 @@ Ce site évolue au fil du temps, avec de nouvelles fonctionnalités, une meilleu
 - HTML5 / CSS3
 - JavaScript
 - Bootstrap
-- Firebase pour le déploiement
+- Firebase pour le déploiement et les témoignages
 
 ---
 

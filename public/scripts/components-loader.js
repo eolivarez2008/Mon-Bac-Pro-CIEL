@@ -1,4 +1,4 @@
-// Fonction pour charger la navbar (version unique, responsive via CSS)
+// Fonction pour charger la navbar
 function loadNavbar() {
   fetch('./components/navbar.html')
     .then(r => r.text())

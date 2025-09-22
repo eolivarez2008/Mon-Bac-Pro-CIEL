@@ -11,7 +11,7 @@ import {
 
 document.addEventListener("DOMContentLoaded", () => {
 
-  // ================== CONFIG FIREBASE ==================
+  // ================== FIREBASE CONFIG ==================
   const firebaseConfig = { 
     apiKey: "AIzaSyD7wnWLPU-BlYJ99NrsUKPzZdyRcMIM-i0", 
     authDomain: "mon-bac-pro-ciel.firebaseapp.com", 
@@ -21,8 +21,9 @@ document.addEventListener("DOMContentLoaded", () => {
     appId: "1:391462981046:web:813ec72bb4b448584f8517" 
   };
 
-  const app = initializeApp(firebaseConfig); // Initialiser Firebase
-  const db = getFirestore(app); // Initialiser Firestore
+  // Initialiser Firebase
+  const app = initializeApp(firebaseConfig);
+  const db = getFirestore(app);
 
   // ================== VARIABLES DOM ==================
   const openBtn = document.getElementById("openFormBtn");
@@ -37,12 +38,12 @@ document.addEventListener("DOMContentLoaded", () => {
   const STORAGE_KEY = "lastTestimonialTime"; // clé pour localStorage
 
   // ================== TOOLTIP ==================
-  const tooltip = document.createElement("div"); // créer l'élément tooltip
+  const tooltip = document.createElement("div");
   tooltip.className = "tooltip-alert";
   tooltip.style.display = "none";
   document.body.appendChild(tooltip);
 
-  let tooltipInterval; // intervalle pour mettre à jour le tooltip en temps réel
+  let tooltipInterval;
 
   // ================== FONCTIONS TIMEOUT ==================
 
@@ -52,7 +53,7 @@ document.addEventListener("DOMContentLoaded", () => {
     if (!lastTime) return false; // jamais envoyé
     const now = new Date().getTime();
     const elapsed = now - parseInt(lastTime, 10);
-    return elapsed < TIMEOUT_HOURS * 60 * 60 * 1000; // true si moins de 24h
+    return elapsed < TIMEOUT_HOURS * 60 * 60 * 1000;
   }
 
   // Calcule le temps restant en ms
@@ -101,17 +102,17 @@ document.addEventListener("DOMContentLoaded", () => {
     const centerX = rectBtn.left + rectBtn.width / 2;
     const centerY = rectBtn.top + rectBtn.height / 2;
 
-    const verticalOffset = 45; // distance du centre du bouton vers le haut
-    tooltip.style.top = (centerY - verticalOffset) + "px"; // monte le tooltip
-    tooltip.style.left = centerX + "px"; // reste centré horizontalement
+    const verticalOffset = 45;
+    tooltip.style.top = (centerY - verticalOffset) + "px";
+    tooltip.style.left = centerX + "px";
     tooltip.style.display = "block";
   }
 
   // Afficher le tooltip au survol
   openBtn.addEventListener("mouseenter", () => {
     if (openBtn.disabled) {
-      updateTooltip(); // affichage immédiat
-      tooltipInterval = setInterval(updateTooltip, 1000); // mise à jour toutes les secondes
+      updateTooltip();
+      tooltipInterval = setInterval(updateTooltip, 1000);
       tooltip.style.display = "block";
     }
   });
@@ -126,7 +127,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // ================== POPUP ==================
   const openPopup = () => {
-    if (checkTimeout()) return; // ne pas ouvrir si cooldown
+    if (checkTimeout()) return;
     popup.style.display = "flex";
     document.body.classList.add('body-no-scroll');
   };
@@ -154,7 +155,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const classe    = document.getElementById("classe").value.trim();
     const message   = document.getElementById("message").value.trim();
 
-    if(!firstname || !lastname || !classe || !message) return; // validation simple
+    if(!firstname || !lastname || !classe || !message) return;
 
     try {
       // Envoi du témoignage vers Firebase
@@ -175,7 +176,7 @@ document.addEventListener("DOMContentLoaded", () => {
       form.reset();
       charCount.textContent = "0 / 200";
       closePopup();
-      updateButtonState(); // désactiver le bouton
+      updateButtonState();
     } catch(err) {
       console.error(err);
       showError("Erreur lors de l'envoi. Veuillez réessayer.");
@@ -287,6 +288,5 @@ document.addEventListener("DOMContentLoaded", () => {
     startAutoSlide();
   }
 
-  loadTestimonials(); // lancement au chargement
-
+  loadTestimonials();
 });

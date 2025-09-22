@@ -1,18 +1,18 @@
-// Check if user is on mobile/tablet and show warning
+// Regarder si l'utilisateur est sur un appareil desktop (largeur >= 1200px).
 function checkViewport() {
   const width = window.innerWidth;
 
-  // Show warning if width < 1200px (tablets and phones)
+  // Si largeur inférieure à 1200px, afficher le message d'avertissement
   if (width < 1200) {
     showDesktopOnlyWarning();
   }
 }
 
 function showDesktopOnlyWarning() {
-  // Avoid creating multiple overlays
+  // Si l'overlay existe déjà, ne rien faire
   if (document.getElementById('desktop-only-overlay')) return;
 
-  // Build overlay element
+  // Créer l'overlay
   const overlay = document.createElement('div');
   overlay.id = 'desktop-only-overlay';
   overlay.style.cssText = [
@@ -51,32 +51,32 @@ function showDesktopOnlyWarning() {
 
   overlay.appendChild(warningBox);
 
-  // Replace entire body content so nothing behind is visible
+  // Remplacer le contenu de body par l'overlay
   try {
-    // Clear body and append overlay only
+    // Nettoyer le body avant d'ajouter l'overlay
     document.body.innerHTML = '';
     document.body.appendChild(overlay);
-    // Prevent scrolling
+    // Bloquer le scroll en overflow hidden
     document.documentElement.style.overflow = 'hidden';
     document.body.style.overflow = 'hidden';
   } catch (e) {
-    // Fallback: append overlay normally
+    // En cas d'erreur, ajouter l'overlay sans vider le body
     document.body.appendChild(overlay);
     document.documentElement.style.overflow = 'hidden';
     document.body.style.overflow = 'hidden';
   }
 }
 
-// Check on load
+// Regarder au chargement de la page
 document.addEventListener('DOMContentLoaded', checkViewport);
 
-// Check on resize
+// Regarder au redimensionnement de la fenêtre
 window.addEventListener('resize', checkViewport);
 
-// If user resizes to desktop width, reload the page to restore content
+// Si on redimensionne au-dessus de 992px, recharger la page pour restaurer le DOM original
 window.addEventListener('resize', function() {
   if (window.innerWidth >= 993 && document.getElementById('desktop-only-overlay')) {
-    // reload to restore original DOM
+    // Recharger la page
     window.location.reload();
   }
 });
