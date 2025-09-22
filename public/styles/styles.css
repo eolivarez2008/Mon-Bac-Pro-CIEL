@@ -69,31 +69,11 @@ p { color: #d0d8df; }
 }
 
 .btn-accent:hover {
+
   box-shadow: 0 8px 30px rgba(78,197,217,0.25), 0 1px 0 rgba(255,255,255,0.02) inset;
   transform: translateY(-2px);
   transition: all 0.3s ease;
 }
-
-/* -------------------------
-    Responsive tweaks
-------------------------- */
-
-@media (max-width:992px){
-  .hero { 
-  flex-direction:column-reverse; 
-  align-items:center; gap:24px; 
-  }
-
-  .hero-card { 
-    width:100%; 
-    max-width:520px; 
-  }
-
-  .site-wrap{ 
-    padding-top:100px; 
-  }
-}
-
 /* -------------------------
     Classes issues des inline styles
 ------------------------- */
