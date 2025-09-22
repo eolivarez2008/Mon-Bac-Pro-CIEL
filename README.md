@@ -1,6 +1,6 @@
-# Naruto Chronicles – Website
+# MON BAC PRO CIEL – Website
 
-Bienvenue sur le dépôt du **site web Naruto** créé par Emilien.
+Bienvenue sur le dépôt **Mon Bac Pro CIEL** créé par Emilien.
 
 Ce site est **hébergé avec Firebase Hosting** :  
 [https://mon-bac-pro-ciel.web.app](https://mon-bac-pro-ciel.web.app)
