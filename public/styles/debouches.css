@@ -31,6 +31,11 @@
   align-items: center;
 }
 
+.flip-card-front span {
+  font-size:90px;
+  color:var(--accent);
+}
+
 .flip-card-back {
   transform: rotateY(180deg);
   overflow-y: auto;
@@ -44,6 +49,15 @@
   color: var(--accent-2);
   opacity: 0.7;
   animation: spin 3s linear infinite;
+}
+
+.container p {
+  max-width:700px;
+  margin:auto;
+}
+
+h3 {
+  color:var(--accent-2)
 }
 
 @keyframes spin {

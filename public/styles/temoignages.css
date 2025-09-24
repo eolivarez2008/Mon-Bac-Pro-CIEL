@@ -20,6 +20,15 @@
   font-size: 0.95rem;
 }
 
+.main-temoignages {
+  margin-top: 50px;
+}
+
+.main-temoignages p {
+  max-width:700px;
+  margin:auto;
+}
+
 .arrow-btn {
   font-size: 2.5rem;
   color: var(--accent, #007bff);

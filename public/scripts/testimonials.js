@@ -25,12 +25,12 @@ document.addEventListener("DOMContentLoaded", () => {
   const db = getFirestore(app); // Initialiser Firestore
 
   // ================== VARIABLES DOM ==================
-  const openBtn = document.getElementById("openFormBtn"); // bouton pour ouvrir le popup
-  const popup = document.getElementById("testimonialPopup"); // popup formulaire
-  const closeBtn = document.getElementById("closePopup"); // bouton fermer
-  const messageInput = document.getElementById("message"); // textarea message
-  const charCount = document.getElementById("charCount"); // compteur de caractères
-  const confirmationMessage = document.createElement('div'); // élément pour les alertes
+  const openBtn = document.getElementById("openFormBtn");
+  const popup = document.getElementById("testimonialPopup");
+  const closeBtn = document.getElementById("closePopup");
+  const messageInput = document.getElementById("message");
+  const charCount = document.getElementById("charCount");
+  const confirmationMessage = document.createElement('div');
 
   // ================== TIMEOUT / LOCALSTORAGE ==================
   const TIMEOUT_HOURS = 24; // Durée du cooldown en heures
