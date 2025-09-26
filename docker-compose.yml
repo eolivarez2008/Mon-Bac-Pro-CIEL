@@ -1,14 +1,15 @@
 version: '3.8'
 
 services:
-  # Ton site statique actuel
   frontend:
     build: .
     ports:
       - "3002:80"
+    volumes:
+      - ./public:/usr/share/nginx/html
+      - ./nginx.conf:/etc/nginx/conf.d/default.conf:ro
     restart: always
 
-  # Ton nouveau backend de témoignages
   api:
     build: ./api
     ports:
