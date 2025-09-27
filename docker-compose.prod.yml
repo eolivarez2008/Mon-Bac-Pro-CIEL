@@ -1,6 +1,7 @@
 services:
-  mobacprociel:
+  monbacprociel:
     container_name: monbacprociel
+    image: monbacprociel:latest
     build: .
     ports:
       - "3002:80"

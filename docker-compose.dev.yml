@@ -1,10 +1,11 @@
 services:
-  mobacprociel:
+  monbacprociel:
     container_name: monbacprociel
-    image: nginx:alpine
+    build: .
+    image: monbacprociel-dev:latest
     ports:
       - "3002:80"
     volumes:
-      - ./nginx.conf:/etc/nginx/conf.d/default.conf
-      - ./public:/usr/share/nginx/html
+      - ./nginx.conf:/etc/nginx/conf.d/default.conf:ro
+      - ./public:/usr/share/nginx/html:ro
     restart: always
