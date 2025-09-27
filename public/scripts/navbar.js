@@ -1,18 +1,38 @@
-// Met à jour la classe active sur la navbar selon la page courante
+// Identification et activation du lien de navigation correspondant à l'URL courante
 function setActiveNavbarLink() {
-  // Récupère le chemin sans les paramètres ni le hash
-  const path = window.location.pathname.replace(/^\//, '').replace(/\.html$/, '');
+    const path = window.location.pathname.split('/').pop().replace(/\.html$/, '');
 
-  // Desktop navbar : marquer le lien actif
-  document.querySelectorAll('.desktop-navbar .nav-link').forEach(link => {
-    let href = link.getAttribute('href').replace(/^\//, '').replace(/\.html$/, '');
-    if ((path === '' && href === '') || (path === href)) {
-      link.classList.add('active');
-    } else {
-      link.classList.remove('active');
-    }
-  });
+    document.querySelectorAll('.navbar .nav-link').forEach(link => {
+        const href = link.getAttribute('href').split('/').pop().replace(/\.html$/, '');
+        const isHomeMatch = (path === '' || path === 'index') && (href === '' || href === 'index');
+        const isExactMatch = path === href;
+
+        link.classList.toggle('active', isHomeMatch || isExactMatch);
+    });
 }
 
-// Appeler au chargement de la navbar
+// Gestion de la fermeture automatique du menu mobile via Bootstrap
+document.addEventListener('click', (event) => {
+    const collapse = document.querySelector('.navbar-collapse');
+    if (!collapse?.classList.contains('show')) return;
+
+    const isLinkClick = event.target.classList.contains('nav-link');
+    const isOutsideClick = !collapse.contains(event.target);
+
+    if (isLinkClick || isOutsideClick) {
+        const bsCollapse = bootstrap.Collapse.getInstance(collapse) || new bootstrap.Collapse(collapse);
+        bsCollapse.hide();
+    }
+});
+
+// Mise à jour de l'état visuel de la barre de navigation selon le défilement
+window.addEventListener('scroll', () => {
+    const nav = document.querySelector('.floating-nav');
+    if (nav) {
+        nav.classList.toggle('nav-scrolled', window.scrollY > 50);
+    }
+});
+
+// Exportation et exécution initiale du module
+window.addEventListener('DOMContentLoaded', setActiveNavbarLink);
 window.setActiveNavbarLink = setActiveNavbarLink;

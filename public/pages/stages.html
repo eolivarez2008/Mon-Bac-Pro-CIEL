@@ -3,97 +3,102 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Bac Pro CIEL — Stages PFMP</title>
-  <link rel="shortcut icon" href="../assets/images/favicon.png" type="image/png">
-  <!-- Frameworks et polices -->
+  <title>Bac Pro CIEL — Stages</title>
+  <link rel="icon" href="../assets/images/favicon.ico?v=2" type="image/x-icon">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/@mdi/font@7.4.47/css/materialdesignicons.min.css" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap" rel="stylesheet">
-  <!-- Styles du site -->
-  <link rel="stylesheet" href="../styles/styles.css">
-  <link rel="stylesheet" href="../styles/navbar.css">
-  <!-- Scripts -->
+  <link rel="stylesheet" href="../styles/styles.css?v=3.211">
   <script defer src="https://cloud.umami.is/script.js" data-website-id="b3a96ee2-97ec-488f-a102-78a1b9f1023b"></script>
-  <script src="../scripts/desktop-only.js"></script>
-  <script src="../scripts/components-loader.js" defer></script>
-  <script src="../scripts/login-internet.js" defer></script>
-  <script src="../scripts/navbar.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script defer src="../scripts/components-loader.js?v=3"></script>
+  <script defer src="../scripts/navbar.js?v=3"></script>
 </head>
 <body>
   <div id="navbar"></div>
-  <main class="site-wrap">
-    <section id="stages min-vh-100" aria-label="Stages">
-      <div class="container-lg mt-5">
-        <h2 class="section-title text-center mb-3">Périodes en milieu professionnel (PFMP)</h2>
+  <main class="site-wrap mt-5">
+    <section id="stages" class="py-5">
+      <div class="container-lg">
+        <header class="text-center mb-5">
+          <h1 class="hero-title text-accent">Stages & PFMP</h1>
+          <p class="hero-lead">L'immersion professionnelle au cœur de votre formation.</p>
+        </header>
 
-        <!-- Présentation -->
-        <div class="glass p-4 mb-4">
-          <div class="row align-items-center">
-            <!-- Texte à gauche -->
-            <div class="col-md-9">
-              <p>Sur les 3 années, les élèves effectuent <strong>22 semaines</strong> de formation en entreprise : </p>
-              <ul>
-                <li><strong>6 semaines</strong> en classe de Seconde (découverte des différents champs professionnels)</li>
-                <li><strong>16 semaines</strong> réparties en Première & Terminale (immersion dans le secteur de l'option choisie)</li>
-              </ul>
-              <p>Le stage est un élément clé de l’évaluation professionnelle et permet de mettre en pratique les compétences techniques et professionnelles acquises.</p>
-
-              <!-- Boutons sous le texte -->
-              <div class="mt-4 d-flex gap-2 flex-wrap">
-                <a href="../assets/documents/Fiche-entente-2025.pdf" target="_blank" class="btn-accent" data-umami-event="Btn-FicheEntente">Fiche d'entente préalable</a>
-                <a href="../assets/documents/PFMP-Cormon-25-26.pdf" target="_blank" class="btn-accent" data-umami-event="Btn-DatesPFMP">Dates PFMP 2025-2026</a>
-                <a href="../assets/documents/Frais-deplacement-2025.pdf" target="_blank" class="btn-accent" data-umami-event="Btn-FraisTransport">Frais de transport</a>
+        <div class="glass p-4 p-md-5 mb-5">
+          <div class="row g-5 align-items-start">
+            <div class="col-lg-7">
+              <h3 class="text-white fw-bold mb-4 border-bottom border-secondary pb-2">22 semaines en entreprise</h3>
+              <div class="pro-content">
+                <p>Sur les 3 années, les élèves effectuent <span class="text-white fw-600">22 semaines</span> de formation en entreprise : </p>
+                <ul>
+                  <li style="color: rgba(255,255,255,0.7)"><span class="text-white fw-600">6 semaines</span> en classe de Seconde (découverte des différents champs professionnels)</li>
+                  <li style="color: rgba(255,255,255,0.7)"><span class="text-white fw-600">8 semaines</span> en classe de Première (immersion dans le secteur de l'option choisie)</li>
+                  <li style="color: rgba(255,255,255,0.7)"><span class="text-white fw-600">8 semaines</span> en classe de Terminale (approfondissement des compétences)</li>
+                </ul>
               </div>
             </div>
 
-            <!-- Image à droite -->
-            <div class="col-md-3 text-center">
-              <img src="./assets/images/stage.jpg" alt="Image stage" class="img-fluid rounded">
+            <div class="col-lg-5">
+              <h4 class="h6 text-uppercase fw-bold hero-lead mb-3">Documents utiles</h4>
+              <div class="d-grid gap-3">
+                <a href="../assets/documents/Fiche-entente.pdf" class="doc-link-card" target="_blank">
+                  <i class="mdi mdi-file-pdf-box text-danger"></i>
+                  <span>Fiche d'entente</span>
+                  <i class="mdi mdi-download ms-auto opacity-50"></i>
+                </a>
+                <a href="../assets/documents/PFMP-Cormon-25-26.pdf" class="doc-link-card" target="_blank">
+                  <i class="mdi mdi-calendar-clock text-accent"></i>
+                  <span>Calendrier PFMP 25-26</span>
+                  <i class="mdi mdi-download ms-auto opacity-50"></i>
+                </a>
+                <a href="../assets/documents/Frais-deplacement.pdf" class="doc-link-card" target="_blank">
+                  <i class="mdi mdi-bus-clock text-info"></i>
+                  <span>Frais de transport</span>
+                  <i class="mdi mdi-download ms-auto opacity-50"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="alert-glass p-3 rounded d-flex align-items-center mt-3">
+            <i class="mdi mdi-information text-accent fs-4 me-3"></i>
+            <span class="small italic">Le stage est un élément clé de l’évaluation professionnelle et permet de mettre en pratique les compétences techniques et professionnelles acquises.</span>
+          </div>
+        </div>
+
+      <div id="presentation-stages" class="mb-2">
+        <div class="row g-4">
+          <div class="col-md-4">
+            <div class="glass p-4 text-center h-100">
+              <div class="container-icon mx-auto mb-3">
+                <span class="mdi mdi-bullseye-arrow"></span>
+              </div>
+              <h5 class="fw-bold">Objectifs</h5>
+              <p class="small mb-0">Appliquer concrètement les acquis théoriques, développer un réseau professionnel solide et renforcer la valeur du CV par une expérience terrain pertinente.</p>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="glass p-4 text-center h-100">
+              <div class="container-icon mx-auto mb-3">
+                <span class="mdi mdi-briefcase-outline"></span>
+              </div>
+              <h5 class="fw-bold">Exemples de missions</h5>
+              <p class="small mb-0">Maintenance et administration de serveurs IT, diagnostic et réparation d’équipements informatiques, ainsi qu’installation et configuration de systèmes IoT.</p>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="glass p-4 text-center h-100">
+              <div class="container-icon mx-auto mb-3">
+                <span class="mdi mdi-cash-multiple"></span>
+              </div>
+              <h5 class="fw-bold">Gratification État</h5>
+              <p class="small mb-0">Gratification versée par l’État : 50 € par semaine en seconde, 75 € en première et 100 € en terminale.</p>
             </div>
           </div>
         </div>
-
-        <!-- Objectifs -->
-        <div class="cards-grid mt-4">
-          <div class="glass p-3">
-            <h5>Objectifs</h5>
-            <ul>
-              <li>Découvrir le monde pro et appliquer les compétences du Bac Pro CIEL.</li>
-              <li>Obtenir de l'expérience à rajouter sur le CV.</li>
-            </ul>
-          </div>
-          <div class="glass p-3">
-            <h5>Exemples</h5>
-            <ul>
-              <li>Installation et maintenance de réseaux informatiques</li>
-              <li>Vente et réparation d'appareils électronique (SAV / Taxi Phone)</li>
-            </ul>
-          </div>
-          <div class="glass p-3">
-            <h5>Rémunération</h5>
-            <ul>
-              <li>50€ par semaine en Seconde</li>
-              <li>75€ par semaine en Première</li>
-              <li>100€ par semaine en Terminale</li>
-            </ul>
-          </div>
-        </div>
-
-        <!-- Conseils -->
-        <div class="glass p-4 mt-4">
-          <h5>Conseils pour réussir vos stages</h5>
-          <ul>
-            <li>S’impliquer dans toutes les missions confiées</li>
-            <li>Demander de l’aide et poser des questions</li>
-            <li>Observer les bonnes pratiques et les normes de sécurité</li>
-            <li>Rédiger un rapport clair et structuré à la fin du stage</li>
-          </ul>
-        </div>
-
       </div>
     </section>
-   </main>  
+  </main>
   <div id="footer"></div>
-  <div id="wifiModalContainer"></div>
 </body>
 </html>

@@ -1,0 +1,10 @@
+services:
+  mobacprociel:
+    container_name: monbacprociel
+    image: nginx:alpine
+    ports:
+      - "3002:80"
+    volumes:
+      - ./nginx.conf:/etc/nginx/conf.d/default.conf
+      - ./public:/usr/share/nginx/html
+    restart: always

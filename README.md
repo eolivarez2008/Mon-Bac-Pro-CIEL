@@ -4,8 +4,6 @@ Bienvenue sur le dépôt **Mon Bac Pro CIEL** créé par Emilien.
 
 **Mon Bac Pro CIEL** est un site web francophone dédié à la présentation du bac professionnel Cybersécurité, Informatique, Électronique et Réseaux, développé dans le cadre d'un projet scolaire débuté en **2025**. 
 
-**Important** : Ce site est **optimisé pour les ordinateurs de bureau uniquement**. L'accès depuis un téléphone ou une tablette n'est pas encore possible — un message s'affichera vous invitant à utiliser un PC.
-
 Ce site propose une immersion complète dans le thème du **Bac Pro CIEL**, à travers différentes rubriques :
 
 - **Formation** : pour comprendre le bac pro 
@@ -21,11 +19,9 @@ Ce site propose une immersion complète dans le thème du **Bac Pro CIEL**, à t
 Le projet est entièrement containerisé et repose sur une architecture micro-services gérée par **Docker Compose**.
 
 * **Infrastructure** : Docker & Docker Compose
-* **Serveur Web** : Nginx (Alpine) servant le front-end et agissant comme Reverse Proxy pour l'API
-* **API Backend** : Node.js & Express
-* **Base de données** : SQLite3 (Persistance via volumes Docker)
+* **Serveur Web** : Nginx (Alpine)
 * **Tunneling & Sécurité** : Cloudflare Tunnel (Zero Trust)
-* **CI/CD** : Déploiement automatisé/manuel via Git & Docker Compose
+* **CI/CD** : Déploiement via Git & Docker Compose
 
 **Accès au site :** [https://monbacprociel.eolivarez.site](https://monbacprociel.eolivarez.site)  
 
@@ -35,13 +31,15 @@ Le projet est entièrement containerisé et repose sur une architecture micro-se
 
 Le projet utilise une architecture moderne séparant le contenu statique de la logique métier dynamique.
 
-- **Structure & sémantique** : [HTML5](https://developer.mozilla.org/fr/docs/Web/HTML)
-- **Mise en forme** : [CSS3](https://developer.mozilla.org/fr/docs/Web/CSS) & [Bootstrap 5](https://getbootstrap.com/)
-- **Logique Client** : [JavaScript (ES6+)](https://developer.mozilla.org/fr/docs/Web/JavaScript) — Fetch API pour la communication avec le backend.
-- **Backend API** : [Node.js](https://nodejs.org/) & [Express](https://expressjs.com/) — Gestion des routes API, de la sécurité (Basic Auth) et de la modération.
-- **Base de données** : [SQLite](https://sqlite.org/) — Stockage léger et performant des témoignages.
-- **Hébergement & Infra** : [Docker](https://www.docker.com/) — Orchestration de deux services (Frontend & API) pour une isolation totale.
-- **Réseau & Sécurité** : [Cloudflare Tunnel](https://www.cloudflare.com/products/tunnel/) — Exposition sécurisée sans ouverture de ports, SSL automatique.
+- **Structure & sémantique** : [HTML5](https://developer.mozilla.org/fr/docs/Web/HTML) — Organisation des pages, hiérarchisation du contenu et intégration des médias.
+- **Mise en forme & responsive design** : [CSS3](https://developer.mozilla.org/fr/docs/Web/CSS) & [Bootstrap 5](https://getbootstrap.com/) — Mise en page, animations légères, adaptation multi-écrans.
+- **Logique côté client** : [JavaScript (ES6+)](https://developer.mozilla.org/fr/docs/Web/JavaScript) — Manipulation du DOM, interactions dynamiques, gestion des données JSON.
+- **Hébergement & Infra** : [Docker](https://www.docker.com/) — Containerisation du site statique avec un serveur Nginx optimisé, auto-hébergé sur une VM dédiée.
+- **Réseau & Sécurité** : [Cloudflare Tunnel](https://www.cloudflare.com/products/tunnel/) — Exposition sécurisée du service sans ouverture de ports (Zero Trust), protection contre les attaques et gestion automatique du certificat SSL.
+- **Gestion du formulaire de témoignage** : [Formspree](https://formspree.io/) — Traitement des soumissions sans backend personnalisé.
+- **Icônes UI** : [Pictogrammers](https://pictogrammers.com/library/mdi/) — Intégration des pictogrammes vectoriels issus de la librairie Pictogrammers pour une interface cohérente et scalable.
+- **Web analytics** : [Umami](https://umami.is/) — Solution open-source d’analyse d’audience, légère et respectueuse de la vie privée, auto-hébergée.
+- **Format de données** : [JSON](https://www.json.org/json-fr.html) — Structuration des lycées et des témoignages.
 
 ---
 

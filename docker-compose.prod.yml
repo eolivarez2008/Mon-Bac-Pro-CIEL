@@ -1,0 +1,7 @@
+services:
+  mobacprociel:
+    container_name: monbacprociel
+    build: .
+    ports:
+      - "3002:80"
+    restart: always

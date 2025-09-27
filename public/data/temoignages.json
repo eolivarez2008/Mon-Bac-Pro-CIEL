@@ -1,0 +1,62 @@
+[
+  {
+    "firstname": "Lucas",
+    "lastname": "Dupont",
+    "classe": "Tpro1",
+    "message": "Super formation, les projets en cybersécurité sont passionnants ! On apprend vraiment par la pratique."
+  },
+  {
+    "firstname": "Sarah",
+    "lastname": "Martin",
+    "classe": "1pro4",
+    "message": "Les profs sont à l'écoute et le matériel réseau est top. Je ne regrette pas mon choix d'orientation."
+  },
+  {
+    "firstname": "Thomas",
+    "lastname": "Leroy",
+    "classe": "BTS CIEL 1",
+    "message": "Le passage du Bac Pro au BTS s'est super bien passé. La base en électronique est un vrai plus."
+  },
+  {
+    "firstname": "Emma",
+    "lastname": "Petit",
+    "classe": "2pro2",
+    "message": "J'ai adoré mon stage en entreprise. On voit enfin à quoi servent tous les TP de programmation."
+  },
+  {
+    "firstname": "Hugo",
+    "lastname": "Moreau",
+    "classe": "2pro3",
+    "message": "La découverte des systèmes embarqués est incroyable. On commence déjà à coder nos premiers microcontrôleurs."
+  },
+  {
+    "firstname": "Chloé",
+    "lastname": "Garcia",
+    "classe": "Tpro2",
+    "message": "Une formation complète qui ouvre beaucoup de portes, que ce soit pour le travail ou les études supérieures."
+  },
+  {
+    "firstname": "Nicolas",
+    "lastname": "Rousseau",
+    "classe": "1pro2",
+    "message": "Aujourd'hui en licence pro, je me rends compte que le Bac Pro CIEL m'a donné des bases techniques solides."
+  },
+  {
+    "firstname": "Léa",
+    "lastname": "Dubois",
+    "classe": "1pro3",
+    "message": "L'ambiance dans la classe est géniale et les projets de groupe nous apprennent à travailler comme en entreprise."
+  },
+  {
+    "firstname": "Maxime",
+    "lastname": "Lefebvre",
+    "classe": "Tpro3",
+    "message": "Le nouvel atelier est super moderne. Configurer des serveurs et sécuriser des réseaux, c'est ce que je préfère."
+  },
+  {
+    "firstname": "Julie",
+    "lastname": "Bertrand",
+    "classe": "2pro1",
+    "message": "Je ne pensais pas que l'informatique était aussi vaste. Chaque semaine, on découvre de nouvelles technologies."
+  }
+]

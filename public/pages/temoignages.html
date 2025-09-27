@@ -4,99 +4,82 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Bac Pro CIEL — Témoignages</title>
-  <link rel="shortcut icon" href="../assets/images/favicon.png" type="image/png">
-  <!-- Frameworks et polices -->
+  <link rel="icon" href="../assets/images/favicon.ico?v=2" type="image/x-icon">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/@mdi/font@7.4.47/css/materialdesignicons.min.css" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap" rel="stylesheet">
-  <!-- Styles du site -->
-  <link rel="stylesheet" href="../styles/styles.css">
-  <link rel="stylesheet" href="../styles/navbar.css">
-  <link rel="stylesheet" href="../styles/temoignages.css">
-  <!-- Scripts -->
+  <link rel="stylesheet" href="../styles/styles.css?v=3.211">
   <script defer src="https://cloud.umami.is/script.js" data-website-id="b3a96ee2-97ec-488f-a102-78a1b9f1023b"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-  <script src="../scripts/desktop-only.js"></script>
-  <script src="./scripts/testimonials.js" type="module"></script>
-  <script src="../scripts/components-loader.js" defer></script>
-  <script src="../scripts/login-internet.js" defer></script>
-  <script src="../scripts/navbar.js" defer></script>
+  <script src="./scripts/testimonials.js?v=3" type="module"></script>
+  <script defer src="../scripts/components-loader.js?v=3"></script>
+  <script defer src="../scripts/navbar.js?v=3"></script>
 </head>
 <body>
   <div id="navbar"></div>
-  <main class="site-wrap container-lg py-5">
-
-    <!-- Titre + description -->
-    <section class="text-center main-temoignages">
-      <h2 class="section-title mb-3">Témoignages</h2>
-        <p class="text-center mb-4">
-         Découvrez les <strong>retours d’expérience</strong> de nos élèves et anciens étudiants du Bac Pro CIEL.  
-        Leurs témoignages reflètent la diversité des parcours et la richesse des apprentissages.  
-        <strong>Inspirez-vous</strong> de leurs histoires pour mieux comprendre la formation.
-        </p>
+  <main class="site-wrap container-lg py-5 mt-5">
+    <section class="text-center pt-3">
+      <h1 class="hero-title mt-5">Témoignages</h1>
+      <p class="hero-lead mx-auto" style="max-width: 700px;">
+        Découvrez les retours d’expérience de nos élèves. Leurs parcours reflètent la diversité et la richesse de la formation CIEL.
+      </p>
     </section>
 
-    <!-- Carrousel Témoignages -->
-    <section id="temoignages" class="text-center mt-5">
-      <div class="d-flex align-items-center justify-content-center">
-        <button id="prev-btn" class="arrow-btn me-3">
+    <section id="temoignages" class="mt-5">
+      <div class="d-flex align-items-center justify-content-center gap-2 gap-md-4">
+        <button id="prev-btn" class="arrow-btn" aria-label="Précédent">
           <span class="mdi mdi-chevron-left"></span>
         </button>
-
-        <div class="testi-box glass flex-grow-1">
-          <p id="testimonial-message" class="testimonial-text">Chargement...</p>
-          <div id="testimonial-meta" class="meta"></div>
+        <div class="testi-box glass">
+          <span class="mdi mdi-format-quote-open quote-icon"></span>
+          <p id="testimonial-message" class="testimonial-text">Chargement des témoignages...</p>
+          <div id="testimonial-meta" class="meta fw-bold text-accent"></div>
+          <span class="mdi mdi-format-quote-close quote-icon-end"></span>
         </div>
-
-        <button id="next-btn" class="arrow-btn ms-3">
+        <button id="next-btn" class="arrow-btn" aria-label="Suivant">
           <span class="mdi mdi-chevron-right"></span>
         </button>
       </div>
     </section>
 
-    <!-- Bouton pour ouvrir le formulaire -->
-    <div class="text-center my-4 mt-5">
-      <button id="openFormBtn" class="btn-accent" data-umami-event="Btn-OpenTestimonialForm">Laisser un témoignage</button>
+    <div class="text-center mt-5">
+      <button id="openFormBtn" class="btn-accent" data-umami-event="Btn-OpenTestimonialForm">
+        <i class="mdi mdi-message-draw me-2"></i>Laisser un témoignage
+      </button>
     </div>
-
-    <!-- Popup Formulaire -->
     <div id="testimonialPopup" class="popup-overlay">
-      <div class="popup-content">
+      <div class="popup-content glass">
         <span id="closePopup" class="close-btn">&times;</span>
-        <h3 class="mb-3">Laisser un témoignage</h3>
-        <form id="testimonialForm" class="popup-form">
-          <div class="form-columns">
-            <div class="left">
-              <div class="mb-2">
-                <label for="firstname" class="form-label">Prénom</label>
-                <input type="text" id="firstname" class="form-control" placeholder="Votre prénom..." required>
-              </div>
-              <div class="mb-2">
-                <label for="lastname" class="form-label">Nom</label>
-                <input type="text" id="lastname" class="form-control" placeholder="Votre nom..." required>
-              </div>
-              <div class="mb-2">
-                <label for="classe" class="form-label">Classe</label>
-                <input type="text" id="classe" class="form-control" placeholder="Votre classe..." required>
-              </div>
+        <h3 class="fw-bold mb-4"><i class="mdi mdi-pen me-2"></i>Votre témoignage</h3>
+        
+        <form id="testimonialForm" action="https://formspree.io/f/xzdaavnv" method="POST" class="popup-form">
+          <div class="row g-3">
+            <div class="col-md-6">
+              <label class="form-label small hero-lead">Prénom</label>
+              <input type="text" id="firstname" name="firstname" class="form-control bg-dark-subtle border-secondary text-white" placeholder="Ex: Jean" required>
             </div>
-            <div class="right">
-              <div class="mb-2 h-100">
-                <label for="message" class="form-label">Témoignage</label>
-                <textarea id="message" class="form-control h-100 fixed-textarea" rows="5" maxlength="200" placeholder="Votre témoignage..." required></textarea>
-                <small id="charCount" class="text-end d-block">0 / 200</small>
-              </div>
+            <div class="col-md-6">
+              <label class="form-label small hero-lead">Nom</label>
+              <input type="text" id="lastname" name="lastname" class="form-control bg-dark-subtle border-secondary text-white" placeholder="Ex: Dupont" required>
+            </div>
+            <div class="col-md-12">
+              <label class="form-label small hero-lead">Classe / Promotion</label>
+              <input type="text" id="classe" name="classe" class="form-control bg-dark-subtle border-secondary text-white" placeholder="Ex: Terminale CIEL 2025" required>
+            </div>
+            <div class="col-md-12">
+              <label class="form-label small hero-lead">Votre message (max 200 caractères)</label>
+              <textarea id="message" name="message" class="form-control bg-dark-subtle border-secondary text-white fixed-textarea" maxlength="200" placeholder="Racontez-nous votre expérience..." required></textarea>
             </div>
           </div>
-          <div class="submit-container">
-            <button type="submit" class="btn-accent"><span class="mdi mdi-send"></span> Envoyer</button>
+          <div class="text-center mt-4">
+            <button type="submit" class="btn-accent px-5">
+              <span class="mdi mdi-send me-2"></span>Envoyer
+            </button>
           </div>
         </form>
       </div>
     </div>
-
   </main>
   <div id="footer"></div>
-  <div id="wifiModalContainer"></div>
 </body>
 </html>

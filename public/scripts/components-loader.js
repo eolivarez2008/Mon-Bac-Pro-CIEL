@@ -1,42 +1,44 @@
-// Fonction pour charger la navbar
-function loadNavbar() {
-  fetch('./components/navbar.html')
-    .then(r => r.text())
-    .then(html => {
-  document.getElementById('navbar').innerHTML = html;
-  // Appel des fonctions d'initialisation si elles existent
-  if (window.initMobileNavbarScrollBehavior) window.initMobileNavbarScrollBehavior();
-  if (window.initNavbarScrollBehavior) window.initNavbarScrollBehavior();
-  if (window.initHamburger) window.initHamburger();
-  if (window.initMobileNavbar) window.initMobileNavbar();
-  if (window.setActiveNavbarLink) window.setActiveNavbarLink();
+// Chargement et injection de composants HTML externes
+async function loadComponent(url, selector, callback = null) {
+    const target = document.getElementById(selector);
+    if (!target) return;
+
+    try {
+        const response = await fetch(url);
+        if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
+        
+        const html = await response.text();
+        target.innerHTML = html;
+        
+        if (callback) callback();
+    } catch (error) {
+        console.error(`Erreur lors du chargement de ${url}:`, error);
+    }
+}
+
+// Initialisation globale des modules logiques de la barre de navigation
+function initNavbarLogic() {
+    const initializers = [
+        'initMobileNavbarScrollBehavior',
+        'initNavbarScrollBehavior',
+        'initHamburger',
+        'initMobileNavbar',
+        'setActiveNavbarLink'
+    ];
+
+    initializers.forEach(fn => {
+        if (typeof window[fn] === 'function') window[fn]();
     });
 }
 
-// Charger la navbar au chargement
-loadNavbar();
-
-// Recharger la navbar si on resize (pour recharger le composant si besoin)
-window.addEventListener('resize', () => {
-  clearTimeout(window._navbarResizeTimeout);
-  window._navbarResizeTimeout = setTimeout(loadNavbar, 200);
+// Exécution des chargements de composants au montage du DOM
+document.addEventListener("DOMContentLoaded", () => {
+    loadComponent('/components/navbar.html', 'navbar', initNavbarLogic);
+    loadComponent('/components/footer.html', 'footer');
 });
 
-// Charger le footer
-fetch('./components/footer.html')
-  .then(r => r.text())
-  .then(html => {
-    document.getElementById('footer').innerHTML = html;
-  });
-
-// Charger le modal Wi-Fi
-fetch('./components/internet-modal.html')
-  .then(r => r.text())
-  .then(html => {
-    document.getElementById('wifiModalContainer').innerHTML = html;
-
-    // Appeler l'initialisation du modal seulement après injection
-    import('./login-internet.js').then(module => {
-      module.initWifiModal();
-    });
-  });
+// Réinitialisation de la logique d'interface lors du redimensionnement de la fenêtre
+window.addEventListener('resize', () => {
+    clearTimeout(window._navbarResizeTimeout);
+    window._navbarResizeTimeout = setTimeout(initNavbarLogic, 250);
+});

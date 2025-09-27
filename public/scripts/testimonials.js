@@ -1,244 +1,228 @@
 document.addEventListener("DOMContentLoaded", () => {
+    // Définition des constantes de configuration
+    const JSON_DATA_URL = "../data/temoignages.json";
+    const FORMSPREE_URL = "https://formspree.io/f/xzdaavnv";
+    const DEBUG_MODE = false;
+    const TIMEOUT_HOURS = DEBUG_MODE ? (30 / 3600) : 24;
+    const AUTO_PLAY_DELAY = 8000;
+    const STORAGE_KEY = "lastTestimonialTime";
 
-  // ================== CONFIGURATION API ==================
-  // En local : http://localhost:3000
-  // En prod : https://monbacprociel.eolivarez.site/api
-  const API_URL = "https://monbacprociel.eolivarez.site/api";
+    // Récupération des éléments du DOM
+    const openBtn = document.getElementById("openFormBtn");
+    const popup = document.getElementById("testimonialPopup");
+    const testiBox = document.querySelector(".testi-box");
+    const testimonialMessage = document.getElementById("testimonial-message");
+    const testimonialMeta = document.getElementById("testimonial-meta");
+    const form = document.getElementById("testimonialForm");
+    
+    // État de l'application
+    let testimonials = [];
+    let currentIndex = 0;
+    let isAnimating = false;
+    let autoPlayInterval;
+    let tooltipUpdateInterval;
 
-  // ================== VARIABLES DOM ==================
-  const openBtn = document.getElementById("openFormBtn");
-  const popup = document.getElementById("testimonialPopup");
-  const closeBtn = document.getElementById("closePopup");
-  const messageInput = document.getElementById("message");
-  const charCount = document.getElementById("charCount");
-  const confirmationMessage = document.createElement('div');
-
-  const testimonialMessage = document.getElementById("testimonial-message");
-  const testimonialMeta = document.getElementById("testimonial-meta");
-  const prevBtn = document.getElementById("prev-btn");
-  const nextBtn = document.getElementById("next-btn");
-
-  // ================== TIMEOUT / LOCALSTORAGE ==================
-  const TIMEOUT_HOURS = 24; 
-  const STORAGE_KEY = "lastTestimonialTime"; 
-
-  // ================== TOOLTIP ==================
-  const tooltip = document.createElement("div");
-  tooltip.className = "tooltip-alert";
-  tooltip.style.display = "none";
-  document.body.appendChild(tooltip);
-
-  let tooltipInterval;
-
-  // ================== FONCTIONS TIMEOUT ==================
-  function checkTimeout() {
-    const lastTime = localStorage.getItem(STORAGE_KEY);
-    if (!lastTime) return false;
-    const now = new Date().getTime();
-    const elapsed = now - parseInt(lastTime, 10);
-    return elapsed < TIMEOUT_HOURS * 60 * 60 * 1000;
-  }
-
-  function getRemainingTime() {
-    const lastTime = localStorage.getItem(STORAGE_KEY);
-    if (!lastTime) return 0;
-    const now = new Date().getTime();
-    const elapsed = now - parseInt(lastTime, 10);
-    const remaining = TIMEOUT_HOURS * 60 * 60 * 1000 - elapsed;
-    return remaining > 0 ? remaining : 0;
-  }
-
-  function updateButtonState() {
-    if (checkTimeout()) {
-      openBtn.disabled = true;
-      openBtn.classList.add("btn-disabled");
-    } else {
-      openBtn.disabled = false;
-      openBtn.classList.remove("btn-disabled");
-    }
-  }
-
-  // ================== TOOLTIP DYNAMIQUE ==================
-  function updateTooltip() {
-    const remainingMs = getRemainingTime();
-    if (remainingMs <= 0) {
-      openBtn.disabled = false;
-      openBtn.classList.remove("btn-disabled");
-      tooltip.style.display = "none";
-      clearInterval(tooltipInterval);
-      return;
-    }
-
-    const hours = Math.floor(remainingMs / (1000 * 60 * 60));
-    const minutes = Math.floor((remainingMs % (1000 * 60 * 60)) / (1000 * 60));
-    const seconds = Math.floor((remainingMs % (1000 * 60)) / 1000);
-
-    tooltip.textContent = `Réessayez dans ${hours}h ${minutes}m ${seconds}s.`;
-
-    const rectBtn = openBtn.getBoundingClientRect();
-    const centerX = rectBtn.left + rectBtn.width / 2;
-    const centerY = rectBtn.top + rectBtn.height / 2;
-    tooltip.style.top = (centerY - 45) + "px";
-    tooltip.style.left = centerX + "px";
-  }
-
-  openBtn.addEventListener("mouseenter", () => {
-    if (openBtn.disabled) {
-      updateTooltip();
-      tooltipInterval = setInterval(updateTooltip, 1000);
-      tooltip.style.display = "block";
-    }
-  });
-
-  openBtn.addEventListener("mouseleave", () => {
+    // Création dynamique de l'alerte tooltip
+    const tooltip = document.createElement("div");
+    tooltip.className = "tooltip-alert";
     tooltip.style.display = "none";
-    clearInterval(tooltipInterval);
-  });
+    document.body.appendChild(tooltip);
 
-  updateButtonState();
-
-  // ================== POPUP ==================
-  const openPopup = () => {
-    if (checkTimeout()) return;
-    popup.style.display = "flex";
-    document.body.classList.add('body-no-scroll');
-  };
-
-  const closePopup = () => {
-    popup.style.display = "none";
-    document.body.classList.remove('body-no-scroll');
-  };
-
-  openBtn.addEventListener("click", openPopup);
-  closeBtn.addEventListener("click", closePopup);
-  popup.addEventListener("click", e => { if(e.target === popup) closePopup(); });
-
-  // ================== COMPTEUR ==================
-  messageInput.addEventListener("input", () => {
-    charCount.textContent = `${messageInput.value.length} / 200`;
-  });
-
-  // ================== FORMULAIRE (ENVOI API) ==================
-  const form = document.getElementById("testimonialForm");
-  form.addEventListener("submit", async (e) => {
-    e.preventDefault();
-    const firstname = document.getElementById("firstname").value.trim();
-    const lastname  = document.getElementById("lastname").value.trim();
-    const classe    = document.getElementById("classe").value.trim();
-    const message   = document.getElementById("message").value.trim();
-
-    if(!firstname || !lastname || !classe || !message) return;
-
-    try {
-      const response = await fetch(`${API_URL}/temoignage`, {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ firstname, lastname, classe, message })
-      });
-
-      if (!response.ok) throw new Error("Erreur lors de l'envoi");
-
-      localStorage.setItem(STORAGE_KEY, new Date().getTime());
-      showConfirmation();
-      form.reset();
-      charCount.textContent = "0 / 200";
-      closePopup();
-      updateButtonState();
-    } catch(err) {
-      console.error(err);
-      showError("Erreur de connexion au serveur.");
+    // Calcul du temps de verrouillage restant via le stockage local
+    function getRemainingTime() {
+        const lastTime = localStorage.getItem(STORAGE_KEY);
+        if (!lastTime) return 0;
+        const rem = (TIMEOUT_HOURS * 3600000) - (Date.now() - parseInt(lastTime));
+        return rem > 0 ? rem : 0;
     }
-  });
 
-  // ================== ALERTES ==================
-  function showConfirmation() {
-    confirmationMessage.innerHTML = `
-      <div class="confirmation-alert">
-        <span class="mdi mdi-check-circle"></span>
-        Merci ! Votre témoignage a été envoyé pour validation.
-      </div>`;
-    const mainContent = document.querySelector('.site-wrap');
-    mainContent.insertBefore(confirmationMessage, mainContent.firstChild);
-    setTimeout(() => { if (confirmationMessage.parentNode) confirmationMessage.parentNode.removeChild(confirmationMessage); }, 5000);
-  }
-
-  function showError(msg) {
-    confirmationMessage.innerHTML = `<div class="error-alert"><span class="mdi mdi-alert-circle"></span> ${msg}</div>`;
-    const mainContent = document.querySelector('.site-wrap');
-    mainContent.insertBefore(confirmationMessage, mainContent.firstChild);
-    setTimeout(() => { if (confirmationMessage.parentNode) confirmationMessage.parentNode.removeChild(confirmationMessage); }, 5000);
-  }
-
-  // ================== CARROUSEL (LECTURE API) ==================
-  let testimonials = [];
-  let currentIndex = 0;
-  let autoSlideInterval;
-
-  async function loadTestimonials() {
-    try {
-      const response = await fetch(`${API_URL}/messages`);
-      testimonials = await response.json();
-
-      if (testimonials.length > 0) {
-        showTestimonial(currentIndex);
-        startAutoSlide();
-      } else {
-        testimonialMessage.textContent = "Aucun témoignage pour le moment.";
-      }
-    } catch (err) {
-      console.error(err);
-      testimonialMessage.textContent = "Erreur de chargement des témoignages.";
+    // Mise à jour de la disponibilité du bouton de soumission
+    function updateButtonState() {
+        const rem = getRemainingTime();
+        if (rem > 0) {
+            openBtn.disabled = true;
+            openBtn.classList.add("btn-disabled");
+            setTimeout(updateButtonState, 1000);
+        } else {
+            openBtn.disabled = false;
+            openBtn.classList.remove("btn-disabled");
+            localStorage.removeItem(STORAGE_KEY);
+            tooltip.style.display = "none";
+        }
     }
-  }
 
-  function showTestimonial(index) {
-    testimonialMessage.classList.add("fade-out");
-    testimonialMeta.classList.add("fade-out");
+    // Formatage des millisecondes en unités temporelles lisibles
+    function formatTime(ms) {
+        const totalSeconds = Math.ceil(ms / 1000);
+        const h = Math.floor(totalSeconds / 3600);
+        const m = Math.floor((totalSeconds % 3600) / 60);
+        const s = totalSeconds % 60;
 
-    setTimeout(() => {
-      const t = testimonials[index];
-      testimonialMessage.textContent = `"${t.message}"`;
-      testimonialMeta.textContent = `— ${t.firstname} ${t.lastname}, ${t.classe}`;
+        const parts = [];
+        if (h > 0) parts.push(`${h}h`);
+        if (m > 0 || h > 0) parts.push(`${m.toString().padStart(2, '0')}m`);
+        parts.push(`${s.toString().padStart(2, '0')}s`);
 
-      testimonialMessage.classList.remove("fade-out");
-      testimonialMeta.classList.remove("fade-out");
-      testimonialMessage.classList.add("fade-in");
-      testimonialMeta.classList.add("fade-in");
+        return parts.join(' ');
+    }
 
-      setTimeout(() => {
-        testimonialMessage.classList.remove("fade-in");
-        testimonialMeta.classList.remove("fade-in");
-      }, 500);
-    }, 300);
-  }
+    // Actualisation de la position et du contenu du tooltip
+    function updateTooltipPosition() {
+        const rem = getRemainingTime();
+        if (rem <= 0) {
+            tooltip.style.display = "none";
+            clearInterval(tooltipUpdateInterval);
+            return;
+        }
 
-  prevBtn.addEventListener("click", () => {
-    if (testimonials.length === 0) return;
-    currentIndex = (currentIndex - 1 + testimonials.length) % testimonials.length;
-    showTestimonial(currentIndex);
-    resetAutoSlide();
-  });
+        tooltip.textContent = DEBUG_MODE ? `Test : ${formatTime(rem)}` : `Attendez encore ${formatTime(rem)}`;
 
-  nextBtn.addEventListener("click", () => {
-    if (testimonials.length === 0) return;
-    currentIndex = (currentIndex + 1) % testimonials.length;
-    showTestimonial(currentIndex);
-    resetAutoSlide();
-  });
+        const rect = openBtn.getBoundingClientRect();
+        tooltip.style.display = "block";
+        tooltip.style.top = `${window.scrollY + rect.top - tooltip.offsetHeight - 15}px`;
+        tooltip.style.left = `${rect.left + rect.width / 2}px`;
+    }
 
-  function startAutoSlide() {
-    if (testimonials.length > 1) {
-        autoSlideInterval = setInterval(() => {
+    // Gestion des survols pour l'affichage du délai restant
+    openBtn.addEventListener("mouseenter", () => {
+        if (getRemainingTime() > 0) {
+            updateTooltipPosition();
+            tooltipUpdateInterval = setInterval(updateTooltipPosition, 1000);
+        }
+    });
+
+    openBtn.addEventListener("mouseleave", () => {
+        tooltip.style.display = "none";
+        clearInterval(tooltipUpdateInterval);
+    });
+
+    // Gestion du cycle d'affichage et des transitions animées
+    function display(index, direction = 'next') {
+        if (isAnimating || testimonials.length === 0) return;
+        isAnimating = true;
+
+        const outClass = direction === 'next' ? 'slide-next-out' : 'slide-prev-out';
+        const inClass = direction === 'next' ? 'slide-next-in' : 'slide-prev-in';
+
+        testiBox.classList.add(outClass);
+
+        setTimeout(() => {
+            const t = testimonials[index];
+            testimonialMessage.textContent = t.message;
+            testimonialMeta.textContent = `— ${t.firstname} ${t.lastname}, ${t.classe}`;
+
+            testiBox.style.transition = 'none';
+            testiBox.classList.remove(outClass);
+            testiBox.classList.add(inClass);
+
+            void testiBox.offsetWidth;
+
+            testiBox.style.transition = 'all 0.5s cubic-bezier(0.4, 0, 0.2, 1)';
+            testiBox.classList.remove(inClass);
+            
+            setTimeout(() => { isAnimating = false; }, 500);
+        }, 500);
+    }
+
+    // Contrôle du défilement automatique
+    function startAutoPlay() {
+        stopAutoPlay();
+        autoPlayInterval = setInterval(() => {
             currentIndex = (currentIndex + 1) % testimonials.length;
-            showTestimonial(currentIndex);
-        }, 10000);
+            display(currentIndex, 'next');
+        }, AUTO_PLAY_DELAY);
     }
-  }
 
-  function resetAutoSlide() {
-    clearInterval(autoSlideInterval);
-    startAutoSlide();
-  }
+    function stopAutoPlay() { 
+        clearInterval(autoPlayInterval); 
+    }
 
-  loadTestimonials();
+    // Écouteurs pour la navigation manuelle
+    document.getElementById("next-btn").addEventListener("click", () => {
+        stopAutoPlay(); 
+        currentIndex = (currentIndex + 1) % testimonials.length;
+        display(currentIndex, 'next'); 
+        startAutoPlay();
+    });
+
+    document.getElementById("prev-btn").addEventListener("click", () => {
+        stopAutoPlay(); 
+        currentIndex = (currentIndex - 1 + testimonials.length) % testimonials.length;
+        display(currentIndex, 'prev'); 
+        startAutoPlay();
+    });
+
+    // Affichage d'une notification de confirmation éphémère
+    function showConfirmation(msg) {
+        const alertDiv = document.createElement('div');
+        alertDiv.className = 'confirmation-alert';
+        alertDiv.innerHTML = `<i class="mdi mdi-check-circle me-2"></i>${msg}`;
+        document.body.appendChild(alertDiv);
+        setTimeout(() => alertDiv.remove(), 4000);
+    }
+
+    // Traitement et expédition du formulaire de témoignage
+    form.addEventListener("submit", async (e) => {
+        e.preventDefault();
+        
+        const data = {
+            firstname: document.getElementById("firstname").value.trim(),
+            lastname: document.getElementById("lastname").value.trim(),
+            classe: document.getElementById("classe").value.trim(),
+            message: document.getElementById("message").value.trim()
+        };
+
+        try {
+            const r = await fetch(FORMSPREE_URL, {
+                method: 'POST',
+                headers: { 'Accept': 'application/json', 'Content-Type': 'application/json' },
+                body: JSON.stringify(data)
+            });
+
+            if (!r.ok) throw new Error();
+            
+            localStorage.setItem(STORAGE_KEY, Date.now());
+            form.reset();
+            popup.style.display = "none";
+            document.body.style.overflow = "auto";
+            
+            showConfirmation("Témoignage envoyé ! Il sera ajouté après vérification.");
+            updateButtonState();
+        } catch(err) { 
+            alert("Erreur d'envoi. Veuillez réessayer plus tard."); 
+        }
+    });
+
+    // Chargement des données JSON et initialisation de l'affichage
+    updateButtonState();
+    (async function loadTestimonials() {
+        try {
+            const r = await fetch(JSON_DATA_URL);
+            if (!r.ok) throw new Error("Fichier JSON introuvable");
+            testimonials = await r.json();
+            
+            if (testimonials.length > 0) {
+                const t = testimonials[0];
+                testimonialMessage.textContent = t.message;
+                testimonialMeta.textContent = `— ${t.firstname} ${t.lastname}, ${t.classe}`;
+                startAutoPlay(); 
+            }
+        } catch(e) { 
+            console.error(e);
+            testimonialMessage.textContent = "Aucun témoignage disponible pour le moment."; 
+        }
+    })();
+
+    // Gestion de l'ouverture et fermeture de la fenêtre modale
+    openBtn.addEventListener("click", () => { 
+        if(!getRemainingTime()) { 
+            popup.style.display="flex"; 
+            document.body.style.overflow="hidden"; 
+        } 
+    });
+    
+    document.getElementById("closePopup").addEventListener("click", () => { 
+        popup.style.display="none"; 
+        document.body.style.overflow="auto"; 
+    });
 });
