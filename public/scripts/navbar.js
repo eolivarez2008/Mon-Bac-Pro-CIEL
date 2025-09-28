@@ -1,38 +1,79 @@
-// Identification et activation du lien de navigation correspondant à l'URL courante
+// Gère l'état visuel (classe .active) des liens de la navbar en fonction de la page affichée
 function setActiveNavbarLink() {
-    const path = window.location.pathname.split('/').pop().replace(/\.html$/, '');
+    const path = window.location.pathname
+        .split('/')
+        .pop()
+        .replace(/\.html$/, '');
 
     document.querySelectorAll('.navbar .nav-link').forEach(link => {
-        const href = link.getAttribute('href').split('/').pop().replace(/\.html$/, '');
-        const isHomeMatch = (path === '' || path === 'index') && (href === '' || href === 'index');
+        const href = link.getAttribute('href')
+            .split('/')
+            .pop()
+            .replace(/\.html$/, '');
+
+        const isHomeMatch =
+            (path === '' || path === 'index') &&
+            (href === '' || href === 'index');
+
         const isExactMatch = path === href;
 
         link.classList.toggle('active', isHomeMatch || isExactMatch);
     });
 }
 
-// Gestion de la fermeture automatique du menu mobile via Bootstrap
-document.addEventListener('click', (event) => {
-    const collapse = document.querySelector('.navbar-collapse');
-    if (!collapse?.classList.contains('show')) return;
 
-    const isLinkClick = event.target.classList.contains('nav-link');
-    const isOutsideClick = !collapse.contains(event.target);
+/* Gestion changement icône hamburger */
+function initHamburger() {
+    const navContent = document.getElementById('navContent');
+    const toggler = document.querySelector('.navbar-toggler');
+    const icon = toggler?.querySelector('.mdi');
 
-    if (isLinkClick || isOutsideClick) {
-        const bsCollapse = bootstrap.Collapse.getInstance(collapse) || new bootstrap.Collapse(collapse);
-        bsCollapse.hide();
-    }
-});
+    if (!navContent || !icon) return;
 
-// Mise à jour de l'état visuel de la barre de navigation selon le défilement
-window.addEventListener('scroll', () => {
+    navContent.addEventListener('show.bs.collapse', () => {
+        icon.classList.remove('mdi-menu');
+        icon.classList.add('mdi-close-thick');
+    });
+
+    navContent.addEventListener('hide.bs.collapse', () => {
+        icon.classList.remove('mdi-close-thick');
+        icon.classList.add('mdi-menu');
+    });
+}
+
+
+/* Fermeture automatique menu mobile au clic */
+function initMobileNavbar() {
+    const navContent = document.getElementById('navContent');
+    if (!navContent) return;
+
+    document.querySelectorAll('.nav-link').forEach(link => {
+        link.addEventListener('click', () => {
+            if (window.innerWidth < 992) {
+                const collapse =
+                    bootstrap.Collapse.getInstance(navContent) ||
+                    new bootstrap.Collapse(navContent);
+
+                collapse.hide();
+            }
+        });
+    });
+}
+
+
+/* Effet navbar au scroll */
+function initNavbarScrollBehavior() {
     const nav = document.querySelector('.floating-nav');
-    if (nav) {
-        nav.classList.toggle('nav-scrolled', window.scrollY > 50);
-    }
-});
+    if (!nav) return;
 
-// Exportation et exécution initiale du module
-window.addEventListener('DOMContentLoaded', setActiveNavbarLink);
+    window.addEventListener('scroll', () => {
+        nav.classList.toggle('nav-scrolled', window.scrollY > 50);
+    });
+}
+
+
+/* Export global pour components-loader */
 window.setActiveNavbarLink = setActiveNavbarLink;
+window.initHamburger = initHamburger;
+window.initMobileNavbar = initMobileNavbar;
+window.initNavbarScrollBehavior = initNavbarScrollBehavior;
