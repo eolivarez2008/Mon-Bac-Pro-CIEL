@@ -8,10 +8,10 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/@mdi/font@7.4.47/css/materialdesignicons.min.css" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="../styles/styles.css?v=3.2226">
+  <link rel="stylesheet" href="../styles/styles.css?v=3.22267">
   <script defer src="https://cloud.umami.is/script.js" data-website-id="b3a96ee2-97ec-488f-a102-78a1b9f1023b"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-  <script src="./scripts/testimonials.js?v=3" type="module"></script>
+  <script src="./scripts/testimonials.js?v=4" type="module"></script>
   <script defer src="../scripts/components-loader.js?v=3"></script>
   <script defer src="../scripts/navbar.js?v=3.1223"></script>
 </head>
@@ -26,17 +26,17 @@
     </section>
 
     <section id="temoignages" class="mt-5">
-      <div class="d-flex align-items-center justify-content-center gap-2 gap-md-4">
-        <button id="prev-btn" class="arrow-btn" aria-label="Précédent">
+      <div class="d-flex flex-wrap flex-md-nowrap align-items-center justify-content-center gap-3 gap-md-4">
+        <button id="prev-btn" class="arrow-btn order-2 order-md-1" aria-label="Précédent">
           <span class="mdi mdi-chevron-left"></span>
         </button>
-        <div class="testi-box glass">
+        <div class="testi-box glass order-1 order-md-2">
           <span class="mdi mdi-format-quote-open quote-icon"></span>
           <p id="testimonial-message" class="testimonial-text">Chargement des témoignages...</p>
           <div id="testimonial-meta" class="meta fw-bold text-accent"></div>
           <span class="mdi mdi-format-quote-close quote-icon-end"></span>
         </div>
-        <button id="next-btn" class="arrow-btn" aria-label="Suivant">
+        <button id="next-btn" class="arrow-btn order-3 order-md-3" aria-label="Suivant">
           <span class="mdi mdi-chevron-right"></span>
         </button>
       </div>
@@ -47,6 +47,7 @@
         <i class="mdi mdi-message-draw me-2"></i>Laisser un témoignage
       </button>
     </div>
+
     <div id="testimonialPopup" class="popup-overlay">
       <div class="popup-content glass">
         <span id="closePopup" class="close-btn">&times;</span>
