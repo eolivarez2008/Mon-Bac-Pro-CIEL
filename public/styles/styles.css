@@ -308,40 +308,16 @@ p {
   border-radius: 12px;
 }
 
+.custom-school-pin {
+    backface-visibility: hidden;
+    perspective: 1000;
+    transform: translateZ(0); /* Force l'usage du GPU */
+}
+
 .table-responsive {
-  border-radius: 12px;
-  overflow: hidden;
-  border: 1px solid var(--glass-border);
-}
-
-.custom-table {
-  width: 100%;
-  background: transparent;
-  margin-bottom: 0;
-  color: var(--text-main);
-  border-collapse: collapse;
-}
-
-.custom-table th {
-  background: rgba(255, 255, 255, 0.05);
-  color: var(--accent);
-  font-weight: 600;
-  text-transform: uppercase;
-  font-size: 0.75rem;
-  letter-spacing: 1px;
-  padding: 16px;
-  border-bottom: 1px solid var(--glass-border);
-}
-
-.custom-table td {
-  padding: 14px 16px;
-  font-size: 0.9rem;
-  color: var(--hero-lead);
-  border-bottom: 1px solid var(--glass-border);
-}
-
-.custom-table tbody tr:hover {
-  background: rgba(255, 255, 255, 0.02);
+    border: none !important; 
+    background: transparent !important;
+    margin-top: 20px;
 }
 
 .pagination {
@@ -351,17 +327,42 @@ p {
   color: var(--hero-lead);
 }
 
-.sort-arrow {
-  font-size: 0.8rem;
-  opacity: 0.5;
-  cursor: pointer;
-  transition: opacity 0.2s;
+.search-wrapper, .filter-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
 }
 
-.sort-arrow:hover {
-  opacity: 1;
-  color: var(--accent);
+.search-icon {
+    position: absolute;
+    left: 15px;
+    color: var(--hero-lead);
 }
+
+#searchInput, #deptFilter {
+    background: rgba(255, 255, 255, 0.05) !important;
+    border: 1px solid var(--glass-border) !important;
+    color: var(--accent) !important;
+    padding-left: 45px !important;
+    border-radius: 10px;
+    height: 50px;
+}
+
+#deptFilter {
+    cursor: pointer;
+}
+
+#deptFilter option {
+    background-color: #121212;
+    color: white;
+}
+
+#searchInput:focus {
+    border-color: var(--accent) !important;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+}
+
+#toggleView.active ~ #searchContainer { display: block !important; }
 
 /* --- Sections spécifiques : Débouchés & Projets --- */
 .flip-card {
@@ -688,7 +689,7 @@ p {
 
 .popup-form .form-control {
   background-color: #0a0a0a !important;
-  color: #ffffff !important;
+  /* color: #ffffff !important; */
   border: 1px solid #333 !important;
   font-family: 'Poppins', sans-serif !important;
 }
@@ -767,6 +768,10 @@ p {
   .testimonial-text { font-size: 1.1rem; }
   .quote-icon, .quote-icon-end { font-size: 2.5rem; }
   .confirmation-alert { top: 100px; font-size: 0.9rem; padding: 0.6rem 1.2rem; }
+  ::-webkit-scrollbar { width: 8px; }
+  ::-webkit-scrollbar-track { background: var(--bg); }
+  ::-webkit-scrollbar-thumb { background: var(--glass-border); border-radius: 10px; }
+  ::-webkit-scrollbar-thumb:hover { background: var(--accent); }
 }
 
 @media (min-width: 768px) {
@@ -799,4 +804,163 @@ p {
 
 @media (min-width: 1024px) {
   .cards-grid { grid-template-columns: repeat(3, 1fr); }
+}
+
+/* Style des lignes sur Ordinateur */
+.custom-table {
+    border-collapse: separate !important;
+    border-spacing: 0 10px !important;
+    table-layout: fixed; /* INDISPENSABLE pour fixer les largeurs */
+    width: 100%;
+}
+
+.custom-table tbody tr {
+    background: var(--glass);
+    transition: transform 0.2s ease;
+}
+
+/* Définition des colonnes : 50% | 30% | 20% */
+.custom-table th:nth-child(1), 
+.custom-table td:nth-child(1) { width: 50%; }
+
+.custom-table th:nth-child(2), 
+.custom-table td:nth-child(2) { width: 30%; }
+
+.custom-table th:nth-child(3), 
+.custom-table td:nth-child(3) { width: 20%; }
+
+/* Bordures et arrondis des lignes sur Ordinateur */
+.custom-table td {
+    white-space: nowrap;      /* Empêche le texte de revenir à la ligne */
+    overflow: hidden;         /* Cache ce qui dépasse */
+    text-overflow: ellipsis;  /* Ajoute "..." si c'est trop long */
+    border-top: 1px solid var(--glass-border) !important;
+    border-bottom: 1px solid var(--glass-border) !important;
+    padding: 20px 15px !important; /* On augmente un peu l'espace interne pour le look */
+}
+
+.custom-table td:first-child {
+    border-left: 1px solid var(--glass-border) !important;
+    border-radius: 12px 0 0 12px !important;
+}
+
+.custom-table td:last-child {
+    border-right: 1px solid var(--glass-border) !important;
+    border-radius: 0 12px 12px 0 !important;
+}
+
+
+.custom-table th:nth-child(1), .custom-table td:nth-child(1) { 
+    text-align: left; 
+    padding-left: 20px !important;
+}
+/* Colonne 2 : Centre */
+.custom-table th:nth-child(2), .custom-table td:nth-child(2) { 
+    text-align: center; 
+}
+/* Colonne 3 : Droite */
+.custom-table th:nth-child(3), .custom-table td:nth-child(3) { 
+    text-align: right; 
+    padding-right: 20px !important;
+}
+/* Alignement propre des titres sans les flèches */
+.custom-table th {
+    border: none !important;
+    text-align: left;
+    padding-left: 15px !important;
+    opacity: 0.6; /* Un peu plus discret pour laisser le focus sur les données */
+}
+
+/* On enlève l'effet de zoom au survol si tu trouves ça trop agité */
+.custom-table tbody tr:hover {
+    background: var(--glass-hover) !important;
+    transform: none !important; 
+}
+/* Correction Mobile (Cartes) */
+@media (max-width: 768px) {
+    .custom-table thead { display: none; }
+
+    .custom-table tr { 
+        display: block !important;
+        background: rgba(255, 255, 255, 0.03) !important; /* Fond très léger */
+        /* Bordure plus marquée pour bien voir la carte */
+        border: 1px solid rgba(255, 255, 255, 0.12) !important; 
+        border-radius: 16px !important;
+        margin-bottom: 20px;
+        padding: 15px !important;
+        position: relative;
+        transition: all 0.3s ease;
+        /* Ombre portée pour détacher la carte du fond */
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    /* Optionnel : Petit effet de lumière quand on touche la carte */
+    .custom-table tr:active {
+        border-color: var(--accent) !important;
+        background: rgba(255, 255, 255, 0.06) !important;
+    }
+
+    .custom-table td {
+        display: block !important;
+        width: 100% !important;
+        padding: 0 !important;
+        text-align: left !important;
+        border: none !important;
+        box-shadow: none !important;
+        background: transparent !important; /* Supprime le fond gris sur le nom */
+    }
+
+    /* Le Nom (En haut, pleine largeur) */
+    .custom-table td:first-child {
+        font-size: 1.07rem;
+        font-weight: 600;
+        color: var(--accent);
+        margin-bottom: 10px; /* Espace avec la ville/cp */
+        white-space: normal !important;
+    }
+
+    /* La Ville (En bas à gauche) */
+    .custom-table td:nth-child(2) {
+        font-size: 0.95rem;
+        color: var(--hero-lead);
+        width: 70% !important; /* Laisse la place au CP à droite */
+        display: inline-block !important;
+    }
+
+    /* Le Code Postal (En bas à droite) */
+    .custom-table td:last-child {
+        position: absolute;
+        right: 20px;
+        bottom: 20px;
+        width: auto !important;
+        display: inline-block !important;
+        font-size: 0.9rem;
+        font-weight: 700;
+        color: var(--accent);
+        background: rgba(255, 255, 255, 0.05); /* Petit badge discret */
+        padding: 2px 8px !important;
+        border-radius: 6px;
+    }
+}
+
+/* --- Alignement PC (Assure-toi que c'est bien présent) --- */
+@media (min-width: 769px) {
+    .custom-table td:nth-child(1) { text-align: left; padding-left: 20px !important; }
+    .custom-table td:nth-child(2) { text-align: center; }
+    .custom-table td:nth-child(3) { text-align: right; padding-right: 20px !important; }
+}
+/* Fix Placeholder et Select */
+#searchInput::placeholder { color: rgba(255, 255, 255, 0.5) !important; }
+#deptFilter option { background-color: #0a0a0a; color: white; }
+
+/* Ajustement Tablette (entre 769px et 1024px) */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .custom-table th:nth-child(1), .custom-table td:nth-child(1) { width: 60%; } /* Plus de place au nom */
+    .custom-table th:nth-child(2), .custom-table td:nth-child(2) { width: 20%; }
+    .custom-table th:nth-child(3), .custom-table td:nth-child(3) { width: 20%; } /* CP au strict minimum */
+    
+    .custom-table td {
+        font-size: 0.85rem; /* On réduit un peu la police pour que ça rentre */
+        white-space: normal; /* On autorise le retour à la ligne si vraiment trop long */
+    }
 }
