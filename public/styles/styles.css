@@ -166,6 +166,19 @@ p {
   transform: translateX(-50%);
 }
 
+/* Désactivation des interactions pour la barre de navigation flottante */
+.floating-nav, 
+.floating-nav .container-fluid {
+    pointer-events: none !important;
+}
+
+/* Activation des interactions pour les éléments de navigation */
+.nav-pill-container, 
+.navbar-brand, 
+.navbar-toggler {
+    pointer-events: auto !important;
+}
+
 /* Logo ou marque dans la navigation */
 .navbar-brand {
   font-size: 1rem;

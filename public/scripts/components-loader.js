@@ -33,8 +33,8 @@ function initNavbarLogic() {
 
 // Exécution des chargements de composants au montage du DOM
 document.addEventListener("DOMContentLoaded", () => {
-    loadComponent('/components/navbar.html', 'navbar', initNavbarLogic);
-    loadComponent('/components/footer.html', 'footer');
+    loadComponent('/components/navbar.html?v=2', 'navbar', initNavbarLogic);
+    loadComponent('/components/footer.html?v=2', 'footer');
 });
 
 // Réinitialisation de la logique d'interface lors du redimensionnement de la fenêtre
