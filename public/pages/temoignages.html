@@ -1,86 +1,169 @@
 <!doctype html>
 <html lang="fr">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Bac Pro CIEL — Témoignages</title>
-  <link rel="icon" href="../assets/images/favicon.ico?v=2" type="image/x-icon">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link href="https://cdn.jsdelivr.net/npm/@mdi/font@7.4.47/css/materialdesignicons.min.css" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="../styles/styles.css?v=5">
-  <script defer src="https://umami.realbus.fr/script.js" data-website-id="195ac2e5-f79d-4b88-aa30-a037b355fa0c"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-  <script src="./scripts/testimonials.js?v=4" type="module"></script>
-  <script defer src="../scripts/components-loader.js?v=4"></script>
-  <script defer src="../scripts/navbar.js?v=4"></script>
-</head>
-<body>
-  <div id="navbar"></div>
-  <main class="site-wrap container-lg py-5 mt-5">
-    <section class="text-center pt-3">
-      <h1 class="hero-title mt-5">Témoignages</h1>
-      <p class="hero-lead mx-auto" style="max-width: 700px;">
-        Découvrez les retours d’expérience de nos élèves. Leurs parcours reflètent la diversité et la richesse de la formation CIEL.
-      </p>
-    </section>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Bac Pro CIEL — Témoignages</title>
+    <link
+      rel="icon"
+      href="../assets/images/favicon.ico?v=2"
+      type="image/x-icon"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/@mdi/font@7.4.47/css/materialdesignicons.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../styles/styles.css?v=5" />
+    <script
+      defer
+      src="https://umami.eolivarez.site/script.js"
+      data-website-id="ID_UMAMI_PROD"
+    ></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="./scripts/testimonials.js?v=4" type="module"></script>
+    <script defer src="../scripts/components-loader.js?v=4"></script>
+    <script defer src="../scripts/navbar.js?v=4"></script>
+  </head>
+  <body>
+    <div id="navbar"></div>
+    <main class="site-wrap container-lg py-5 mt-5">
+      <section class="text-center pt-3">
+        <h1 class="hero-title mt-5">Témoignages</h1>
+        <p class="hero-lead mx-auto" style="max-width: 700px">
+          Découvrez les retours d’expérience de nos élèves. Leurs parcours
+          reflètent la diversité et la richesse de la formation CIEL.
+        </p>
+      </section>
 
-    <section id="temoignages" class="mt-5">
-      <div class="d-flex flex-wrap flex-md-nowrap align-items-center justify-content-center gap-3 gap-md-4">
-        <button id="prev-btn" class="arrow-btn order-2 order-md-1" aria-label="Précédent"  data-umami-event="Temoignage" data-umami-event-temoignage="Previous">
-          <span class="mdi mdi-chevron-left"></span>
-        </button>
-        <div class="testi-box glass order-1 order-md-2">
-          <span class="mdi mdi-format-quote-open quote-icon"></span>
-          <p id="testimonial-message" class="testimonial-text">Chargement des témoignages...</p>
-          <div id="testimonial-meta" class="meta fw-bold text-accent"></div>
-          <span class="mdi mdi-format-quote-close quote-icon-end"></span>
+      <section id="temoignages" class="mt-5">
+        <div
+          class="d-flex flex-wrap flex-md-nowrap align-items-center justify-content-center gap-3 gap-md-4"
+        >
+          <button
+            id="prev-btn"
+            class="arrow-btn order-2 order-md-1"
+            aria-label="Précédent"
+            data-umami-event="Temoignage"
+            data-umami-event-temoignage="Previous"
+          >
+            <span class="mdi mdi-chevron-left"></span>
+          </button>
+          <div class="testi-box glass order-1 order-md-2">
+            <span class="mdi mdi-format-quote-open quote-icon"></span>
+            <p id="testimonial-message" class="testimonial-text">
+              Chargement des témoignages...
+            </p>
+            <div id="testimonial-meta" class="meta fw-bold text-accent"></div>
+            <span class="mdi mdi-format-quote-close quote-icon-end"></span>
+          </div>
+          <button
+            id="next-btn"
+            class="arrow-btn order-3 order-md-3"
+            aria-label="Suivant"
+            data-umami-event="Temoignage"
+            data-umami-event-temoignage="Next"
+          >
+            <span class="mdi mdi-chevron-right"></span>
+          </button>
         </div>
-        <button id="next-btn" class="arrow-btn order-3 order-md-3" aria-label="Suivant" data-umami-event="Temoignage" data-umami-event-temoignage="Next">
-          <span class="mdi mdi-chevron-right"></span>
+      </section>
+
+      <div class="text-center mt-5">
+        <button
+          id="openFormBtn"
+          class="btn-accent"
+          data-umami-event="Temoignage"
+          data-umami-event-temoignage="OpenForm"
+        >
+          <i class="mdi mdi-message-draw me-2"></i>Laisser un témoignage
         </button>
       </div>
-    </section>
 
-    <div class="text-center mt-5">
-      <button id="openFormBtn" class="btn-accent" data-umami-event="Temoignage" data-umami-event-temoignage="OpenForm">
-        <i class="mdi mdi-message-draw me-2"></i>Laisser un témoignage
-      </button>
-    </div>
+      <div id="testimonialPopup" class="popup-overlay">
+        <div class="popup-content glass">
+          <span id="closePopup" class="close-btn">&times;</span>
+          <h3 class="fw-bold mb-4">
+            <i class="mdi mdi-pen me-2"></i>Votre témoignage
+          </h3>
 
-    <div id="testimonialPopup" class="popup-overlay">
-      <div class="popup-content glass">
-        <span id="closePopup" class="close-btn">&times;</span>
-        <h3 class="fw-bold mb-4"><i class="mdi mdi-pen me-2"></i>Votre témoignage</h3>
-        
-        <form id="testimonialForm" action="https://formspree.io/f/xzdaavnv" method="POST" class="popup-form">
-          <div class="row g-3">
-            <div class="col-md-6">
-              <label class="form-label small hero-lead">Prénom</label>
-              <input type="text" id="firstname" name="firstname" class="form-control bg-dark-subtle border-secondary text-white" placeholder="Ex: Jean" required>
+          <form
+            id="testimonialForm"
+            action="https://formspree.io/f/xzdaavnv"
+            method="POST"
+            class="popup-form"
+          >
+            <div class="row g-3">
+              <div class="col-md-6">
+                <label class="form-label small hero-lead">Prénom</label>
+                <input
+                  type="text"
+                  id="firstname"
+                  name="firstname"
+                  class="form-control bg-dark-subtle border-secondary text-white"
+                  placeholder="Ex: Jean"
+                  required
+                />
+              </div>
+              <div class="col-md-6">
+                <label class="form-label small hero-lead">Nom</label>
+                <input
+                  type="text"
+                  id="lastname"
+                  name="lastname"
+                  class="form-control bg-dark-subtle border-secondary text-white"
+                  placeholder="Ex: Dupont"
+                  required
+                />
+              </div>
+              <div class="col-md-12">
+                <label class="form-label small hero-lead"
+                  >Classe / Promotion</label
+                >
+                <input
+                  type="text"
+                  id="classe"
+                  name="classe"
+                  class="form-control bg-dark-subtle border-secondary text-white"
+                  placeholder="Ex: Terminale CIEL 2025"
+                  required
+                />
+              </div>
+              <div class="col-md-12">
+                <label class="form-label small hero-lead"
+                  >Votre message (max 200 caractères)</label
+                >
+                <textarea
+                  id="message"
+                  name="message"
+                  class="form-control bg-dark-subtle border-secondary text-white fixed-textarea"
+                  maxlength="200"
+                  placeholder="Racontez-nous votre expérience..."
+                  required
+                ></textarea>
+              </div>
             </div>
-            <div class="col-md-6">
-              <label class="form-label small hero-lead">Nom</label>
-              <input type="text" id="lastname" name="lastname" class="form-control bg-dark-subtle border-secondary text-white" placeholder="Ex: Dupont" required>
+            <div class="text-center mt-4">
+              <button
+                type="submit"
+                class="btn-accent px-5"
+                data-umami-event="Temoignage"
+                data-umami-event-temoignage="SubmitForm"
+              >
+                <span class="mdi mdi-send me-2"></span>Envoyer
+              </button>
             </div>
-            <div class="col-md-12">
-              <label class="form-label small hero-lead">Classe / Promotion</label>
-              <input type="text" id="classe" name="classe" class="form-control bg-dark-subtle border-secondary text-white" placeholder="Ex: Terminale CIEL 2025" required>
-            </div>
-            <div class="col-md-12">
-              <label class="form-label small hero-lead">Votre message (max 200 caractères)</label>
-              <textarea id="message" name="message" class="form-control bg-dark-subtle border-secondary text-white fixed-textarea" maxlength="200" placeholder="Racontez-nous votre expérience..." required></textarea>
-            </div>
-          </div>
-          <div class="text-center mt-4">
-            <button type="submit" class="btn-accent px-5" data-umami-event="Temoignage" data-umami-event-temoignage="SubmitForm">
-              <span class="mdi mdi-send me-2"></span>Envoyer
-            </button>
-          </div>
-        </form>
+          </form>
+        </div>
       </div>
-    </div>
-  </main>
-  <div id="footer"></div>
-</body>
+    </main>
+    <div id="footer"></div>
+  </body>
 </html>

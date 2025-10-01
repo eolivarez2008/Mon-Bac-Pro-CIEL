@@ -1,0 +1,11 @@
+services:
+  monbacprociel:
+    container_name: monbacprociel
+    image: monbacprociel:latest
+    build: .
+    ports:
+      - "127.0.0.1:3002:80"
+    env_file:
+      - .env
+    command: /bin/sh -c "sed -i 's/ID_UMAMI_PROD/'$UMAMI_ID'/g' /usr/share/nginx/html/*.html && nginx -g 'daemon off;'"
+    restart: always

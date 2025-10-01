@@ -2,11 +2,11 @@
 
 Bienvenue sur le dépôt **Mon Bac Pro CIEL** créé par Emilien.
 
-**Mon Bac Pro CIEL** est un site web francophone dédié à la présentation du bac professionnel Cybersécurité, Informatique, Électronique et Réseaux, développé dans le cadre d'un projet scolaire débuté en **2025**. 
+**Mon Bac Pro CIEL** est un site web francophone dédié à la présentation du bac professionnel Cybersécurité, Informatique, Électronique et Réseaux, développé dans le cadre d'un projet scolaire débuté en **2025**.
 
 Ce site propose une immersion complète dans le thème du **Bac Pro CIEL**, à travers différentes rubriques :
 
-- **Formation** : pour comprendre le bac pro 
+- **Formation** : pour comprendre le bac pro
 - **Débouchés** : présentation des métiers et études supérieurs disponibles après le bac  
 - **Projets** : une présentation structurée des projets fait par les élèves  
 - **Stages** : des informations et conseils pour les stages
@@ -18,12 +18,31 @@ Ce site propose une immersion complète dans le thème du **Bac Pro CIEL**, à t
 
 Le projet est entièrement containerisé et repose sur une architecture micro-services gérée par **Docker Compose**.
 
-* **Infrastructure** : Docker & Docker Compose
-* **Serveur Web** : Nginx (Alpine)
-* **Tunneling & Sécurité** : Cloudflare Tunnel (Zero Trust)
-* **CI/CD** : Déploiement via Git & Docker Compose
+- **Infrastructure** : Docker & Docker Compose
+- **Serveur Web** : Nginx (Alpine)
+- **Tunneling & Sécurité** : Cloudflare Tunnel (Zero Trust)
+- **CI/CD** : Déploiement via Git & Docker Compose
 
 **Accès au site :** [https://monbacprociel.eolivarez.site](https://monbacprociel.eolivarez.site)  
+
+---
+
+## Installation et Configuration
+
+1. Clonage du projet
+
+```bash
+git clone https://github.com/eolivarez2008/Mon-Bac-Pro-CIEL.git
+cd Mon-Bac-Pro-CIEL
+```
+
+2. Configuration des variables d'environnement
+
+Création du fichier .env à la racine du projet
+
+```env
+UMAMI_ID=votre_id_umami_ici
+```
 
 ---
 
@@ -52,10 +71,11 @@ Lycée Louis de Cormontaigne, Metz
 
 ## Licence
 
-Ce projet est sous licence **Apache 2.0**. 
+Ce projet est sous licence **Apache 2.0**.
 Tu peux :
+
 - utiliser librement le code,
 - le modifier,
 - le distribuer,
 - même à usage commercial,  
-tant que tu respectes les conditions de la [licence Apache 2.0](https://www.apache.org/licenses/LICENSE-2.0).
+  tant que tu respectes les conditions de la [licence Apache 2.0](https://www.apache.org/licenses/LICENSE-2.0).
