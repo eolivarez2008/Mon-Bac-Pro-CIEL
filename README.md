@@ -1,81 +1,119 @@
-# MON BAC PRO CIEL – Website
+<div align="center">
 
-Bienvenue sur le dépôt **Mon Bac Pro CIEL** créé par Emilien.
+# Mon Bac Pro CIEL
 
-**Mon Bac Pro CIEL** est un site web francophone dédié à la présentation du bac professionnel Cybersécurité, Informatique, Électronique et Réseaux, développé dans le cadre d'un projet scolaire débuté en **2025**.
+A static website presenting the French vocational diploma in Cybersecurity, IT, Electronics & Networks (Bac Pro CIEL).
 
-Ce site propose une immersion complète dans le thème du **Bac Pro CIEL**, à travers différentes rubriques :
+[![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://www.apache.org/licenses/LICENSE-2.0)
+[![Docker](https://img.shields.io/badge/Docker-Compose-2496ED?logo=docker&logoColor=white)](https://www.docker.com/)
+[![Nginx](https://img.shields.io/badge/Nginx-Alpine-009639?logo=nginx&logoColor=white)](https://nginx.org/)
+[![Cloudflare](https://img.shields.io/badge/Cloudflare-Tunnel-F38020?logo=cloudflare&logoColor=white)](https://www.cloudflare.com/products/tunnel/)
 
-- **Formation** : pour comprendre le bac pro
-- **Débouchés** : présentation des métiers et études supérieurs disponibles après le bac  
-- **Projets** : une présentation structurée des projets fait par les élèves  
-- **Stages** : des informations et conseils pour les stages
-- **Témoignages** : affichage dynamique et formulaire de soumission avec modération admin
+**[Live Website](https://monbacprociel.eolivarez.site)**
 
----
-
-## Déploiement & Architecture
-
-Le projet est entièrement containerisé et repose sur une architecture micro-services gérée par **Docker Compose**.
-
-- **Infrastructure** : Docker & Docker Compose
-- **Serveur Web** : Nginx (Alpine)
-- **Tunneling & Sécurité** : Cloudflare Tunnel (Zero Trust)
-- **CI/CD** : Déploiement via Git & Docker Compose
-
-**Accès au site :** [https://monbacprociel.eolivarez.site](https://monbacprociel.eolivarez.site)  
+</div>
 
 ---
 
-## Installation et Configuration
+## Project Status: Completed
 
-1. Clonage du projet
+This project was built, finalized, and validated as a core part of my high school curriculum. It is fully operational, stable, and successfully hosted.
+
+---
+
+## Table of Contents
+
+- [Overview](#overview)
+- [Features](#features)
+- [Tech Stack](#tech-stack)
+- [Deployment & Infrastructure](#deployment--infrastructure)
+- [Getting Started](#getting-started)
+- [License](#license)
+
+---
+
+## Overview
+
+**Mon Bac Pro CIEL** documents the Bac Pro CIEL curriculum — a French vocational track covering Cybersecurity, IT, Electronics, and Networks. It features a clean modular architecture, separating static frontend presentation from self-hosted analytics.
+
+---
+
+## Features
+
+- **Formation** — curriculum overview and programme structure.
+- **Débouchés** — career paths and higher education opportunities after graduation.
+- **Projets** — structured showcase of student-built projects.
+- **Stages** — practical guidance for internship periods.
+- **Témoignages** — dynamic testimonials feed with submission form and admin moderation.
+
+---
+
+## Tech Stack
+
+- **Core Frontend:** Built using core [HTML5](https://developer.mozilla.org/en/docs/Web/HTML), [CSS3](https://developer.mozilla.org/en/docs/Web/CSS), and vanilla [JavaScript ES6+](https://developer.mozilla.org/en/docs/Web/JavaScript) for DOM manipulation and dynamic JSON data handling.
+- **UI Framework:** [Bootstrap 5](https://getbootstrap.com/) and [Pictogrammers MDI](https://pictogrammers.com/library/mdi/) vector icons for responsive layout.
+- **Backend Utilities:** [Formspree](https://formspree.io/) integration for secure serverless form handling without exposing a custom backend.
+
+---
+
+## Deployment & Infrastructure
+
+While the frontend relies on standard web technologies, the production deployment incorporates modern network and system administration practices:
+
+- **Web Server:** Optimized **Nginx (Alpine)** serving static files, self-hosted on a dedicated VM.
+- **Containerization:** The entire stack is containerized and automated using **Docker** and **Docker Compose**.
+- **Zero Trust Network:** Securely exposed using a **Cloudflare Tunnel (Zero Trust)**. This architecture allows secure web hosting without opening any inbound ports on the local firewall, providing native DDoS mitigation and automated SSL/TLS management.
+- **Privacy-First Analytics:** Integration of **Umami**, a lightweight, self-hosted, open-source analytics platform respectful of GDPR.
+
+---
+
+## Getting Started
+
+### Development (Local Run)
+
+To run the website locally and preserve proper routing and dynamic features, a local web server is required.
+
+1. Clone the repository:
 
 ```bash
 git clone https://github.com/eolivarez2008/Mon-Bac-Pro-CIEL.git
 cd Mon-Bac-Pro-CIEL
+
 ```
 
-2. Configuration des variables d'environnement
+2. Serve the files using a local development server such as **Live Server (VS Code extension)**, **WampServer**, **XAMPP**, or python's built-in server (`python -m http.server`).
 
-Création du fichier .env à la racine du projet
+### Production Deployment
+
+This repository provides pre-configured production files including `Dockerfile`, `docker-compose.yml`, and `nginx.conf`. You can choose your preferred deployment strategy:
+
+#### Option A: Static Web Hosting (Netlify, Vercel, VPS...)
+
+You can host the frontend directly on any static platform. Simply connect your **Umami** dashboard tracking ID to your analytics environment.
+
+#### Option B: Self-Hosted Containerized Stack (Docker & Nginx)
+
+To spin up the complete automated stack provided in this repository:
+
+1. Ensure you have **Docker**, **Docker Compose** and **Nginx** installed on your server.
+2. Create a `.env` file at the root to configure your analytics:
 
 ```env
-UMAMI_ID=votre_id_umami_ici
+UMAMI_ID=your_umami_site_id_here
+
 ```
 
----
+3. Launch the infrastructure:
 
-## Stack Technique
+```bash
+docker compose up -d
 
-Le projet utilise une architecture moderne séparant le contenu statique de la logique métier dynamique.
+```
 
-- **Structure & sémantique** : [HTML5](https://developer.mozilla.org/fr/docs/Web/HTML) — Organisation des pages, hiérarchisation du contenu et intégration des médias.
-- **Mise en forme & responsive design** : [CSS3](https://developer.mozilla.org/fr/docs/Web/CSS) & [Bootstrap 5](https://getbootstrap.com/) — Mise en page, animations légères, adaptation multi-écrans.
-- **Logique côté client** : [JavaScript (ES6+)](https://developer.mozilla.org/fr/docs/Web/JavaScript) — Manipulation du DOM, interactions dynamiques, gestion des données JSON.
-- **Hébergement & Infra** : [Docker](https://www.docker.com/) — Containerisation du site statique avec un serveur Nginx optimisé, auto-hébergé sur une VM dédiée.
-- **Réseau & Sécurité** : [Cloudflare Tunnel](https://www.cloudflare.com/products/tunnel/) — Exposition sécurisée du service sans ouverture de ports (Zero Trust), protection contre les attaques et gestion automatique du certificat SSL.
-- **Gestion du formulaire de témoignage** : [Formspree](https://formspree.io/) — Traitement des soumissions sans backend personnalisé.
-- **Icônes UI** : [Pictogrammers](https://pictogrammers.com/library/mdi/) — Intégration des pictogrammes vectoriels issus de la librairie Pictogrammers pour une interface cohérente et scalable.
-- **Web analytics** : [Umami](https://umami.is/) — Solution open-source d’analyse d’audience, légère et respectueuse de la vie privée, auto-hébergée.
-- **Format de données** : [JSON](https://www.json.org/json-fr.html) — Structuration des lycées et des témoignages.
+The site will be live locally on port `3002` (or the port defined in your configuration), ready to be routed behind Nginx and Cloudflare.
 
 ---
 
-## Auteur
+## License
 
-Développé par **Emilien Olivarez** – Étudiant en Bac Pro CIEL  
-Lycée Louis de Cormontaigne, Metz
-
----
-
-## Licence
-
-Ce projet est sous licence **Apache 2.0**.
-Tu peux :
-
-- utiliser librement le code,
-- le modifier,
-- le distribuer,
-- même à usage commercial,  
-  tant que tu respectes les conditions de la [licence Apache 2.0](https://www.apache.org/licenses/LICENSE-2.0).
+Distributed under the **Apache 2.0 License** — see [LICENSE](LICENSE) for details.
