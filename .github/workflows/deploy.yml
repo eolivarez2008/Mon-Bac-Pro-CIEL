@@ -1,0 +1,39 @@
+name: Deploy Site via Cloudflare Tunnel
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    environment: production
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Configure SSH for Cloudflare Tunnel
+        run: |
+          mkdir -p ~/.ssh
+          wget -q https://github.com/cloudflare/cloudflared/releases/latest/download/cloudflared-linux-amd64.deb
+          sudo dpkg -i cloudflared-linux-amd64.deb
+          echo "Host ${{ secrets.SSH_HOST }}" >> ~/.ssh/config
+          echo "  ProxyCommand /usr/local/bin/cloudflared access ssh --hostname %h" >> ~/.ssh/config
+          echo "  StrictHostKeyChecking no" >> ~/.ssh/config
+
+      - name: Deploy files to Server
+        uses: easingthemes/ssh-deploy@main
+        with:
+          SSH_PRIVATE_KEY: ${{ secrets.SSH_KEY }}
+          ARGS: "-rlgoDzvO --delete --exclude=.env"
+          REMOTE_HOST: ${{ secrets.SSH_HOST }}
+          REMOTE_USER: ${{ secrets.SSH_USER }}
+          TARGET: "/srv/monbacprociel"
+
+      - name: Restart Docker Container
+        run: |
+          eval $(ssh-agent -s)
+          echo "${{ secrets.SSH_KEY }}" | tr -d '\r' | ssh-add -
+          ssh ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }} "cd /srv/monbacprociel && docker compose up -d --build"
