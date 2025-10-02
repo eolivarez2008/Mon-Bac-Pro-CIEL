@@ -71,17 +71,28 @@ While the frontend relies on standard web technologies, the production deploymen
 
 ### Development (Local Run)
 
-To run the website locally and preserve proper routing and dynamic features, a local web server is required.
+To run the website locally and preserve proper routing, a local web server is required. Node.js must be installed on your machine.
 
 1. Clone the repository:
 
 ```bash
 git clone https://github.com/eolivarez2008/Mon-Bac-Pro-CIEL.git
 cd Mon-Bac-Pro-CIEL
-
 ```
 
-2. Serve the files using a local development server such as **Live Server (VS Code extension)**, **WampServer**, **XAMPP**, or python's built-in server (`python -m http.server`).
+2. Install `serve` globally:
+
+```bash
+npm install -g serve
+```
+
+3. Start the development server:
+
+```bash
+serve -c serve.json public/
+```
+
+The site will be available at `http://localhost:3000`.
 
 ### Production Deployment
 
