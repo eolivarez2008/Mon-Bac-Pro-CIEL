@@ -107,13 +107,7 @@ The site will be available at `http://localhost:3000`.
 
 ### Production Deployment
 
-This repository provides pre-configured production files including `Dockerfile`, `docker-compose.yml`, and `nginx.conf`. You can choose your preferred deployment strategy:
-
-#### Option A: Static Web Hosting (Netlify, Vercel, VPS...)
-
-You can host the frontend directly on any static platform. You will need to handle environment variable injection yourself depending on your platform's build pipeline.
-
-#### Option B: Self-Hosted Containerized Stack (Docker & Nginx)
+This repository provides pre-configured production files including `Dockerfile`, `docker-compose.yml`, and `nginx.conf`.
 
 1. Ensure you have **Docker**, **Docker Compose** and **Nginx** installed on your server.
 
@@ -124,22 +118,16 @@ git clone https://github.com/eolivarez2008/Mon-Bac-Pro-CIEL.git
 cd Mon-Bac-Pro-CIEL
 ```
 
-3. Install `serve` globally:
-
-```bash
-npm install -g serve
-```
-
-4. Copy the example environment file and fill in your values:
+3. Copy the example environment file and fill in your values:
 
 ```bash
 cp .env.example .env
 ```
 
-5. Launch the infrastructure:
+4. Launch the infrastructure:
 
 ```bash
-docker compose up -d
+docker compose up -d --build
 ```
 
 The site will be live locally on port `3002`, ready to be routed behind Nginx and Cloudflare.
