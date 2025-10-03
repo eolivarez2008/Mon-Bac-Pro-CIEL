@@ -31,7 +31,11 @@ body {
   max-width: 100%;
   background-color: var(--bg);
   color: var(--text-main);
-  font-family: 'Inter', 'Poppins', -apple-system, sans-serif;
+  font-family:
+    "Inter",
+    "Poppins",
+    -apple-system,
+    sans-serif;
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
 }
@@ -83,7 +87,7 @@ p {
 .hero-title {
   margin-bottom: 1.5rem;
   font-weight: 500;
-  line-height: 1.0;
+  line-height: 1;
   color: var(--accent);
 }
 
@@ -151,6 +155,17 @@ p {
   color: var(--accent);
 }
 
+/* Liens du pied de page*/
+.footer-link a {
+  color: #ffffff66 !important;
+  font-size: 0.85rem;
+}
+
+/* Hover sur les liens du pied de page*/
+.footer-link a:hover {
+  color: #ffffff !important;
+}
+
 /* ==========================================================================
    NAVIGATION
    ========================================================================== */
@@ -167,16 +182,16 @@ p {
 }
 
 /* Désactivation des interactions pour la barre de navigation flottante */
-.floating-nav, 
+.floating-nav,
 .floating-nav .container-fluid {
-    pointer-events: none !important;
+  pointer-events: none !important;
 }
 
 /* Activation des interactions pour les éléments de navigation */
-.nav-pill-container, 
-.navbar-brand, 
+.nav-pill-container,
+.navbar-brand,
 .navbar-toggler {
-    pointer-events: auto !important;
+  pointer-events: auto !important;
 }
 
 /* Logo ou marque dans la navigation */
@@ -709,7 +724,9 @@ p {
   flex-direction: column;
   padding: 16px;
   height: 100%;
-  transition: transform 0.3s ease, border-color 0.3s ease;
+  transition:
+    transform 0.3s ease,
+    border-color 0.3s ease;
 }
 
 /* Interaction au survol de la carte projet */
@@ -840,15 +857,32 @@ p {
 }
 
 /* Classes d'animation pour le slider de témoignages */
-.slide-next-out { opacity: 0; transform: translateX(-100px); }
-.slide-next-in { opacity: 0; transform: translateX(100px); }
-.slide-prev-out { opacity: 0; transform: translateX(100px); }
-.slide-prev-in { opacity: 0; transform: translateX(-100px); }
+.slide-next-out {
+  opacity: 0;
+  transform: translateX(-100px);
+}
+.slide-next-in {
+  opacity: 0;
+  transform: translateX(100px);
+}
+.slide-prev-out {
+  opacity: 0;
+  transform: translateX(100px);
+}
+.slide-prev-in {
+  opacity: 0;
+  transform: translateX(-100px);
+}
 
 /* Définition de l'animation Pulse */
 @keyframes pulse {
-  0%, 100% { opacity: 0.4; }
-  50% { opacity: 1; }
+  0%,
+  100% {
+    opacity: 0.4;
+  }
+  50% {
+    opacity: 1;
+  }
 }
 
 /* ==========================================================================
@@ -866,7 +900,7 @@ p {
   font-weight: 700;
   white-space: nowrap;
   border-radius: 8px;
-  box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
   transform: translateX(-50%);
   pointer-events: none;
 }
@@ -902,15 +936,23 @@ p {
   border: 1px solid rgba(255, 255, 255, 0.2);
   border-radius: 50px;
   backdrop-filter: blur(8px);
-  box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
   transform: translateX(-50%);
   animation: slideDown 0.5s cubic-bezier(0.18, 0.89, 0.32, 1.28);
 }
 
 /* Animation d'entrée pour l'alerte de confirmation */
 @keyframes slideDown {
-  from { top: 0px; opacity: 0; transform: translateX(-50%) scale(0.9); }
-  to { top: 130px; opacity: 1; transform: translateX(-50%) scale(1); }
+  from {
+    top: 0px;
+    opacity: 0;
+    transform: translateX(-50%) scale(0.9);
+  }
+  to {
+    top: 130px;
+    opacity: 1;
+    transform: translateX(-50%) scale(1);
+  }
 }
 
 /* ==========================================================================
@@ -944,7 +986,7 @@ p {
 /* Champs de contrôle du formulaire popup */
 .popup-form .form-control {
   background-color: #0a0a0a !important;
-  font-family: 'Poppins', sans-serif !important;
+  font-family: "Poppins", sans-serif !important;
   border: 1px solid #333 !important;
 }
 
@@ -1096,7 +1138,7 @@ p {
     padding: 0.6rem 1.2rem;
     font-size: 0.9rem;
   }
-  
+
   /* Transformation du tableau en système de cartes sur mobile */
   .custom-table thead {
     display: none;
@@ -1161,24 +1203,57 @@ p {
   .cards-grid {
     grid-template-columns: repeat(2, 1fr);
   }
-  .order-md-1 { order: 1 !important; }
-  .order-md-2 { order: 2 !important; }
-  .order-md-3 { order: 3 !important; }
-  
+  .order-md-1 {
+    order: 1 !important;
+  }
+  .order-md-2 {
+    order: 2 !important;
+  }
+  .order-md-3 {
+    order: 3 !important;
+  }
+
   /* Alignement spécifique des colonnes du tableau sur desktop */
-  .custom-table td:nth-child(1) { text-align: left; padding-left: 20px !important; }
-  .custom-table td:nth-child(2) { text-align: center; }
-  .custom-table td:nth-child(3) { text-align: right; padding-right: 20px !important; }
+  .custom-table td:nth-child(1) {
+    text-align: left;
+    padding-left: 20px !important;
+  }
+  .custom-table td:nth-child(2) {
+    text-align: center;
+  }
+  .custom-table td:nth-child(3) {
+    text-align: right;
+    padding-right: 20px !important;
+  }
 }
 
 /* --- Configuration spécifique Tablette (769px à 1024px) --- */
 @media (min-width: 769px) and (max-width: 1024px) {
-  .custom-table th:nth-child(1), .custom-table td:nth-child(1) { width: 60%; }
-  .custom-table th:nth-child(2), .custom-table td:nth-child(2) { width: 20%; }
-  .custom-table th:nth-child(3), .custom-table td:nth-child(3) { width: 20%; }
+  .custom-table th:nth-child(1),
+  .custom-table td:nth-child(1) {
+    width: 60%;
+  }
+  .custom-table th:nth-child(2),
+  .custom-table td:nth-child(2) {
+    width: 20%;
+  }
+  .custom-table th:nth-child(3),
+  .custom-table td:nth-child(3) {
+    width: 20%;
+  }
   .custom-table td {
     font-size: 0.85rem;
     white-space: normal;
+  }
+  .footer {
+    font-size: 0.75rem;
+  }
+  .footer h4 {
+    font-size: 0.85rem;
+    margin-bottom: 1rem;
+  }
+  .footer-link a {
+    font-size: 0.75rem;
   }
 }
 
