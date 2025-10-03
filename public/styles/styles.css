@@ -627,6 +627,95 @@ p {
 }
 
 /* ==========================================================================
+   SECTIONS SPÉCIFIQUES : LEGAL
+   ========================================================================== */
+
+.legal-section {
+  margin-bottom: 2.5rem;
+}
+.legal-section h2 {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--accent);
+  margin-bottom: 1rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid var(--glass-border);
+}
+.legal-section p,
+.legal-section li {
+  font-size: 0.92rem;
+  color: var(--hero-lead);
+  line-height: 1.75;
+}
+.legal-label {
+  color: rgba(255, 255, 255, 0.4);
+  font-size: 0.85rem;
+}
+.legal-table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  font-size: 0.85rem;
+}
+.legal-table thead tr {
+  background: rgba(255, 255, 255, 0.04);
+}
+.legal-table th {
+  padding: 10px 16px !important;
+  color: rgba(255, 255, 255, 0.5) !important;
+  font-weight: 600;
+  text-align: left;
+  border-bottom: 1px solid var(--glass-border) !important;
+  opacity: 1 !important;
+}
+.legal-table td {
+  padding: 10px 16px !important;
+  color: var(--hero-lead);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.04) !important;
+  border-top: none !important;
+  border-left: none !important;
+  border-right: none !important;
+  border-radius: 0 !important;
+  white-space: normal;
+  overflow: visible;
+  text-overflow: unset;
+}
+.legal-table td:first-child {
+  color: rgba(255, 255, 255, 0.75);
+  font-weight: 500;
+  border-left: none !important;
+  border-radius: 0 !important;
+}
+.legal-table tbody tr:last-child td {
+  border-bottom: none !important;
+}
+.legal-note {
+  font-size: 0.8rem;
+  color: rgba(255, 255, 255, 0.3);
+  margin-top: 0.75rem;
+}
+.legal-right-item {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 0.6rem;
+}
+.legal-right-item .bullet {
+  color: var(--accent);
+  margin-top: 2px;
+  flex-shrink: 0;
+}
+.legal-right-item strong {
+  color: rgba(255, 255, 255, 0.8);
+}
+code.legal-code {
+  font-size: 0.8rem;
+  background: rgba(255, 255, 255, 0.05);
+  color: rgba(255, 255, 255, 0.7);
+  padding: 2px 6px;
+  border-radius: 4px;
+}
+
+/* ==========================================================================
    SECTIONS SPÉCIFIQUES : DÉBOUCHÉS & PROJETS
    ========================================================================== */
 
