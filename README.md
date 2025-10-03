@@ -34,7 +34,7 @@ This project was built, finalized, and validated as a core part of my high schoo
 
 ## Overview
 
-**Mon Bac Pro CIEL** documents the Bac Pro CIEL curriculum — a French vocational track covering Cybersecurity, IT, Electronics, and Networks. It features a clean modular architecture, separating static frontend presentation from self-hosted analytics.
+**Mon Bac Pro CIEL** documents the Bac Pro CIEL curriculum — a French vocational track covering Cybersecurity, IT, Electronics, and Networks. It features a clean modular architecture, separating static frontend presentation from self-hosted analytics and a headless CMS for content moderation.
 
 ---
 
@@ -44,15 +44,16 @@ This project was built, finalized, and validated as a core part of my high schoo
 - **Débouchés** — career paths and higher education opportunities after graduation.
 - **Projets** — structured showcase of student-built projects.
 - **Stages** — practical guidance for internship periods.
-- **Témoignages** — dynamic testimonials feed with submission form and admin moderation.
+- **Témoignages** — dynamic testimonials feed with submission form and admin moderation via Sanity CMS.
 
 ---
 
 ## Tech Stack
 
-- **Core Frontend:** Built using core [HTML5](https://developer.mozilla.org/en/docs/Web/HTML), [CSS3](https://developer.mozilla.org/en/docs/Web/CSS), and vanilla [JavaScript ES6+](https://developer.mozilla.org/en/docs/Web/JavaScript) for DOM manipulation and dynamic JSON data handling.
+- **Core Frontend:** Built using core [HTML5](https://developer.mozilla.org/en/docs/Web/HTML), [CSS3](https://developer.mozilla.org/en/docs/Web/CSS), and vanilla [JavaScript ES6+](https://developer.mozilla.org/en/docs/Web/JavaScript) for DOM manipulation and dynamic data handling.
 - **UI Framework:** [Bootstrap 5](https://getbootstrap.com/) and [Pictogrammers MDI](https://pictogrammers.com/library/mdi/) vector icons for responsive layout.
 - **Backend Utilities:** [Formspree](https://formspree.io/) integration for secure serverless form handling without exposing a custom backend.
+- **CMS:** [Sanity.io](https://www.sanity.io/) headless CMS for testimonials moderation and storage, queried at runtime via the Sanity Content API.
 
 ---
 
@@ -61,7 +62,7 @@ This project was built, finalized, and validated as a core part of my high schoo
 While the frontend relies on standard web technologies, the production deployment incorporates modern network and system administration practices:
 
 - **Web Server:** Optimized **Nginx (Alpine)** serving static files, self-hosted on a dedicated VM.
-- **Containerization:** The entire stack is containerized and automated using **Docker** and **Docker Compose**.
+- **Containerization:** The entire stack is containerized and automated using **Docker** and **Docker Compose**. Environment variables are injected at container startup via `sed`, keeping all sensitive or environment-specific values out of the source code.
 - **Zero Trust Network:** Securely exposed using a **Cloudflare Tunnel (Zero Trust)**. This architecture allows secure web hosting without opening any inbound ports on the local firewall, providing native DDoS mitigation and automated SSL/TLS management.
 - **Privacy-First Analytics:** Integration of **Umami**, a lightweight, self-hosted, open-source analytics platform respectful of GDPR.
 
@@ -86,7 +87,13 @@ cd Mon-Bac-Pro-CIEL
 npm install -g serve
 ```
 
-3. Start the development server:
+3. Copy the example environment file and fill in your values:
+
+```bash
+cp .env.example .env
+```
+
+4. Start the development server:
 
 ```bash
 serve -c serve.json public/
@@ -94,34 +101,48 @@ serve -c serve.json public/
 
 The site will be available at `http://localhost:3000`.
 
+> **Note:** In development, environment variables are not injected (that's handled by Docker at runtime). You can temporarily hardcode your values in the JS/HTML files for local testing, but never commit them.
+
+---
+
 ### Production Deployment
 
 This repository provides pre-configured production files including `Dockerfile`, `docker-compose.yml`, and `nginx.conf`. You can choose your preferred deployment strategy:
 
 #### Option A: Static Web Hosting (Netlify, Vercel, VPS...)
 
-You can host the frontend directly on any static platform. Simply connect your **Umami** dashboard tracking ID to your analytics environment.
+You can host the frontend directly on any static platform. You will need to handle environment variable injection yourself depending on your platform's build pipeline.
 
 #### Option B: Self-Hosted Containerized Stack (Docker & Nginx)
 
-To spin up the complete automated stack provided in this repository:
-
 1. Ensure you have **Docker**, **Docker Compose** and **Nginx** installed on your server.
-2. Create a `.env` file at the root to configure your analytics:
 
-```env
-UMAMI_ID=your_umami_site_id_here
+2. Clone the repository:
 
+```bash
+git clone https://github.com/eolivarez2008/Mon-Bac-Pro-CIEL.git
+cd Mon-Bac-Pro-CIEL
 ```
 
-3. Launch the infrastructure:
+3. Install `serve` globally:
+
+```bash
+npm install -g serve
+```
+
+4. Copy the example environment file and fill in your values:
+
+```bash
+cp .env.example .env
+```
+
+5. Launch the infrastructure:
 
 ```bash
 docker compose up -d
-
 ```
 
-The site will be live locally on port `3002` (or the port defined in your configuration), ready to be routed behind Nginx and Cloudflare.
+The site will be live locally on port `3002`, ready to be routed behind Nginx and Cloudflare.
 
 ---
 

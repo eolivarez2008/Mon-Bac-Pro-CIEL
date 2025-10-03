@@ -7,5 +7,10 @@ services:
       - "127.0.0.1:3002:80"
     env_file:
       - .env
-    command: /bin/sh -c "sed -i 's/ID_UMAMI_PROD/'$UMAMI_ID'/g' /usr/share/nginx/html/*.html && nginx -g 'daemon off;'"
+    command: /bin/sh -c "
+      sed -i 's|ID_UMAMI_PROD|'$UMAMI_ID'|g' /usr/share/nginx/html/*.html /usr/share/nginx/html/pages/*.html &&
+      sed -i 's|UMAMI_URL_PROD|'$UMAMI_URL'|g' /usr/share/nginx/html/*.html /usr/share/nginx/html/pages/*.html &&
+      sed -i 's|FORMSPREE_ID_PROD|'$FORMSPREE_ID'|g' /usr/share/nginx/html/scripts/*.js /usr/share/nginx/html/pages/*.html &&
+      sed -i 's|ID_SANITY_PROD|'$SANITY_PROJECT_ID'|g' /usr/share/nginx/html/scripts/*.js &&
+      nginx -g 'daemon off;'"
     restart: always

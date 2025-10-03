@@ -22,13 +22,9 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="../styles/styles.css?v=5.1" />
-    <script
-      defer
-      src="https://umami.eolivarez.site/script.js"
-      data-website-id="ID_UMAMI_PROD"
-    ></script>
+    <script defer src="UMAMI_URL_PROD" data-website-id="ID_UMAMI_PROD"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="./scripts/testimonials.js?v=4" type="module"></script>
+    <script src="./scripts/testimonials.js?v=4.3" type="module"></script>
     <script defer src="../scripts/components-loader.js?v=4"></script>
     <script defer src="../scripts/navbar.js?v=4"></script>
   </head>
@@ -96,7 +92,7 @@
 
           <form
             id="testimonialForm"
-            action="https://formspree.io/f/xzdaavnv"
+            action="FORMSPREE_ID_PROD"
             method="POST"
             class="popup-form"
           >
@@ -148,6 +144,46 @@
                   placeholder="Racontez-nous votre expérience..."
                   required
                 ></textarea>
+              </div>
+            </div>
+            <div class="mt-4">
+              <div class="form-check d-flex align-items-start gap-2">
+                <input
+                  type="checkbox"
+                  id="consentCheckbox"
+                  name="consent"
+                  class="form-check-input mt-1 flex-shrink-0"
+                  required
+                  style="
+                    width: 18px;
+                    height: 18px;
+                    background-color: transparent;
+                    border: 1px solid rgba(255, 255, 255, 0.3);
+                    border-radius: 4px;
+                    cursor: pointer;
+                    accent-color: #ffffff;
+                  "
+                />
+                <label
+                  for="consentCheckbox"
+                  class="form-check-label"
+                  style="
+                    font-size: 0.82rem;
+                    color: rgba(255, 255, 255, 0.5);
+                    cursor: pointer;
+                    line-height: 1.5;
+                  "
+                >
+                  J'accepte que mon témoignage (nom, classe et avis) soit traité
+                  et publié sur ce site conformément aux
+                  <a
+                    href="legal"
+                    target="_blank"
+                    style="color: var(--accent); text-decoration: underline"
+                  >
+                    Mentions légales &amp; Confidentialité </a
+                  >.
+                </label>
               </div>
             </div>
             <div class="text-center mt-4">
