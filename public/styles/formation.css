@@ -86,12 +86,23 @@
   color: var(--muted);
 }
 
+.pagination .btn-accent:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+  box-shadow: none;
+}
+
+.pagination .btn-accent:disabled:hover {
+  transform: none;
+  box-shadow: none;
+}
+
 .container-video {
   position: relative; 
   padding-top: 56.25%;
 }
 
-span {
+#presentation span {
   font-size:40px; 
   color:var(--accent);
 }

@@ -92,10 +92,6 @@ p { color: #d0d8df; }
   .site-wrap{ 
     padding-top:100px; 
   }
-
-  .contact-grid{ 
-    grid-template-columns:1fr; 
-  }
 }
 
 /* -------------------------
