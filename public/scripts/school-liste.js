@@ -33,7 +33,7 @@ toggleBtn.addEventListener("click", () => {
     tableDiv.classList.add("d-none");
     toggleIcon.textContent = "📋";
     toggleText.textContent = "Liste";
-    map.invalidateSize(); // Actualise la taille de la carte
+    map.invalidateSize();
   } else {
     // Affiche le tableau, cache la carte
     mapDiv.classList.add("d-none");
@@ -67,8 +67,8 @@ fetch('./data/lycees.json')
 
 // Fonction pour afficher le tableau des lycées
 function renderTable() {
-  tableBody.innerHTML = ""; // Vide le tableau avant de le remplir
-  let sorted = [...lyceesData]; // Copie des données pour tri
+  tableBody.innerHTML = "";
+  let sorted = [...lyceesData];
 
   // Tri si une colonne est sélectionnée
   if (currentSort.column) {

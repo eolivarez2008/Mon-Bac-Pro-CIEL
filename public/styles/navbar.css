@@ -14,25 +14,25 @@
   transition: color 0.3s ease;
 }
 
-  /* New active state for nav-link */
-      .icon-link {
-  width: 100%;
+.nav-link.active {
+  color: var(--accent) !important;
 }
-          color: #cfeaf6;
-          font-size: 2rem;
-          padding: 0 8px;
-          transition: color 0.2s;
-          background: none;
-          border: none;
-          outline: none;
-      }
-      .icon-link.active {
-          color: var(--accent) !important;
-      }
-      .icon-link:active,
-      .icon-link:focus,
-      .icon-link:hover {
-        color: var(--accent);
-      }
 
+.nav-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 0%;
+  height: 2px;
+  background:var(--accent);
+  transition: width 0.3s ease;
+}
+
+.nav-link:hover {
+  color:var(--accent);
+}
+
+.nav-link:hover::after {
+  width: 100%;
 }
