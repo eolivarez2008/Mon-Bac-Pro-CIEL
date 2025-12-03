@@ -11,7 +11,7 @@ Ce site est **hébergé avec Firebase Hosting** :
 
 **Mon Bac Pro CIEL** est un site web francophone dédié à la présentation du bac professionnel Cybersécurité, Informatique, Electronique et réseaux; développé dans le cadre d'un projet scolaire réalisé en **2025**. 
 
-⚠️ **Important** : Ce site est **optimisé pour les ordinateurs de bureau uniquement**. L'accès depuis un téléphone ou une tablette n'est pas possible — un message s'affichera vous invitant à utiliser un PC.
+**Important** : Ce site est **optimisé pour les ordinateurs de bureau uniquement**. L'accès depuis un téléphone ou une tablette n'est pas possible — un message s'affichera vous invitant à utiliser un PC.
 
 Ce site propose une immersion complète dans le thème du **Bac Pro CIEL**, à travers différentes rubriques :
 
